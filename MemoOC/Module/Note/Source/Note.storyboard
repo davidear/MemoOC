@@ -20,7 +20,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="mtn-Ec-sJ4" customClass="MMNoteCollectionViewCell" customModule="MemoOC" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="mtn-Ec-sJ4" customClass="MMnoteCollectionCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -62,7 +62,7 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="QzR-0W-HCT" firstAttribute="leading" secondItem="mtn-Ec-sJ4" secondAttribute="leading" constant="8" id="6Cr-gh-rQe"/>
                                     <constraint firstItem="pd9-rT-k2Z" firstAttribute="leading" secondItem="QzR-0W-HCT" secondAttribute="trailing" constant="8" id="HXm-Uk-mV5"/>
@@ -75,19 +75,19 @@
                                 </constraints>
                                 <size key="customSize" width="468" height="44"/>
                                 <connections>
-                                    <outlet property="ammount" destination="Jvz-QJ-At0" id="xdi-QW-O5n"/>
-                                    <outlet property="logo" destination="QzR-0W-HCT" id="Rrg-dt-nsh"/>
-                                    <outlet property="name" destination="pd9-rT-k2Z" id="W0F-BR-rMH"/>
+                                    <outlet property="amount" destination="Jvz-QJ-At0" id="PjI-Jf-EK7"/>
+                                    <outlet property="logo" destination="QzR-0W-HCT" id="hGs-Wm-ruK"/>
+                                    <outlet property="name" destination="pd9-rT-k2Z" id="gBa-7Y-bca"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="dataSource" destination="kpR-i5-XE8" id="irK-G7-4Em"/>
-                            <outlet property="delegate" destination="kpR-i5-XE8" id="1nG-BF-gHx"/>
+                            <outlet property="dataSource" destination="kpR-i5-XE8" id="ZNP-5Z-r70"/>
+                            <outlet property="delegate" destination="kpR-i5-XE8" id="Ajo-V4-Kcx"/>
                         </connections>
                     </collectionView>
                     <connections>
-                        <outlet property="noteLayout" destination="09r-W4-MWr" id="5ao-Vb-VVY"/>
+                        <outlet property="noteLayout" destination="09r-W4-MWr" id="5D5-IV-r23"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hm-JB-wER" userLabel="First Responder" sceneMemberID="firstResponder"/>

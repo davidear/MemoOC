@@ -42,7 +42,7 @@
             if (attrs.representedElementKind == nil) {
                 CGRect frame = attrs.frame;
                 UICollectionView *cv = self.collectionView;
-                frame.origin.y = cv.contentSize.height + cv.contentInset.bottom - 10 - deltaY * (cv.numberOfSections - attrs.indexPath.section) - 20 * (cv.numberOfSections - attrs.indexPath.section - 1) - 44 * cv.numberOfSections - attrs.indexPath.section;
+                frame.origin.y = cv.contentSize.height + cv.contentInset.bottom - 10 - deltaY * (cv.numberOfSections - attrs.indexPath.section) - 20 * (cv.numberOfSections - attrs.indexPath.section - 1) - 44 * (cv.numberOfSections - attrs.indexPath.section);
                 attrs.frame = frame;
             }
         }
@@ -50,11 +50,21 @@
     return attrsArray;
 }
 @end
-
-@interface MMNoteCollectionViewController ()
+#pragma mark -
+@interface MMnoteCollectionCell: UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *amount;
+
+@end
+@implementation MMnoteCollectionCell
+
+@end
+#pragma mark -
+
+@interface MMNoteCollectionViewController ()
+
+@property (weak, nonatomic) IBOutlet MMNoteLayout *noteLayout;
 
 @property (strong, nonatomic) NSMutableArray *dataArray;
 @end
@@ -70,10 +80,10 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-
+    [self loadData];
     [self setUI];
 }
 
@@ -82,27 +92,24 @@ static NSString * const reuseIdentifier = @"Cell";
     _dataArray = [NSMutableArray arrayWithContentsOfFile:path];
 }
 - (void)setUI {
-//    noteLayout.itemSize = CGSizeMake(UIScreen.mainScreen().bounds.width - 40, 44)
-//    //    noteLayout.headerReferenceSize = CGSizeMake(UIScreen.mainScreen().bounds.width - 40, <#height: CGFloat#>)
-//    noteLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
+    self.noteLayout.itemSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, 44);
+    //    noteLayout.headerReferenceSize = CGSizeMake(UIScreen.mainScreen().bounds.width - 40, <#height: CGFloat#>)
+    self.noteLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
 }
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete method implementation -- Return the number of sections
     return self.dataArray.count;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete method implementation -- Return the number of items in the section
     return 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
+    MMnoteCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     // Configure the cell
     
     return cell;
