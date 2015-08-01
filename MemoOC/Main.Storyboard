@@ -7,7 +7,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ipd-AM-hr2">
             <objects>
-                <navigationController id="IVW-x7-0yT" sceneMemberID="viewController">
+                <navigationController id="IVW-x7-0yT" customClass="MMNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ka7-Ft-cRw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

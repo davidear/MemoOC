@@ -25,12 +25,22 @@
 }
 
 - (void)awakeFromNib {
-    [self initSubControllers];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 40)];
+    [button setImage:[UIImage imageNamed:@"iconfont-shezhi"] forState:UIControlStateNormal];
+    [button setTitle:@"设置" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor colorFromHexString:kColorLight] forState:UIControlStateNormal];
+//    [button setTintColor:[UIColor colorFromHexString:kColorDark]];
+    [button addTarget:self action:@selector(setting:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.leftBarButtonItem = left;
+    
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"iconfont-xinzeng"] style:UIBarButtonItemStylePlain target:self action:@selector(postAddNotification)];
+    self.navigationItem.rightBarButtonItem = right;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self initSubControllers];
+
 }
 - (void)initSubControllers {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Note" bundle:nil];
@@ -47,5 +57,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - NOTIFICATION
+- (void)setting:(UIButton *)sender {
+    
+}
+- (void)postAddNotification {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationAdd object:nil];
+}
 
 @end

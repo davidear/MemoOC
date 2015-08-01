@@ -13,7 +13,13 @@
 @end
 
 @implementation MMNavigationController
-
++(void)initialize {
+    [super initialize];
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor colorFromHexString:kColorDark]];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorFromHexString:kColorDark]];
+    
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

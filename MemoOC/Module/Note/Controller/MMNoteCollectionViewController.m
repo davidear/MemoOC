@@ -117,8 +117,8 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MMnoteCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     // Configure the cell
-    cell.logo.image = [UIImage imageNamed:self.dataArray[indexPath.row][@"logo"]];
-    cell.name.text = self.dataArray[indexPath.row][@"name"];
+    cell.logo.image = [UIImage imageNamed:self.dataArray[indexPath.section][@"logo"]];
+    cell.name.text = self.dataArray[indexPath.section][@"name"];
     cell.amount.text = @"5";
     return cell;
 }

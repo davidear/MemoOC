@@ -62,7 +62,7 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.2196078431372549" green="0.63137254901960782" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.4823529411764706" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="QzR-0W-HCT" firstAttribute="leading" secondItem="mtn-Ec-sJ4" secondAttribute="leading" constant="8" id="6Cr-gh-rQe"/>
                                     <constraint firstItem="pd9-rT-k2Z" firstAttribute="leading" secondItem="QzR-0W-HCT" secondAttribute="trailing" constant="8" id="HXm-Uk-mV5"/>
@@ -75,8 +75,8 @@
                                 </constraints>
                                 <size key="customSize" width="468" height="44"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerra">
-                                        <integer key="value" value="3"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
