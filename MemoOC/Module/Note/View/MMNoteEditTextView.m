@@ -41,13 +41,17 @@
 }
 - (void)setUI {
     _locationInfo.font = [UIFont systemFontOfSize:13];
+    _locationInfo.textColor = [UIColor colorFromHexString:kColorDark];
     [_notebook setImage:[UIImage imageNamed:@"iconfont-bijiben"] forState:UIControlStateNormal];
+    [_notebook setTitleColor:[UIColor colorFromHexString:kColorDark] forState:UIControlStateNormal];
     [_locationButton setImage:[UIImage imageNamed:@"iconfont-ditu"] forState:UIControlStateNormal];
+    [_notebook setTitle:@"notebook" forState:UIControlStateNormal];
+    _locationInfo.text = @"note comes from shenzhen city 1088";
 }
 
 - (void)layoutSubviews {
-    _locationInfo.frame = CGRectMake(0, 0, self.bounds.size.width, 44);
-    _notebook.frame = CGRectMake(8, CGRectGetMaxY(_locationInfo.frame), 80, 30);
+    _locationInfo.frame = CGRectMake(8, 0, self.bounds.size.width - 16, 44);
+    _notebook.frame = CGRectMake(8, CGRectGetMaxY(_locationInfo.frame), 100, 30);
     _locationButton.frame = CGRectMake(self.bounds.size.width - 8 - 30, _notebook.frame.origin.y, 30, 30);
     self.textContainerInset = UIEdgeInsetsMake(CGRectGetMaxY(_locationButton.frame), 0, 0, 0);
 }
