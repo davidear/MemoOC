@@ -72,7 +72,13 @@
 @implementation MMNoteCollectionViewController
 
 static NSString * const reuseIdentifier = @"Cell";
-
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self loadData];
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -83,13 +89,13 @@ static NSString * const reuseIdentifier = @"Cell";
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-    [self loadData];
+//    [self loadData];
     [self setUI];
 }
 
 - (void)loadData {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"NoteList" ofType:@"plist"];
-    _dataArray = [NSMutableArray arrayWithContentsOfFile:path];
+    self.dataArray = [NSMutableArray arrayWithContentsOfFile:path];
 }
 - (void)setUI {
     self.noteLayout.itemSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, 44);
@@ -111,7 +117,9 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MMnoteCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     // Configure the cell
-    
+    cell.logo.image = [UIImage imageNamed:self.dataArray[indexPath.row][@"logo"]];
+    cell.name.text = self.dataArray[indexPath.row][@"name"];
+    cell.amount.text = @"5";
     return cell;
 }
 

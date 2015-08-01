@@ -11,7 +11,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="nEd-5L-lSy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.47450980390000003" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="09r-W4-MWr" customClass="MMNoteLayout">
                             <size key="itemSize" width="0.0" height="44"/>
@@ -20,7 +20,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="mtn-Ec-sJ4" customClass="MMnoteCollectionCell">
+                            <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="mtn-Ec-sJ4" customClass="MMnoteCollectionCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -34,7 +34,7 @@
                                                 <constraint firstAttribute="height" constant="20" id="dUL-SA-mSM"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zBJ-q5-h5K">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfont-jiantou" translatesAutoresizingMaskIntoConstraints="NO" id="zBJ-q5-h5K">
                                             <rect key="frame" x="440" y="12" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="3R9-Qx-05F"/>
@@ -47,7 +47,7 @@
                                                 <constraint firstAttribute="height" constant="21" id="KSr-hL-I4Z"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.33725490200000002" green="0.6705882353" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.62745098039215685" green="0.84705882352941175" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvz-QJ-At0">
@@ -56,13 +56,13 @@
                                                 <constraint firstAttribute="height" constant="21" id="tBI-qL-TDp"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.33725490200000002" green="0.6705882353" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.62745098039215685" green="0.84705882352941175" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.2196078431372549" green="0.63137254901960782" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="QzR-0W-HCT" firstAttribute="leading" secondItem="mtn-Ec-sJ4" secondAttribute="leading" constant="8" id="6Cr-gh-rQe"/>
                                     <constraint firstItem="pd9-rT-k2Z" firstAttribute="leading" secondItem="QzR-0W-HCT" secondAttribute="trailing" constant="8" id="HXm-Uk-mV5"/>
@@ -74,6 +74,11 @@
                                     <constraint firstAttribute="trailing" secondItem="zBJ-q5-h5K" secondAttribute="trailing" constant="8" id="sJX-4c-db9"/>
                                 </constraints>
                                 <size key="customSize" width="468" height="44"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerra">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="amount" destination="Jvz-QJ-At0" id="PjI-Jf-EK7"/>
                                     <outlet property="logo" destination="QzR-0W-HCT" id="hGs-Wm-ruK"/>
@@ -95,4 +100,7 @@
             <point key="canvasLocation" x="-476" y="561"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconfont-jiantou" width="21" height="21"/>
+    </resources>
 </document>
