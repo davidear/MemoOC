@@ -18,7 +18,6 @@
 		B2F88CFC1B6B9AA7002567BE /* MMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88CFB1B6B9AA7002567BE /* MMViewController.m */; };
 		B2F88CFF1B6B9C32002567BE /* MMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88CFE1B6B9C32002567BE /* MMNavigationController.m */; };
 		B2F88D021B6B9C57002567BE /* MMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88D011B6B9C57002567BE /* MMTabBarController.m */; };
-		B2F88D051B6B9CFB002567BE /* MMNoteCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88D041B6B9CFB002567BE /* MMNoteCollectionViewController.m */; };
 		B2F88D081B6BBD66002567BE /* MMNoteEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88D071B6BBD66002567BE /* MMNoteEditViewController.m */; };
 		B2F88D0B1B6BBEA3002567BE /* MMTouchLockSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88D0A1B6BBEA3002567BE /* MMTouchLockSplashViewController.m */; };
 		B2F88D0E1B6BBEE8002567BE /* MMNoteEditTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88D0D1B6BBEE8002567BE /* MMNoteEditTextView.m */; };
@@ -26,6 +25,7 @@
 		B2F9DE251B6C722E003A7DCA /* NoteList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2F9DE241B6C722E003A7DCA /* NoteList.plist */; };
 		B2F9DE281B6C7269003A7DCA /* MMNoteData.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9DE271B6C7269003A7DCA /* MMNoteData.m */; };
 		B2F9DE2B1B6C79B9003A7DCA /* FMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9DE2A1B6C79B9003A7DCA /* FMDBHelper.m */; };
+		B2F9DE2E1B6CF7AB003A7DCA /* MMNoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9DE2D1B6CF7AB003A7DCA /* MMNoteListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,6 @@
 		B2F88CFE1B6B9C32002567BE /* MMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNavigationController.m; sourceTree = "<group>"; };
 		B2F88D001B6B9C57002567BE /* MMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTabBarController.h; sourceTree = "<group>"; };
 		B2F88D011B6B9C57002567BE /* MMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTabBarController.m; sourceTree = "<group>"; };
-		B2F88D031B6B9CFB002567BE /* MMNoteCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNoteCollectionViewController.h; sourceTree = "<group>"; };
-		B2F88D041B6B9CFB002567BE /* MMNoteCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNoteCollectionViewController.m; sourceTree = "<group>"; };
 		B2F88D061B6BBD66002567BE /* MMNoteEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNoteEditViewController.h; sourceTree = "<group>"; };
 		B2F88D071B6BBD66002567BE /* MMNoteEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNoteEditViewController.m; sourceTree = "<group>"; };
 		B2F88D091B6BBEA3002567BE /* MMTouchLockSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTouchLockSplashViewController.h; sourceTree = "<group>"; };
@@ -77,6 +75,8 @@
 		B2F9DE271B6C7269003A7DCA /* MMNoteData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNoteData.m; sourceTree = "<group>"; };
 		B2F9DE291B6C79B9003A7DCA /* FMDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBHelper.h; sourceTree = "<group>"; };
 		B2F9DE2A1B6C79B9003A7DCA /* FMDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBHelper.m; sourceTree = "<group>"; };
+		B2F9DE2C1B6CF7AB003A7DCA /* MMNoteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNoteListViewController.h; sourceTree = "<group>"; };
+		B2F9DE2D1B6CF7AB003A7DCA /* MMNoteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNoteListViewController.m; sourceTree = "<group>"; };
 		E12BD68C3625EC2705FACCBF /* libPods-MemoOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -220,10 +220,10 @@
 		B2F88CB51B6B99A6002567BE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B2F88D031B6B9CFB002567BE /* MMNoteCollectionViewController.h */,
-				B2F88D041B6B9CFB002567BE /* MMNoteCollectionViewController.m */,
 				B2F88D061B6BBD66002567BE /* MMNoteEditViewController.h */,
 				B2F88D071B6BBD66002567BE /* MMNoteEditViewController.m */,
+				B2F9DE2C1B6CF7AB003A7DCA /* MMNoteListViewController.h */,
+				B2F9DE2D1B6CF7AB003A7DCA /* MMNoteListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -437,6 +437,7 @@
 				B2F88D081B6BBD66002567BE /* MMNoteEditViewController.m in Sources */,
 				B2F88C8E1B6B9712002567BE /* AppDelegate.m in Sources */,
 				B2F88CF81B6B9A06002567BE /* CommonHelper.m in Sources */,
+				B2F9DE2E1B6CF7AB003A7DCA /* MMNoteListViewController.m in Sources */,
 				B2F88C8B1B6B9712002567BE /* main.m in Sources */,
 				B2F9DE281B6C7269003A7DCA /* MMNoteData.m in Sources */,
 				B2F88CFF1B6B9C32002567BE /* MMNavigationController.m in Sources */,
@@ -444,7 +445,6 @@
 				B2F9DE2B1B6C79B9003A7DCA /* FMDBHelper.m in Sources */,
 				B2F88D021B6B9C57002567BE /* MMTabBarController.m in Sources */,
 				B2F88D0E1B6BBEE8002567BE /* MMNoteEditTextView.m in Sources */,
-				B2F88D051B6B9CFB002567BE /* MMNoteCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

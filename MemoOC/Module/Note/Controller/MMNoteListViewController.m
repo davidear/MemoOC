@@ -1,12 +1,12 @@
 //
-//  MMNoteCollectionViewController.m
+//  MMNoteListViewController.m
 //  MemoOC
 //
-//  Created by dai.fengyi on 15/7/31.
+//  Created by dai.fengyi on 15/8/1.
 //  Copyright (c) 2015年 childrenOurFuture. All rights reserved.
 //
 
-#import "MMNoteCollectionViewController.h"
+#import "MMNoteListViewController.h"
 #import "MMNoteEditViewController.h"
 @interface MMNoteLayout: UICollectionViewFlowLayout
 
@@ -19,7 +19,7 @@
     CGPoint offset = self.collectionView.contentOffset;
     NSArray *attrsArray = [super layoutAttributesForElementsInRect:rect];
     CGFloat topMinY = -self.collectionView.contentInset.top;
-    CGFloat bottomMaxY = MAX(self.collectionView.contentSize.height + self.collectionView.contentInset.bottom - [UIScreen mainScreen].bounds.size.height, 0);
+    CGFloat bottomMaxY = MAX(self.collectionView.contentSize.height + self.collectionView.contentInset.bottom - self.collectionView.bounds.size.height, 0);
     
     if (offset.y < topMinY) {
         CGFloat deltaY = fabs((offset.y - topMinY) / 10);
@@ -62,15 +62,15 @@
 @end
 #pragma mark -
 
-@interface MMNoteCollectionViewController ()
-
+@interface MMNoteListViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet MMNoteLayout *noteLayout;
 
 @property (strong, nonatomic) NSMutableArray *dataArray;
+
 @end
 
-@implementation MMNoteCollectionViewController
-
+@implementation MMNoteListViewController
 static NSString * const reuseIdentifier = @"Cell";
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
@@ -86,10 +86,10 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-//    [self loadData];
+    //    [self loadData];
     [self setUI];
 }
 
@@ -128,32 +128,32 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.navigationController pushViewController:[[MMNoteEditViewController alloc] init] animated:YES];
 }
 /*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+ // Uncomment this method to specify if the specified item should be highlighted during tracking
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
 	return YES;
-}
-*/
+ }
+ */
 
 /*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
+ // Uncomment this method to specify if the specified item should be selected
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+ return YES;
+ }
+ */
 
 /*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
+ // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
 	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+ }
+ 
+ - (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
 	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+ }
+ 
+ - (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
 	
-}
-*/
+ }
+ */
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "MMTabBarController.h"
-#import "MMNoteCollectionViewController.h"
+#import "MMNoteListViewController.h"
 @interface MMTabBarController ()
 
 @end
@@ -44,7 +44,7 @@
 }
 - (void)initSubControllers {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Note" bundle:nil];
-    MMNoteCollectionViewController *vc = [storyboard instantiateInitialViewController];
+    MMNoteListViewController *vc = [storyboard instantiateInitialViewController];
     [self setViewControllers:@[vc]];
 }
 
