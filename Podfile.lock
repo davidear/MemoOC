@@ -1,21 +1,31 @@
 PODS:
   - Colours (5.6.2)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
   - Masonry (0.6.2)
   - MBProgressHUD (0.9.1)
+  - MJExtension (2.5.3)
   - SSKeychain (1.2.3)
   - VENTouchLock (1.11.0):
     - SSKeychain (~> 1.0)
 
 DEPENDENCIES:
   - Colours (~> 5.6.2)
+  - FMDB (~> 2.5)
   - Masonry (~> 0.6.2)
   - MBProgressHUD (~> 0.9.1)
+  - MJExtension (~> 2.5.3)
   - VENTouchLock (~> 1.0)
 
 SPEC CHECKSUMS:
   Colours: 0afd4c3429656880fd4cff350ca3bf0ab86ca348
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MJExtension: d636ed42d1af44cba81106ae7831cccb66906eb7
   SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
   VENTouchLock: f3145d6fbff243d6692dfb1107b88db06dc216c9
 

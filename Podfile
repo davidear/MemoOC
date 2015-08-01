@@ -6,6 +6,8 @@ pod 'VENTouchLock', '~> 1.0'
 pod 'Colours', '~> 5.6.2'
 pod 'MBProgressHUD', '~> 0.9.1'
 pod 'Masonry', '~> 0.6.2'
+pod 'FMDB', '~> 2.5'
+pod 'MJExtension', '~> 2.5.3'
 end
 
 target 'MemoOCTests' do

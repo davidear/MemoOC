@@ -8,7 +8,6 @@
 
 #import "MMNoteEditViewController.h"
 #import "MMNoteEditTextView.h"
-#import "Masonry.h"
 @interface MMNoteEditViewController ()
 @property (strong, nonatomic) MMNoteEditTextView * editTextView;
 @end
@@ -50,4 +49,5 @@
     _editTextView.contentInset = UIEdgeInsetsMake(0, 0, keyboardHeight, 0);
     [_editTextView scrollRangeToVisible:_editTextView.selectedRange];
 }
+
 @end

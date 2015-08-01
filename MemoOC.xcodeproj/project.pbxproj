@@ -13,7 +13,6 @@
 		B2F88C961B6B9712002567BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F88C951B6B9712002567BE /* Images.xcassets */; };
 		B2F88C991B6B9712002567BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2F88C971B6B9712002567BE /* LaunchScreen.xib */; };
 		B2F88CA51B6B9712002567BE /* MemoOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88CA41B6B9712002567BE /* MemoOCTests.m */; };
-		B2F88CE51B6B99A6002567BE /* NoteList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2F88CB91B6B99A6002567BE /* NoteList.plist */; };
 		B2F88CE61B6B99A6002567BE /* Note.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F88CBB1B6B99A6002567BE /* Note.storyboard */; };
 		B2F88CF81B6B9A06002567BE /* CommonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88CF71B6B9A06002567BE /* CommonHelper.m */; };
 		B2F88CFC1B6B9AA7002567BE /* MMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88CFB1B6B9AA7002567BE /* MMViewController.m */; };
@@ -24,6 +23,9 @@
 		B2F88D0B1B6BBEA3002567BE /* MMTouchLockSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88D0A1B6BBEA3002567BE /* MMTouchLockSplashViewController.m */; };
 		B2F88D0E1B6BBEE8002567BE /* MMNoteEditTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88D0D1B6BBEE8002567BE /* MMNoteEditTextView.m */; };
 		B2F88D101B6BC6C4002567BE /* Main.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F88D0F1B6BC6C4002567BE /* Main.Storyboard */; };
+		B2F9DE251B6C722E003A7DCA /* NoteList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2F9DE241B6C722E003A7DCA /* NoteList.plist */; };
+		B2F9DE281B6C7269003A7DCA /* MMNoteData.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9DE271B6C7269003A7DCA /* MMNoteData.m */; };
+		B2F9DE2B1B6C79B9003A7DCA /* FMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9DE2A1B6C79B9003A7DCA /* FMDBHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,6 @@
 		B2F88C9E1B6B9712002567BE /* MemoOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F88CA31B6B9712002567BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2F88CA41B6B9712002567BE /* MemoOCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoOCTests.m; sourceTree = "<group>"; };
-		B2F88CB91B6B99A6002567BE /* NoteList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NoteList.plist; sourceTree = "<group>"; };
 		B2F88CBB1B6B99A6002567BE /* Note.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Note.storyboard; sourceTree = "<group>"; };
 		B2F88CF61B6B9A06002567BE /* CommonHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHelper.h; sourceTree = "<group>"; };
 		B2F88CF71B6B9A06002567BE /* CommonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonHelper.m; sourceTree = "<group>"; };
@@ -69,6 +70,13 @@
 		B2F88D0C1B6BBEE8002567BE /* MMNoteEditTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNoteEditTextView.h; sourceTree = "<group>"; };
 		B2F88D0D1B6BBEE8002567BE /* MMNoteEditTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNoteEditTextView.m; sourceTree = "<group>"; };
 		B2F88D0F1B6BC6C4002567BE /* Main.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.Storyboard; sourceTree = "<group>"; };
+		B2F9DE211B6C65CB003A7DCA /* MMConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMConstant.h; sourceTree = "<group>"; };
+		B2F9DE221B6C66A4003A7DCA /* MemoOC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoOC-Prefix.pch"; sourceTree = "<group>"; };
+		B2F9DE241B6C722E003A7DCA /* NoteList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NoteList.plist; sourceTree = "<group>"; };
+		B2F9DE261B6C7269003A7DCA /* MMNoteData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNoteData.h; sourceTree = "<group>"; };
+		B2F9DE271B6C7269003A7DCA /* MMNoteData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNoteData.m; sourceTree = "<group>"; };
+		B2F9DE291B6C79B9003A7DCA /* FMDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBHelper.h; sourceTree = "<group>"; };
+		B2F9DE2A1B6C79B9003A7DCA /* FMDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBHelper.m; sourceTree = "<group>"; };
 		E12BD68C3625EC2705FACCBF /* libPods-MemoOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -122,6 +130,7 @@
 		B2F88C871B6B9712002567BE /* MemoOC */ = {
 			isa = PBXGroup;
 			children = (
+				B2F9DE231B6C720F003A7DCA /* Model */,
 				B2F88CAE1B6B99A6002567BE /* Helper */,
 				B2F88CC01B6B99A6002567BE /* Template */,
 				B2F88CB01B6B99A6002567BE /* Module */,
@@ -141,6 +150,8 @@
 				B2F88C971B6B9712002567BE /* LaunchScreen.xib */,
 				B2F88C891B6B9712002567BE /* Info.plist */,
 				B2F88C8A1B6B9712002567BE /* main.m */,
+				B2F9DE211B6C65CB003A7DCA /* MMConstant.h */,
+				B2F9DE221B6C66A4003A7DCA /* MemoOC-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -165,6 +176,8 @@
 		B2F88CAE1B6B99A6002567BE /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B2F9DE291B6C79B9003A7DCA /* FMDBHelper.h */,
+				B2F9DE2A1B6C79B9003A7DCA /* FMDBHelper.m */,
 				B2F88CF91B6B9A46002567BE /* Singleton.h */,
 				B2F88CF61B6B9A06002567BE /* CommonHelper.h */,
 				B2F88CF71B6B9A06002567BE /* CommonHelper.m */,
@@ -198,7 +211,6 @@
 			children = (
 				B2F88CB51B6B99A6002567BE /* Controller */,
 				B2F88CB81B6B99A6002567BE /* Model */,
-				B2F88CB91B6B99A6002567BE /* NoteList.plist */,
 				B2F88CBA1B6B99A6002567BE /* Source */,
 				B2F88CBC1B6B99A6002567BE /* View */,
 			);
@@ -226,6 +238,7 @@
 		B2F88CBA1B6B99A6002567BE /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B2F9DE241B6C722E003A7DCA /* NoteList.plist */,
 				B2F88CBB1B6B99A6002567BE /* Note.storyboard */,
 			);
 			path = Source;
@@ -263,6 +276,15 @@
 			children = (
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		B2F9DE231B6C720F003A7DCA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2F9DE261B6C7269003A7DCA /* MMNoteData.h */,
+				B2F9DE271B6C7269003A7DCA /* MMNoteData.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E9B144FFE9756721C97BF9E6 /* Pods */ = {
@@ -357,10 +379,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F88C991B6B9712002567BE /* LaunchScreen.xib in Resources */,
-				B2F88CE51B6B99A6002567BE /* NoteList.plist in Resources */,
 				B2F88D101B6BC6C4002567BE /* Main.Storyboard in Resources */,
 				B2F88CE61B6B99A6002567BE /* Note.storyboard in Resources */,
 				B2F88C961B6B9712002567BE /* Images.xcassets in Resources */,
+				B2F9DE251B6C722E003A7DCA /* NoteList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,8 +438,10 @@
 				B2F88C8E1B6B9712002567BE /* AppDelegate.m in Sources */,
 				B2F88CF81B6B9A06002567BE /* CommonHelper.m in Sources */,
 				B2F88C8B1B6B9712002567BE /* main.m in Sources */,
+				B2F9DE281B6C7269003A7DCA /* MMNoteData.m in Sources */,
 				B2F88CFF1B6B9C32002567BE /* MMNavigationController.m in Sources */,
 				B2F88CFC1B6B9AA7002567BE /* MMViewController.m in Sources */,
+				B2F9DE2B1B6C79B9003A7DCA /* FMDBHelper.m in Sources */,
 				B2F88D021B6B9C57002567BE /* MMTabBarController.m in Sources */,
 				B2F88D0E1B6BBEE8002567BE /* MMNoteEditTextView.m in Sources */,
 				B2F88D051B6B9CFB002567BE /* MMNoteCollectionViewController.m in Sources */,
@@ -541,6 +565,8 @@
 			baseConfigurationReference = 4283CCFC37DA233488C5BB96 /* Pods-MemoOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoOC/MemoOC-Prefix.pch";
 				INFOPLIST_FILE = MemoOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -552,6 +578,8 @@
 			baseConfigurationReference = 0CB710FF5605CD19DEE6C6B1 /* Pods-MemoOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoOC/MemoOC-Prefix.pch";
 				INFOPLIST_FILE = MemoOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

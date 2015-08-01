@@ -7,658 +7,794 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		028B154A1DF75C5182D07B9A /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DAAD80D3CBF7F2929B2386E /* NSLayoutConstraint+MASDebugAdditions.h */; };
-		04D3388165A7EB800BE55049 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A63ED06CC199A4966A2490E9 /* MASConstraint+Private.h */; };
-		066D269D8C19DCDCF813F2BF /* Pods-MemoOC-SSKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2D18045CD5365714268DCE /* Pods-MemoOC-SSKeychain-dummy.m */; };
-		0B3E87BF982B926CC4459CEA /* VENTouchLockSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C860EA23BA8484F760222F0 /* VENTouchLockSplashViewController.m */; };
-		0ED7E09D7E18031CF68BAA85 /* VENTouchLockEnterPasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D38784B62F0713F1210B24D /* VENTouchLockEnterPasscodeViewController.m */; };
-		1418983B8F898FFFE69F5CED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721BD6CF4B20A1658FAEA4BD /* Foundation.framework */; };
-		151D4A303FA794D4BBC57A8F /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A08C1078C2BF62241748FE /* NSArray+MASShorthandAdditions.h */; };
-		17813FE856A806E420A6AE17 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A0BDA929A500214CD4CBC5 /* Colours.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		20D13B9B039A140DC88DF8B3 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F75A92B260FDC7CD4BD45A6 /* MASCompositeConstraint.m */; };
-		2A8AB377B78FCD9640290371 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCD2D81F2CB899E90B857BE /* MASConstraintMaker.m */; };
-		2C8B55834A0C091BD9494ADB /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EA740C90916EAFBD8B2BB9E1 /* ViewController+MASAdditions.h */; };
-		41CC5BB8C3A64B9FFCCEFEE0 /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D8CACD49FD46C1D48394C18 /* SSKeychain.h */; };
-		487B893E10172B555CAE7479 /* VENTouchLock.h in Headers */ = {isa = PBXBuildFile; fileRef = 4087193521BFAAE9FC8F1571 /* VENTouchLock.h */; };
-		48EAEAC6FF6686989EFD4D06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721BD6CF4B20A1658FAEA4BD /* Foundation.framework */; };
-		4ABC08B7244B934936703C5E /* VENTouchLockEnterPasscodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 33CBF0CFA014B7A1C0D14018 /* VENTouchLockEnterPasscodeViewController.h */; };
-		4AE5D72E4FFB05E59D15F30E /* VENTouchLockAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FC1DED935B21E978C9F00DF /* VENTouchLockAppearance.h */; };
-		4B4ECBC141CA14038FD924C9 /* Colours.h in Headers */ = {isa = PBXBuildFile; fileRef = 80C5BC6572F287F76D94797F /* Colours.h */; };
-		4DCC7AFAD676236AA25AD578 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 05121A72628FD27626621A3B /* MASCompositeConstraint.h */; };
-		598D103FF558B743EB9FB02A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721BD6CF4B20A1658FAEA4BD /* Foundation.framework */; };
-		5E129107F029ADC6943C9698 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F8E2E63EA64CB125283217 /* SSKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		62640BF752CC52C405BCC019 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE69E721D4DC8EDD17DFFDB /* View+MASAdditions.m */; };
-		6290CCE4377F2AAAB5C5FE3D /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB73ED7EA6A2DFB8338C8D6 /* MASViewAttribute.h */; };
-		66E60E95F8AFACBF201003DE /* Pods-MemoOC-VENTouchLock-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A92034355CC07E1BD2349 /* Pods-MemoOC-VENTouchLock-dummy.m */; };
-		68AE36C2B2782B238DCA456E /* VENTouchLockPasscodeCharacterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11CAA6AD6AB9BFD58256A39F /* VENTouchLockPasscodeCharacterView.h */; };
-		691E9A1B24F9CF1A2868D853 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4291EBF9D62F16A4870F3CFA /* ViewController+MASAdditions.m */; };
-		6D9AB188ECD6118671CD8A74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721BD6CF4B20A1658FAEA4BD /* Foundation.framework */; };
-		728E806E92171E09DEC5A696 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B8BE4DB6BBC50F225D886 /* NSArray+MASAdditions.m */; };
-		7785F5D7BDDFF092E8B68E93 /* VENTouchLockCreatePasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE345EC349D866930E1E2D /* VENTouchLockCreatePasscodeViewController.m */; };
-		7BEA0B453483F37160697886 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7C1C67CDEDD0BD92AD487F /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		7C42698EDEDD2CBC2C6E1675 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D1493A05DFF423A04A033C79 /* MASViewConstraint.m */; };
-		8109B3A749A048C42FEE565B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D19771446C2852CC738829B /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		85A6DD4AD8B13688B562135F /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 80568BE21F58F8E17A754C5D /* MASLayoutConstraint.h */; };
-		870B2CFD696CE6AF405727C8 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 679EEEE23437B393082E2C73 /* MBProgressHUD.h */; };
-		8799B5ECA8627AE1DFF9204C /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = A7AB34C042DB19FF364D6382 /* Masonry.h */; };
-		8F4E73491576C98FB0F12ECC /* Pods-MemoOC-Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4629E81C5A819BA3EA4F37 /* Pods-MemoOC-Masonry-dummy.m */; };
-		91729D4B98DF9592064248C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C619F1ADAF996400E94218 /* Security.framework */; };
-		93D8F3F580B3DE78BFE97E81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C0DB5F19F648B5933DEE103 /* UIKit.framework */; };
-		97D8EBCD2D5910D737977961 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B51CC3C6D8E2C3C3FF0FBB84 /* View+MASShorthandAdditions.h */; };
-		9B2216874D8A8C25A890AA99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721BD6CF4B20A1658FAEA4BD /* Foundation.framework */; };
-		A44368F78BBC735A99619914 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 602C89F4C0E7B179ACA94049 /* SSKeychainQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A4A901D23B8CE96DD979717E /* VENTouchLockAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8A704AC34F114456A0399 /* VENTouchLockAppearance.m */; };
-		AB017215ED119F5606B837ED /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F2AF4D4F31444B494522AF /* MASConstraint.h */; };
-		AB1B0E817D9F303C88C91CBF /* Pods-MemoOC-Colours-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99675B2DCB5871F6183A0928 /* Pods-MemoOC-Colours-dummy.m */; };
-		ABB8978175CF010712293917 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF68486D2C495B29311F172 /* View+MASAdditions.h */; };
-		B4AA382D6D320EDF1D4647A9 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 36A0FFB485368EE331486030 /* MASUtilities.h */; };
-		B4FE01B0F99228076358A92B /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB5EC2B82A7A490193EA2C /* MASLayoutConstraint.m */; };
-		B6C9E99123E57B70C1055890 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721BD6CF4B20A1658FAEA4BD /* Foundation.framework */; };
-		B7AB8BCDCB16F4C1AEAE5BCF /* Pods-MemoOC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A10F664066C93EC3199F93D2 /* Pods-MemoOC-dummy.m */; };
-		B845402ED121537618193F3D /* VENTouchLockCreatePasscodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1472A0A1D451DAC788A30770 /* VENTouchLockCreatePasscodeViewController.h */; };
-		BCD012B2A7F1725B0DA01E36 /* UIViewController+VENTouchLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E968BFC417185EEDAAF1B44 /* UIViewController+VENTouchLock.m */; };
-		BDB2B26831C52F44AB9B8A40 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 14BD0A58A0508B23C1FD2EFF /* NSArray+MASAdditions.h */; };
-		BDD386E8BA2654388F46D7F6 /* UIViewController+VENTouchLock.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A779DAFF3C925CE62E4896C /* UIViewController+VENTouchLock.h */; };
-		C0C142EC9D0C2A9BBEA4BADB /* VENTouchLockSplashViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C1CF9D0100228C10FC5DDFA4 /* VENTouchLockSplashViewController.h */; };
-		C804047E1AFF6DF78AD93360 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 828858777A0FC97BDC283B83 /* MASConstraint.m */; };
-		D23FCC8EA3FE8885C55A622D /* Pods-MemoOC-MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A06AD37FB52209BA34FE98 /* Pods-MemoOC-MBProgressHUD-dummy.m */; };
-		D61D56A729989F28AB57792A /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D886DC7D6C06C9EE720CE51C /* LocalAuthentication.framework */; };
-		D9EEA91B1EF7D44DBD340DBB /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = C450CF5914D91A87A32CBFE2 /* MASViewConstraint.h */; };
-		DCE2F757B1FD742BF095D0CD /* VENTouchLockPasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE1ADF57EA79E0C70D5EF58 /* VENTouchLockPasscodeViewController.m */; };
-		DEDEF66CFF6C356CD53308DA /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 159F83566EA360801CDE32BC /* MASConstraintMaker.h */; };
-		E0378FDB6ACE7232B19D2984 /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = DE1D879AF29D8C4D958E19F6 /* SSKeychainQuery.h */; };
-		E08899634709CBF643D1C3E8 /* VENTouchLockPasscodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 98D162410D67C59381529600 /* VENTouchLockPasscodeView.h */; };
-		E27F0184869D02911DD93A95 /* VENTouchLockPasscodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9612C5F6AA2171A563B7693D /* VENTouchLockPasscodeView.m */; };
-		EA4D17D9DB314511F2913721 /* VENTouchLockPasscodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A8232B9C91DE833C0A115F5 /* VENTouchLockPasscodeViewController.h */; };
-		ED7A9128DD68FC3956EA0F8D /* VENTouchLockPasscodeCharacterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070D5D42634D818F8FB9EA01 /* VENTouchLockPasscodeCharacterView.m */; };
-		F3331E5A36BCA1969207233B /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E0C8F1C9CD7754671B6A87 /* MASViewAttribute.m */; };
-		F3F99FD9FAB0CDE226A05AA0 /* VENTouchLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A59C75C7FCC2339C00422 /* VENTouchLock.m */; };
-		F4FAFA21347410F7A4D7B5C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61C5430B2D34CE7A87DFCFC /* CoreGraphics.framework */; };
+		077FBF521CEC301E71030A45 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5096A2C1A7F31CEE7EABE46C /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0B15BC82870CFB198DB27CD5 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F0FAA38F1930CD83EF7E49DD /* NSArray+MASAdditions.h */; };
+		1027EFA3D7C45AAD8D060FD8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F180B85058E617B5B4A429 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		146B28CEE3FC68ABEC0DCDF4 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 78471F5BEE5E9904FDEA4EB2 /* NSObject+MJKeyValue.m */; };
+		159979D6E49A80CDEF07E9F5 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = FCDB41358C6FFED3F2B5454F /* MASLayoutConstraint.h */; };
+		17D70E1FFAAB0BF0D3F65FF3 /* VENTouchLockPasscodeCharacterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C162530CAE6A9BCFA67AA8DC /* VENTouchLockPasscodeCharacterView.m */; };
+		17E23BFEEA6545072800E177 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B25095F8A1E704BD795C62 /* MJExtensionConst.m */; };
+		18FF5C412447D563C32F80F8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751399CEDB1E5403DA4A7A0F /* Security.framework */; };
+		23DAEF80A0D5915648AE3106 /* VENTouchLockCreatePasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8A47A69457BC0BED73C4BE /* VENTouchLockCreatePasscodeViewController.m */; };
+		2518790F85C84E17ADA9DEFC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFC2BB6943DC4712E088E33 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		26456BAA1AB1F38F22111446 /* Pods-MemoOC-Colours-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 949EFB2820927F37277C09CC /* Pods-MemoOC-Colours-dummy.m */; };
+		29BB6358120E388CBE9C02F4 /* VENTouchLockPasscodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E66DD6A5CC5407200E27158 /* VENTouchLockPasscodeViewController.h */; };
+		2FA3F415DC1F5BB005335926 /* MJExtensionConst.h in Headers */ = {isa = PBXBuildFile; fileRef = BBA4536B77FD514BFC0A3400 /* MJExtensionConst.h */; };
+		306142D4C92C61B94AA780E2 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = FE5CAA3C53380BF8DEB84F5C /* FMDatabaseQueue.h */; };
+		32D02D8D94D1C95BD5E04E20 /* MJType.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBE043F03049CD23BA2A1C /* MJType.m */; };
+		3889C8186A7378CFBD55D5C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B4DEE2D53499FEA3F14B03 /* Foundation.framework */; };
+		3D77AD04CD5991B7C8D2A219 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 32793B64BA04803EF37BD3E1 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3DE66578FAE73F69BD7705F6 /* Pods-MemoOC-SSKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF0257D65A62765F3C50494 /* Pods-MemoOC-SSKeychain-dummy.m */; };
+		42889EDE78C19D28B9F9EAEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B4DEE2D53499FEA3F14B03 /* Foundation.framework */; };
+		4372076287259D2B4AEAF3A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B4DEE2D53499FEA3F14B03 /* Foundation.framework */; };
+		43826A31C743474B1F82E68C /* VENTouchLock.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C04576CDC6192C9A7DEC269 /* VENTouchLock.h */; };
+		453D899EBF3A4AFA60F05C9D /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 622CC2A209E971F645479655 /* MJExtension.h */; };
+		45A4C408E526A58147055129 /* MJType.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D57B27E08A92234117CA77 /* MJType.h */; };
+		4619A3ACEE9428018DE89D9A /* NSString+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8505FA2AF69114F9CEDB47AD /* NSString+MJExtension.h */; };
+		4898249ACC07E1103A8E4800 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 697D109155068C5014DF6FE1 /* Colours.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		493EBA58A492D2E18EA118CA /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4119BF1E6D5F8310A6482B36 /* View+MASAdditions.m */; };
+		4FD09223AF4738E734B89380 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A1FC96F9E5200C456BEBA9 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		51A2C5C341625CDEA3B5E8B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B4DEE2D53499FEA3F14B03 /* Foundation.framework */; };
+		535350140372B3A129EB8E11 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 044AA16EAD239420CFE1A52F /* MASViewConstraint.m */; };
+		53A37726C35A4557C13A3E0D /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0850C5A7004D1AD5068786B6 /* FMDatabaseAdditions.h */; };
+		53BCA78C22D87D98F3A38364 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C4CFA11E3430A549ACD65E /* ViewController+MASAdditions.h */; };
+		5748054AC324995F682E7FFF /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 64E45377FDBF8CA317C71CF1 /* MASViewConstraint.h */; };
+		575199155F0814B2D22B67C6 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AE984CAA4CC803A7F2B1353 /* FMResultSet.h */; };
+		582A413C6538BFA453EB1A0C /* VENTouchLockAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE6C71A69BB6EDC848CAC0 /* VENTouchLockAppearance.m */; };
+		58FD45999C1D6E0163A74999 /* VENTouchLockEnterPasscodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 132F2AE6C9B3941E381EB11A /* VENTouchLockEnterPasscodeViewController.h */; };
+		5A2CB8322796850BC1C2BCA1 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F7DAD62904D899EAF0CEA745 /* MASConstraint+Private.h */; };
+		60F0940D96463D5D72D66D50 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F94DCF84C67AD447EEC03D /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6196802A8FB48CF7326530B1 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A7595830004BD3D261729DF0 /* MASCompositeConstraint.m */; };
+		64FD0C0478A8E3D453725E5F /* Pods-MemoOC-MJExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD2236CD5DEF1FA9CAB1CE5 /* Pods-MemoOC-MJExtension-dummy.m */; };
+		65660F7CF8BA010245D4DBB3 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BB5BF144D2B3A69B0701E6 /* MJProperty.m */; };
+		688F7BB24307F8AC455005BB /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 30997FF75C7E683083333926 /* NSArray+MASAdditions.m */; };
+		6A776BDB09924EF2EAC01E6D /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5934A60B6825AC1A8CFD1111 /* NSObject+MJProperty.m */; };
+		6B1C10B9AF8096E80A388233 /* VENTouchLockCreatePasscodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 734144B8165C6AA90A9F71C0 /* VENTouchLockCreatePasscodeViewController.h */; };
+		6FFA68BFD27FF6CD5D53B1BF /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 812638FBA74C0B9DA31F480E /* ViewController+MASAdditions.m */; };
+		70144E287FA59988F1EBFFFA /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D014F6920673ABE24F425E /* View+MASShorthandAdditions.h */; };
+		7294BBCB2E1C06E335494903 /* Colours.h in Headers */ = {isa = PBXBuildFile; fileRef = B101C15E366490D3FFF3E29C /* Colours.h */; };
+		73E20B34BCBEBAF6DB86F3C0 /* VENTouchLockSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E38C37862471AFB427474670 /* VENTouchLockSplashViewController.m */; };
+		7656FB03D4CD3F6240299C84 /* VENTouchLockAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = 69D00273F3A12B13DAA5EE1B /* VENTouchLockAppearance.h */; };
+		773E697560CBD3F875D4363B /* VENTouchLockPasscodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = F4FA09F8F4C803B7531EB24C /* VENTouchLockPasscodeView.h */; };
+		78E2BA2C91A3B620B0391A32 /* Pods-MemoOC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3289847C30E8B7A81C42D5D1 /* Pods-MemoOC-dummy.m */; };
+		79C215D53DB2AA430C76BA05 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = D0AA7FE6FFBACA967B94C218 /* MBProgressHUD.h */; };
+		79F1B3677B6E5CC0C34B7F95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B4DEE2D53499FEA3F14B03 /* Foundation.framework */; };
+		7CEBEA07FE490A7185B1CE5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B4DEE2D53499FEA3F14B03 /* Foundation.framework */; };
+		7DF14980C4C5591BC7B3F6F9 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1330B5A46AFC50A1558DF8 /* SSKeychainQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		80208D6A52593E7BC04D3885 /* Pods-MemoOC-VENTouchLock-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6275243490E2CDC507688C6 /* Pods-MemoOC-VENTouchLock-dummy.m */; };
+		817AA7B8D5B0AE815D2D3D97 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8051A8BA50906B693900B32A /* LocalAuthentication.framework */; };
+		831B832ACAAA5AF3A7F24BB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B4DEE2D53499FEA3F14B03 /* Foundation.framework */; };
+		915773B92A48ACA5A0113C61 /* VENTouchLockPasscodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB8925D0CE60B991ACD057B /* VENTouchLockPasscodeView.m */; };
+		949B43C87F579F2D07ECBF57 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 6256C3671C4F957F287A2D5B /* FMDatabasePool.h */; };
+		9896ACFE80E02D6EE5DA5E20 /* NSObject+MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D38488616554D729D19F780 /* NSObject+MJProperty.h */; };
+		9A050F6D8302846B6F2C4B7C /* VENTouchLockPasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB19CF1BA0C90C5F6242EA3 /* VENTouchLockPasscodeViewController.m */; };
+		9AEE9E89981D6B4AD074450C /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 4990D3BF1814516E11B9ADDD /* MASUtilities.h */; };
+		9B15CBF8CD4FED19645ABF99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B4DEE2D53499FEA3F14B03 /* Foundation.framework */; };
+		9C35C918093834576CB83504 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 87DD718EC3B8ADD7DBEBEC2B /* FMDB.h */; };
+		A0F99CD3E22C83C2BC95C5C8 /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFB10D3F984E8451205F95A /* SSKeychainQuery.h */; };
+		A49E9D45E60D4F8B51ADFAD2 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE57B6F1ACC660E1F0E2093A /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ACFA5A89DE15FD421E393EE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF22D104998832B6690FF6D /* CoreGraphics.framework */; };
+		ADB9A56C106EB0DAC89DF16D /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = F6C28F5AF7BE9DA555D9E34E /* MASCompositeConstraint.h */; };
+		ADBED3D93548766BA211A162 /* NSObject+MJCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1EDBA36E95243F0163E586 /* NSObject+MJCoding.h */; };
+		AED658A20598E7443A21293A /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = A83535C9EC4D8A139B9D467B /* MASViewAttribute.h */; };
+		B0A8C816790655D3C5104E82 /* UIViewController+VENTouchLock.h in Headers */ = {isa = PBXBuildFile; fileRef = 479B9A7DF9A42E87000BEE34 /* UIViewController+VENTouchLock.h */; };
+		B1FFB173799F3A653EA6C314 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = AFADE06E68044EEA9B1CF3D3 /* MASConstraintMaker.m */; };
+		B72F450F4A816274E3B142B1 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 77E5B70955BDCD5F22A7E961 /* FMDatabase.h */; };
+		BBFAC89720F48AE5E2FA7859 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F70E337AA77BB677DC5CB0 /* Masonry.h */; };
+		BC55AF3EA974605292EF6BCF /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A960735C29B2FA7F030F03D /* NSLayoutConstraint+MASDebugAdditions.h */; };
+		BD522F721B06EFA21CDDB431 /* Pods-MemoOC-Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 044FFE26090490389FCD5EEA /* Pods-MemoOC-Masonry-dummy.m */; };
+		BE270EA0668FE3F26444783B /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FB9046E7ADC141191FEC7B0 /* MASConstraint.h */; };
+		C272370BC8F08777D848937C /* MJFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = AF112DC6A87C20B2CB7A0D6E /* MJFoundation.h */; };
+		C72BA1F8811900382EB1FEA3 /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 655B5ED8B6F1513D7533373A /* SSKeychain.h */; };
+		C9FB99383090F4AA33C9D5E2 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 924687C9A42C33FFFDBF9615 /* MJFoundation.m */; };
+		CDC0D7B7DE7238DC2898E3CE /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 34013B8FDBAAB28F11017F54 /* MASConstraintMaker.h */; };
+		CE3D4A7EE64B5471B7E6C237 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 92351600005540B1BDDB11AD /* NSString+MJExtension.m */; };
+		D0DDF408B53FF5CDBC0DC50B /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C1EC1B3F9A964F16BF6DCA31 /* MASConstraint.m */; };
+		D344BE467893BDBDDB33C393 /* VENTouchLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD75105B21D131950B6BEE9 /* VENTouchLock.m */; };
+		D575B7404CF38B976C64C6D0 /* VENTouchLockEnterPasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4639A9723FA6130CEB6075 /* VENTouchLockEnterPasscodeViewController.m */; };
+		D72EB3146051CD99DB562AD2 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD32BB9EBC077319BF88CC /* SSKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D959E020CFF4ADE48C6429DE /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = FE305379C53E930A5FC756E7 /* MASLayoutConstraint.m */; };
+		DA517EDD63279CBC8A790390 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDE29CB272E74C50324653E /* MASViewAttribute.m */; };
+		DEFE9255AF3B22B47CDF2C5D /* MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = F5B8DF1051EAD42FFBB23036 /* MJProperty.h */; };
+		E0885ED7D50D5FE7B282DA49 /* UIViewController+VENTouchLock.m in Sources */ = {isa = PBXBuildFile; fileRef = C84ED164856B2D07091BC534 /* UIViewController+VENTouchLock.m */; };
+		E616F61836BA4091687F615D /* VENTouchLockSplashViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CCB359088E2C23FB72829342 /* VENTouchLockSplashViewController.h */; };
+		EA2A196CC14A8A74D36F480C /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A9F5CCFE23692C003D632C /* NSObject+MJCoding.m */; };
+		EFE1DA2838F104A418BC8447 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 62440982F17482A2AA606EB5 /* NSArray+MASShorthandAdditions.h */; };
+		F1B95877BE97492EF9F7C7CF /* VENTouchLockPasscodeCharacterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C9839D07134ED9B466BC72E /* VENTouchLockPasscodeCharacterView.h */; };
+		F45BAAB9D1E28F53BB953533 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39AB6CBC3731B9664AA52105 /* UIKit.framework */; };
+		F88546E15E0F4D53D8754195 /* Pods-MemoOC-FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2CA75ABC6F475006207D33 /* Pods-MemoOC-FMDB-dummy.m */; };
+		F98F0A1591BAA4DB9AE68949 /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A6869A37DF5B07CF1C2439 /* NSObject+MJKeyValue.h */; };
+		FC4F58240AB215B929CE2DFF /* Pods-MemoOC-MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9086785D7C6670497419BC70 /* Pods-MemoOC-MBProgressHUD-dummy.m */; };
+		FCF5890207A8D6774F72BA9A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4C920DD3B7D64839F2B0822 /* View+MASAdditions.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		211F50B310EC81CA1F335F58 /* PBXContainerItemProxy */ = {
+		0C919E39A6422FFF105CEF73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84142320243E9351CD617129 /* Project object */;
+			containerPortal = 19D60E55EFAEA7247A9F90E4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 28EEDF53FE7720EFDE35002A;
-			remoteInfo = "Pods-MemoOC-Colours";
+			remoteGlobalIDString = 6DD0C0584D0B649B8BB43B18;
+			remoteInfo = "Pods-MemoOC-Masonry";
 		};
-		26AA7ED1A45C48C13B0D76E5 /* PBXContainerItemProxy */ = {
+		0D88CF76753EEEFF5633B134 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84142320243E9351CD617129 /* Project object */;
+			containerPortal = 19D60E55EFAEA7247A9F90E4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 907D54217F8C377C08B0E2B9;
+			remoteGlobalIDString = 3263379F64AC6BAE1BA86ED2;
 			remoteInfo = "Pods-MemoOC-SSKeychain";
 		};
-		63C4EC65F9FF65919749A602 /* PBXContainerItemProxy */ = {
+		290D4782E1BEBD3896F60BA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84142320243E9351CD617129 /* Project object */;
+			containerPortal = 19D60E55EFAEA7247A9F90E4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1B44484E186135609A9E2CA7;
-			remoteInfo = "Pods-MemoOC-MBProgressHUD";
+			remoteGlobalIDString = C15EC6EA3FC0535FFC37F919;
+			remoteInfo = "Pods-MemoOC-FMDB";
 		};
-		6AE25F441B5565C5B86C5B24 /* PBXContainerItemProxy */ = {
+		5D5DFE3EEB071658A6E7CFF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84142320243E9351CD617129 /* Project object */;
+			containerPortal = 19D60E55EFAEA7247A9F90E4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 15A6F5A8B57010F74D9E031A;
+			remoteGlobalIDString = 84E1B0224445CCE1F12F26E4;
 			remoteInfo = "Pods-MemoOC-VENTouchLock";
 		};
-		9533CA6782EE183DCA8C56DB /* PBXContainerItemProxy */ = {
+		5FB28B13A9AFA2E79FD1785E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84142320243E9351CD617129 /* Project object */;
+			containerPortal = 19D60E55EFAEA7247A9F90E4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 907D54217F8C377C08B0E2B9;
+			remoteGlobalIDString = F97B5F5B7FA34054E2CC870D;
+			remoteInfo = "Pods-MemoOC-MJExtension";
+		};
+		83B05015A57BE9A76CB85767 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19D60E55EFAEA7247A9F90E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2C455BC1219022ED79EA8C0;
+			remoteInfo = "Pods-MemoOC-MBProgressHUD";
+		};
+		AC0E1EB63FF079E7DE16E8CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19D60E55EFAEA7247A9F90E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3263379F64AC6BAE1BA86ED2;
 			remoteInfo = "Pods-MemoOC-SSKeychain";
 		};
-		CE87412666B46B6148DDB3C3 /* PBXContainerItemProxy */ = {
+		FE433D54F81A21BDC319C610 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84142320243E9351CD617129 /* Project object */;
+			containerPortal = 19D60E55EFAEA7247A9F90E4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AD01562C416D363421FE1694;
-			remoteInfo = "Pods-MemoOC-Masonry";
+			remoteGlobalIDString = AA3E3D92B4BE4C21FC04BE50;
+			remoteInfo = "Pods-MemoOC-Colours";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0360BAF1D1BC8967E3125582 /* Pods-MemoOC-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-environment.h"; sourceTree = "<group>"; };
-		05121A72628FD27626621A3B /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
-		070D5D42634D818F8FB9EA01 /* VENTouchLockPasscodeCharacterView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockPasscodeCharacterView.m; path = VENTouchLock/Views/VENTouchLockPasscodeCharacterView.m; sourceTree = "<group>"; };
-		0E968BFC417185EEDAAF1B44 /* UIViewController+VENTouchLock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+VENTouchLock.m"; path = "VENTouchLock/Categories/UIViewController+VENTouchLock.m"; sourceTree = "<group>"; };
-		0EF68486D2C495B29311F172 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
-		11CAA6AD6AB9BFD58256A39F /* VENTouchLockPasscodeCharacterView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockPasscodeCharacterView.h; path = VENTouchLock/Views/VENTouchLockPasscodeCharacterView.h; sourceTree = "<group>"; };
-		1472A0A1D451DAC788A30770 /* VENTouchLockCreatePasscodeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockCreatePasscodeViewController.h; path = VENTouchLock/Controllers/VENTouchLockCreatePasscodeViewController.h; sourceTree = "<group>"; };
-		14BD0A58A0508B23C1FD2EFF /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		159F83566EA360801CDE32BC /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
-		1673EBCDBF765F71BC6A9B8C /* libPods-MemoOC-VENTouchLock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC-VENTouchLock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		167F91A924219606804930DD /* Pods-MemoOC-VENTouchLock-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-VENTouchLock-Private.xcconfig"; sourceTree = "<group>"; };
-		1A779DAFF3C925CE62E4896C /* UIViewController+VENTouchLock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+VENTouchLock.h"; path = "VENTouchLock/Categories/UIViewController+VENTouchLock.h"; sourceTree = "<group>"; };
-		27CAE75C5BC7E319EFE9AC3C /* Pods-MemoOC-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MemoOC-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2EE69E721D4DC8EDD17DFFDB /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
-		2FC1DED935B21E978C9F00DF /* VENTouchLockAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockAppearance.h; path = VENTouchLock/Models/VENTouchLockAppearance.h; sourceTree = "<group>"; };
-		33C58ABF38F0BA9B284BADD7 /* Pods-MemoOC-Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-Masonry-prefix.pch"; sourceTree = "<group>"; };
-		33CBF0CFA014B7A1C0D14018 /* VENTouchLockEnterPasscodeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockEnterPasscodeViewController.h; path = VENTouchLock/Controllers/VENTouchLockEnterPasscodeViewController.h; sourceTree = "<group>"; };
-		340B0466EBBB79A4B5AC2C2A /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		36A0FFB485368EE331486030 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
-		37C619F1ADAF996400E94218 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		398A92034355CC07E1BD2349 /* Pods-MemoOC-VENTouchLock-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-VENTouchLock-dummy.m"; sourceTree = "<group>"; };
-		39A08C1078C2BF62241748FE /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		3C254E509B9918E6B0393076 /* Pods-MemoOC-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MemoOC-acknowledgements.plist"; sourceTree = "<group>"; };
-		3DAAD80D3CBF7F2929B2386E /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		4087193521BFAAE9FC8F1571 /* VENTouchLock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLock.h; path = VENTouchLock/VENTouchLock.h; sourceTree = "<group>"; };
-		4291EBF9D62F16A4870F3CFA /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		46268DFC565FDF25F0D67CF4 /* Pods-MemoOC-SSKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-SSKeychain-prefix.pch"; sourceTree = "<group>"; };
-		4B7C1C67CDEDD0BD92AD487F /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		4BAEBA0D039FC6037249FF92 /* VENTouchLockPasscodeView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = VENTouchLockPasscodeView.xib; path = VENTouchLock/Views/VENTouchLockPasscodeView.xib; sourceTree = "<group>"; };
-		4C8A59EC0B415E8A6F1EA150 /* Pods-MemoOC-SSKeychain.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-SSKeychain.xcconfig"; sourceTree = "<group>"; };
-		4D38784B62F0713F1210B24D /* VENTouchLockEnterPasscodeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockEnterPasscodeViewController.m; path = VENTouchLock/Controllers/VENTouchLockEnterPasscodeViewController.m; sourceTree = "<group>"; };
-		584A22DDFA5B4BF9E46EF0A6 /* libPods-MemoOC-Colours.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC-Colours.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		591221D9C03F7DCDFAC50771 /* Pods-MemoOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC.release.xcconfig"; sourceTree = "<group>"; };
-		5D4629E81C5A819BA3EA4F37 /* Pods-MemoOC-Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-Masonry-dummy.m"; sourceTree = "<group>"; };
-		602C89F4C0E7B179ACA94049 /* SSKeychainQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychainQuery.m; path = SSKeychain/SSKeychainQuery.m; sourceTree = "<group>"; };
-		63D7B64B57E3B0883E29A221 /* Pods-MemoOC-Colours-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-Colours-Private.xcconfig"; sourceTree = "<group>"; };
-		66AE345EC349D866930E1E2D /* VENTouchLockCreatePasscodeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockCreatePasscodeViewController.m; path = VENTouchLock/Controllers/VENTouchLockCreatePasscodeViewController.m; sourceTree = "<group>"; };
-		679EEEE23437B393082E2C73 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		6B3B8BE4DB6BBC50F225D886 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		6BD98FB3B57BE604A0CD42D8 /* libPods-MemoOC-SSKeychain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC-SSKeychain.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C2B47CB8A2DB4D41466B708 /* libPods-MemoOC-Masonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC-Masonry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D19771446C2852CC738829B /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		6F75A92B260FDC7CD4BD45A6 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
-		6FE1ADF57EA79E0C70D5EF58 /* VENTouchLockPasscodeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockPasscodeViewController.m; path = VENTouchLock/Controllers/VENTouchLockPasscodeViewController.m; sourceTree = "<group>"; };
-		70F8E2E63EA64CB125283217 /* SSKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
-		721BD6CF4B20A1658FAEA4BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		74D5F34D5BD165691689811C /* libPods-MemoOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AD8A704AC34F114456A0399 /* VENTouchLockAppearance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockAppearance.m; path = VENTouchLock/Models/VENTouchLockAppearance.m; sourceTree = "<group>"; };
-		7C0DB5F19F648B5933DEE103 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		7C860EA23BA8484F760222F0 /* VENTouchLockSplashViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockSplashViewController.m; path = VENTouchLock/Controllers/VENTouchLockSplashViewController.m; sourceTree = "<group>"; };
-		7D8CACD49FD46C1D48394C18 /* SSKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = SSKeychain/SSKeychain.h; sourceTree = "<group>"; };
-		80568BE21F58F8E17A754C5D /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
-		80C5BC6572F287F76D94797F /* Colours.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
-		828858777A0FC97BDC283B83 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		88A06AD37FB52209BA34FE98 /* Pods-MemoOC-MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		8A8232B9C91DE833C0A115F5 /* VENTouchLockPasscodeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockPasscodeViewController.h; path = VENTouchLock/Controllers/VENTouchLockPasscodeViewController.h; sourceTree = "<group>"; };
-		8D5A59C75C7FCC2339C00422 /* VENTouchLock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLock.m; path = VENTouchLock/VENTouchLock.m; sourceTree = "<group>"; };
-		9612C5F6AA2171A563B7693D /* VENTouchLockPasscodeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockPasscodeView.m; path = VENTouchLock/Views/VENTouchLockPasscodeView.m; sourceTree = "<group>"; };
-		98B9A89F2EDF772B5D1BF0CE /* Pods-MemoOC-VENTouchLock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-VENTouchLock.xcconfig"; sourceTree = "<group>"; };
-		98D162410D67C59381529600 /* VENTouchLockPasscodeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockPasscodeView.h; path = VENTouchLock/Views/VENTouchLockPasscodeView.h; sourceTree = "<group>"; };
-		99675B2DCB5871F6183A0928 /* Pods-MemoOC-Colours-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-Colours-dummy.m"; sourceTree = "<group>"; };
-		9BDB5EC2B82A7A490193EA2C /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
-		A10F664066C93EC3199F93D2 /* Pods-MemoOC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-dummy.m"; sourceTree = "<group>"; };
-		A174EE57C161FE7F0148C7C5 /* Pods-MemoOC-SSKeychain-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-SSKeychain-Private.xcconfig"; sourceTree = "<group>"; };
-		A63ED06CC199A4966A2490E9 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
-		A7AB34C042DB19FF364D6382 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
-		ACF2C6F22432D4435AA756D9 /* Pods-MemoOC-MBProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-MBProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
-		AE3071FF4A69C83CAE3DC204 /* Pods-MemoOC-Colours.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-Colours.xcconfig"; sourceTree = "<group>"; };
-		B08C74EEE8597D6F9D8F581A /* Pods-MemoOC-MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-MBProgressHUD.xcconfig"; sourceTree = "<group>"; };
-		B1B0C256ABB0090F68133786 /* Pods-MemoOC-Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-Masonry.xcconfig"; sourceTree = "<group>"; };
-		B51CC3C6D8E2C3C3FF0FBB84 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		C1CF9D0100228C10FC5DDFA4 /* VENTouchLockSplashViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockSplashViewController.h; path = VENTouchLock/Controllers/VENTouchLockSplashViewController.h; sourceTree = "<group>"; };
-		C450CF5914D91A87A32CBFE2 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
-		CF92ED5AB6BCA26CEF3310C8 /* libPods-MemoOC-MBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC-MBProgressHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFCD2D81F2CB899E90B857BE /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
-		D146C6C61C7DB6CCDFB84E73 /* Pods-MemoOC-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MemoOC-resources.sh"; sourceTree = "<group>"; };
-		D1493A05DFF423A04A033C79 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
-		D1BD60F5E475232414FEA537 /* Pods-MemoOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC.debug.xcconfig"; sourceTree = "<group>"; };
-		D1F2AF4D4F31444B494522AF /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
-		D2A0BDA929A500214CD4CBC5 /* Colours.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
-		D5A93373E0D4545C5BC1432F /* Pods-MemoOC-VENTouchLock-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-VENTouchLock-prefix.pch"; sourceTree = "<group>"; };
-		D886DC7D6C06C9EE720CE51C /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/LocalAuthentication.framework; sourceTree = DEVELOPER_DIR; };
-		DA2D18045CD5365714268DCE /* Pods-MemoOC-SSKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-SSKeychain-dummy.m"; sourceTree = "<group>"; };
-		DAB73ED7EA6A2DFB8338C8D6 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
-		DE1D879AF29D8C4D958E19F6 /* SSKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = SSKeychain/SSKeychainQuery.h; sourceTree = "<group>"; };
-		E34348F1A386224E9C957534 /* Pods-MemoOC-Colours-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-Colours-prefix.pch"; sourceTree = "<group>"; };
-		E61C5430B2D34CE7A87DFCFC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		EA43D28D2DD61953A57FD0F3 /* Pods-MemoOC-MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		EA740C90916EAFBD8B2BB9E1 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
-		EADD6A275D3444A3FA284C7B /* Pods-MemoOC-Masonry-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-Masonry-Private.xcconfig"; sourceTree = "<group>"; };
-		F7E0C8F1C9CD7754671B6A87 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		044AA16EAD239420CFE1A52F /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		044FFE26090490389FCD5EEA /* Pods-MemoOC-Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-Masonry-dummy.m"; sourceTree = "<group>"; };
+		051D8EDEAC96A3AB22159169 /* Pods-MemoOC-MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-MBProgressHUD.xcconfig"; sourceTree = "<group>"; };
+		0793A0E5B61E7FFA043246CF /* VENTouchLockPasscodeView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = VENTouchLockPasscodeView.xib; path = VENTouchLock/Views/VENTouchLockPasscodeView.xib; sourceTree = "<group>"; };
+		0850C5A7004D1AD5068786B6 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		0B3DAF537F90348A23C7E769 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0E6A411F06FE2C13CC63E239 /* Pods-MemoOC-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MemoOC-acknowledgements.markdown"; sourceTree = "<group>"; };
+		132F2AE6C9B3941E381EB11A /* VENTouchLockEnterPasscodeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockEnterPasscodeViewController.h; path = VENTouchLock/Controllers/VENTouchLockEnterPasscodeViewController.h; sourceTree = "<group>"; };
+		1AD75105B21D131950B6BEE9 /* VENTouchLock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLock.m; path = VENTouchLock/VENTouchLock.m; sourceTree = "<group>"; };
+		1AF0257D65A62765F3C50494 /* Pods-MemoOC-SSKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-SSKeychain-dummy.m"; sourceTree = "<group>"; };
+		1D8A47A69457BC0BED73C4BE /* VENTouchLockCreatePasscodeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockCreatePasscodeViewController.m; path = VENTouchLock/Controllers/VENTouchLockCreatePasscodeViewController.m; sourceTree = "<group>"; };
+		1FE52091DE4AA58167051442 /* Pods-MemoOC-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MemoOC-resources.sh"; sourceTree = "<group>"; };
+		2FFC2BB6943DC4712E088E33 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		30997FF75C7E683083333926 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		30F70E337AA77BB677DC5CB0 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		315628867696D74F1DC8888C /* libPods-MemoOC-VENTouchLock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC-VENTouchLock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32793B64BA04803EF37BD3E1 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		3289847C30E8B7A81C42D5D1 /* Pods-MemoOC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-dummy.m"; sourceTree = "<group>"; };
+		34013B8FDBAAB28F11017F54 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		39576B3FCAD58533EF09B41D /* libPods-MemoOC-Colours.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC-Colours.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39AB6CBC3731B9664AA52105 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3C9839D07134ED9B466BC72E /* VENTouchLockPasscodeCharacterView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockPasscodeCharacterView.h; path = VENTouchLock/Views/VENTouchLockPasscodeCharacterView.h; sourceTree = "<group>"; };
+		4119BF1E6D5F8310A6482B36 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		41A6869A37DF5B07CF1C2439 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJKeyValue.h"; path = "MJExtension/NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		4436ED278F9F92E944215A9C /* Pods-MemoOC-FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-FMDB.xcconfig"; sourceTree = "<group>"; };
+		479B9A7DF9A42E87000BEE34 /* UIViewController+VENTouchLock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+VENTouchLock.h"; path = "VENTouchLock/Categories/UIViewController+VENTouchLock.h"; sourceTree = "<group>"; };
+		482A2702E74699DD94EEF942 /* Pods-MemoOC-MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		4990D3BF1814516E11B9ADDD /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		49AB04A156D10973319ECFF7 /* Pods-MemoOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC.debug.xcconfig"; sourceTree = "<group>"; };
+		4A960735C29B2FA7F030F03D /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		4F3E5CDA75206FE546F86F7F /* Pods-MemoOC-VENTouchLock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-VENTouchLock.xcconfig"; sourceTree = "<group>"; };
+		5096A2C1A7F31CEE7EABE46C /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		51CB9076B4B3AB29E383D95E /* libPods-MemoOC-MBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC-MBProgressHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54DD974EC246AA7B2C63C1F8 /* Pods-MemoOC-Masonry-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-Masonry-Private.xcconfig"; sourceTree = "<group>"; };
+		57D014F6920673ABE24F425E /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		5934A60B6825AC1A8CFD1111 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJProperty.m"; path = "MJExtension/NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		5A07D96215C891C35A5469FA /* Pods-MemoOC-SSKeychain-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-SSKeychain-Private.xcconfig"; sourceTree = "<group>"; };
+		5CCE6C71A69BB6EDC848CAC0 /* VENTouchLockAppearance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockAppearance.m; path = VENTouchLock/Models/VENTouchLockAppearance.m; sourceTree = "<group>"; };
+		5D38488616554D729D19F780 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		5D5DC09A726652CA4A924E43 /* Pods-MemoOC-Colours-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-Colours-Private.xcconfig"; sourceTree = "<group>"; };
+		5DD2236CD5DEF1FA9CAB1CE5 /* Pods-MemoOC-MJExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-MJExtension-dummy.m"; sourceTree = "<group>"; };
+		602838D8CE5CC1ED82B4ABB0 /* Pods-MemoOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC.release.xcconfig"; sourceTree = "<group>"; };
+		622CC2A209E971F645479655 /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtension/MJExtension.h; sourceTree = "<group>"; };
+		62440982F17482A2AA606EB5 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		6256C3671C4F957F287A2D5B /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		63C4CFA11E3430A549ACD65E /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		64E45377FDBF8CA317C71CF1 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
+		655B5ED8B6F1513D7533373A /* SSKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = SSKeychain/SSKeychain.h; sourceTree = "<group>"; };
+		662D3E3FF5A669121027BC72 /* Pods-MemoOC-Colours.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-Colours.xcconfig"; sourceTree = "<group>"; };
+		697D109155068C5014DF6FE1 /* Colours.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
+		69D00273F3A12B13DAA5EE1B /* VENTouchLockAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockAppearance.h; path = VENTouchLock/Models/VENTouchLockAppearance.h; sourceTree = "<group>"; };
+		6C04576CDC6192C9A7DEC269 /* VENTouchLock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLock.h; path = VENTouchLock/VENTouchLock.h; sourceTree = "<group>"; };
+		6D1330B5A46AFC50A1558DF8 /* SSKeychainQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychainQuery.m; path = SSKeychain/SSKeychainQuery.m; sourceTree = "<group>"; };
+		6FF22D104998832B6690FF6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		734144B8165C6AA90A9F71C0 /* VENTouchLockCreatePasscodeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockCreatePasscodeViewController.h; path = VENTouchLock/Controllers/VENTouchLockCreatePasscodeViewController.h; sourceTree = "<group>"; };
+		7402BAB4D7A5D4537809A9D8 /* Pods-MemoOC-VENTouchLock-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-VENTouchLock-prefix.pch"; sourceTree = "<group>"; };
+		751399CEDB1E5403DA4A7A0F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		77E5B70955BDCD5F22A7E961 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		78471F5BEE5E9904FDEA4EB2 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJKeyValue.m"; path = "MJExtension/NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		7CBBE043F03049CD23BA2A1C /* MJType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJType.m; path = MJExtension/MJType.m; sourceTree = "<group>"; };
+		7E4639A9723FA6130CEB6075 /* VENTouchLockEnterPasscodeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockEnterPasscodeViewController.m; path = VENTouchLock/Controllers/VENTouchLockEnterPasscodeViewController.m; sourceTree = "<group>"; };
+		7E66DD6A5CC5407200E27158 /* VENTouchLockPasscodeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockPasscodeViewController.h; path = VENTouchLock/Controllers/VENTouchLockPasscodeViewController.h; sourceTree = "<group>"; };
+		8051A8BA50906B693900B32A /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/LocalAuthentication.framework; sourceTree = DEVELOPER_DIR; };
+		812638FBA74C0B9DA31F480E /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		8505FA2AF69114F9CEDB47AD /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
+		865FA773E9E3E1C84AF50087 /* Pods-MemoOC-FMDB-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-FMDB-Private.xcconfig"; sourceTree = "<group>"; };
+		87DD718EC3B8ADD7DBEBEC2B /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		9086785D7C6670497419BC70 /* Pods-MemoOC-MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		919B02E4E815A1F81113EAC2 /* Pods-MemoOC-MBProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-MBProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
+		92351600005540B1BDDB11AD /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
+		924687C9A42C33FFFDBF9615 /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtension/MJFoundation.m; sourceTree = "<group>"; };
+		930DEF4E6AE644274D01F4C4 /* Pods-MemoOC-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MemoOC-acknowledgements.plist"; sourceTree = "<group>"; };
+		949EFB2820927F37277C09CC /* Pods-MemoOC-Colours-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-Colours-dummy.m"; sourceTree = "<group>"; };
+		97FBCECE920793B11877ADF0 /* Pods-MemoOC-SSKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-SSKeychain-prefix.pch"; sourceTree = "<group>"; };
+		984D86B1EF92B54A89A61984 /* Pods-MemoOC-Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-Masonry.xcconfig"; sourceTree = "<group>"; };
+		9AE984CAA4CC803A7F2B1353 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		9FB9046E7ADC141191FEC7B0 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		A6D57B27E08A92234117CA77 /* MJType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJType.h; path = MJExtension/MJType.h; sourceTree = "<group>"; };
+		A7595830004BD3D261729DF0 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
+		A83535C9EC4D8A139B9D467B /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		AF112DC6A87C20B2CB7A0D6E /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = MJExtension/MJFoundation.h; sourceTree = "<group>"; };
+		AFADE06E68044EEA9B1CF3D3 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		B00CFB59327C062A8792DC8A /* Pods-MemoOC-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-environment.h"; sourceTree = "<group>"; };
+		B101C15E366490D3FFF3E29C /* Colours.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
+		BBA4536B77FD514BFC0A3400 /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
+		BE6AACE9802EED3EA743C8F3 /* libPods-MemoOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF1797D7428427FBE87F1CEA /* Pods-MemoOC-SSKeychain.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-SSKeychain.xcconfig"; sourceTree = "<group>"; };
+		BFBD32BB9EBC077319BF88CC /* SSKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
+		BFE73E928BA47B5684E00134 /* libPods-MemoOC-FMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC-FMDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B4DEE2D53499FEA3F14B03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C162530CAE6A9BCFA67AA8DC /* VENTouchLockPasscodeCharacterView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockPasscodeCharacterView.m; path = VENTouchLock/Views/VENTouchLockPasscodeCharacterView.m; sourceTree = "<group>"; };
+		C1BB5BF144D2B3A69B0701E6 /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = MJExtension/MJProperty.m; sourceTree = "<group>"; };
+		C1EC1B3F9A964F16BF6DCA31 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		C4762C0ED7D03F2006F270E4 /* libPods-MemoOC-Masonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC-Masonry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6AF9574134255B5F78219C0 /* Pods-MemoOC-MJExtension-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-MJExtension-Private.xcconfig"; sourceTree = "<group>"; };
+		C7B25095F8A1E704BD795C62 /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
+		C84ED164856B2D07091BC534 /* UIViewController+VENTouchLock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+VENTouchLock.m"; path = "VENTouchLock/Categories/UIViewController+VENTouchLock.m"; sourceTree = "<group>"; };
+		CC17941ADFBF42897BC50920 /* Pods-MemoOC-FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-FMDB-prefix.pch"; sourceTree = "<group>"; };
+		CCB19CF1BA0C90C5F6242EA3 /* VENTouchLockPasscodeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockPasscodeViewController.m; path = VENTouchLock/Controllers/VENTouchLockPasscodeViewController.m; sourceTree = "<group>"; };
+		CCB359088E2C23FB72829342 /* VENTouchLockSplashViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockSplashViewController.h; path = VENTouchLock/Controllers/VENTouchLockSplashViewController.h; sourceTree = "<group>"; };
+		CDD230DA4E338FDF87AC0DB9 /* Pods-MemoOC-MJExtension.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-MJExtension.xcconfig"; sourceTree = "<group>"; };
+		D0AA7FE6FFBACA967B94C218 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		D4A1FC96F9E5200C456BEBA9 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		D797DC5E6736A70FED4C7BCC /* Pods-MemoOC-Colours-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-Colours-prefix.pch"; sourceTree = "<group>"; };
+		DAB8925D0CE60B991ACD057B /* VENTouchLockPasscodeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockPasscodeView.m; path = VENTouchLock/Views/VENTouchLockPasscodeView.m; sourceTree = "<group>"; };
+		DAFB10D3F984E8451205F95A /* SSKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = SSKeychain/SSKeychainQuery.h; sourceTree = "<group>"; };
+		DE57B6F1ACC660E1F0E2093A /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		E38C37862471AFB427474670 /* VENTouchLockSplashViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENTouchLockSplashViewController.m; path = VENTouchLock/Controllers/VENTouchLockSplashViewController.m; sourceTree = "<group>"; };
+		E4C920DD3B7D64839F2B0822 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		E4F180B85058E617B5B4A429 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		E6A9F5CCFE23692C003D632C /* NSObject+MJCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJCoding.m"; path = "MJExtension/NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		E776D15C0A6605235FD67FB2 /* libPods-MemoOC-SSKeychain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC-SSKeychain.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8F7CBF9C1C659C966B845CC /* Pods-MemoOC-Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-Masonry-prefix.pch"; sourceTree = "<group>"; };
+		E9AF7EB002064F6284FD5A8B /* Pods-MemoOC-MJExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MemoOC-MJExtension-prefix.pch"; sourceTree = "<group>"; };
+		E9F94DCF84C67AD447EEC03D /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		ED2CA75ABC6F475006207D33 /* Pods-MemoOC-FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-FMDB-dummy.m"; sourceTree = "<group>"; };
+		ED494B753714C745FA5502CE /* Pods-MemoOC-VENTouchLock-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MemoOC-VENTouchLock-Private.xcconfig"; sourceTree = "<group>"; };
+		EE533FA77AAFA1D291CDBE99 /* libPods-MemoOC-MJExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC-MJExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEDE29CB272E74C50324653E /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		EF1EDBA36E95243F0163E586 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		F0FAA38F1930CD83EF7E49DD /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		F4FA09F8F4C803B7531EB24C /* VENTouchLockPasscodeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENTouchLockPasscodeView.h; path = VENTouchLock/Views/VENTouchLockPasscodeView.h; sourceTree = "<group>"; };
+		F5B8DF1051EAD42FFBB23036 /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
+		F6275243490E2CDC507688C6 /* Pods-MemoOC-VENTouchLock-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MemoOC-VENTouchLock-dummy.m"; sourceTree = "<group>"; };
+		F6C28F5AF7BE9DA555D9E34E /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		F7DAD62904D899EAF0CEA745 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		FCDB41358C6FFED3F2B5454F /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		FE305379C53E930A5FC756E7 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		FE5CAA3C53380BF8DEB84F5C /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0A3C80264BF27D82D992E3C0 /* Frameworks */ = {
+		21D53C8BB310B1F5B67AAC0A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48EAEAC6FF6686989EFD4D06 /* Foundation.framework in Frameworks */,
-				D61D56A729989F28AB57792A /* LocalAuthentication.framework in Frameworks */,
+				831B832ACAAA5AF3A7F24BB4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36412654EAF5476CFBD66D39 /* Frameworks */ = {
+		21DF66019609B903E6AFB7C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1418983B8F898FFFE69F5CED /* Foundation.framework in Frameworks */,
+				79F1B3677B6E5CC0C34B7F95 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6604A6341010C2AE02E11A5F /* Frameworks */ = {
+		495903310F7EF181B83D4638 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6C9E99123E57B70C1055890 /* Foundation.framework in Frameworks */,
-				93D8F3F580B3DE78BFE97E81 /* UIKit.framework in Frameworks */,
+				3889C8186A7378CFBD55D5C7 /* Foundation.framework in Frameworks */,
+				817AA7B8D5B0AE815D2D3D97 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7B7EB8EE41B11EAD51180506 /* Frameworks */ = {
+		52624401E7119A9C0CB3E213 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4FAFA21347410F7A4D7B5C4 /* CoreGraphics.framework in Frameworks */,
-				598D103FF558B743EB9FB02A /* Foundation.framework in Frameworks */,
+				7CEBEA07FE490A7185B1CE5C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0465600EEA70332548B2050 /* Frameworks */ = {
+		7CFAFA935667FA49A6F726DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D9AB188ECD6118671CD8A74 /* Foundation.framework in Frameworks */,
-				91729D4B98DF9592064248C4 /* Security.framework in Frameworks */,
+				9B15CBF8CD4FED19645ABF99 /* Foundation.framework in Frameworks */,
+				F45BAAB9D1E28F53BB953533 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC5EAFA64EB86224F358B45C /* Frameworks */ = {
+		93BFB85CCB363885BD24A247 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B2216874D8A8C25A890AA99 /* Foundation.framework in Frameworks */,
+				4372076287259D2B4AEAF3A5 /* Foundation.framework in Frameworks */,
+				18FF5C412447D563C32F80F8 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D222F529FAD7B578E4E0966D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACFA5A89DE15FD421E393EE2 /* CoreGraphics.framework in Frameworks */,
+				42889EDE78C19D28B9F9EAEE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2599FC9C2A236E01FE764BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51A2C5C341625CDEA3B5E8B7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		007081C4F0D84CB2E7633E66 /* iOS */ = {
+		04D91AE3FE4948E90CF0E667 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E61C5430B2D34CE7A87DFCFC /* CoreGraphics.framework */,
-				721BD6CF4B20A1658FAEA4BD /* Foundation.framework */,
-				D886DC7D6C06C9EE720CE51C /* LocalAuthentication.framework */,
-				37C619F1ADAF996400E94218 /* Security.framework */,
-				7C0DB5F19F648B5933DEE103 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		2BAD2D05312D1A79599571B2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AE3071FF4A69C83CAE3DC204 /* Pods-MemoOC-Colours.xcconfig */,
-				63D7B64B57E3B0883E29A221 /* Pods-MemoOC-Colours-Private.xcconfig */,
-				99675B2DCB5871F6183A0928 /* Pods-MemoOC-Colours-dummy.m */,
-				E34348F1A386224E9C957534 /* Pods-MemoOC-Colours-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-MemoOC-Colours";
-			sourceTree = "<group>";
-		};
-		2F07A990C32CA8374ECA784A = {
-			isa = PBXGroup;
-			children = (
-				340B0466EBBB79A4B5AC2C2A /* Podfile */,
-				8CD90F4348845C93B8EA497F /* Frameworks */,
-				5AF6CA8596CA2C22B1295EE1 /* Pods */,
-				EF64EF2F25EB17441BA170CB /* Products */,
-				D6111AF0177E6C015D3305A5 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		36B79F9D3F97C39D8ADB5052 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B1B0C256ABB0090F68133786 /* Pods-MemoOC-Masonry.xcconfig */,
-				EADD6A275D3444A3FA284C7B /* Pods-MemoOC-Masonry-Private.xcconfig */,
-				5D4629E81C5A819BA3EA4F37 /* Pods-MemoOC-Masonry-dummy.m */,
-				33C58ABF38F0BA9B284BADD7 /* Pods-MemoOC-Masonry-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-MemoOC-Masonry";
-			sourceTree = "<group>";
-		};
-		3A8A84C73FB3054D8423DE26 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4C8A59EC0B415E8A6F1EA150 /* Pods-MemoOC-SSKeychain.xcconfig */,
-				A174EE57C161FE7F0148C7C5 /* Pods-MemoOC-SSKeychain-Private.xcconfig */,
-				DA2D18045CD5365714268DCE /* Pods-MemoOC-SSKeychain-dummy.m */,
-				46268DFC565FDF25F0D67CF4 /* Pods-MemoOC-SSKeychain-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-MemoOC-SSKeychain";
-			sourceTree = "<group>";
-		};
-		5AF6CA8596CA2C22B1295EE1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7991BF8D5E3B21029C7F4FD7 /* Colours */,
-				C6BF5BA16BF8FA86C1CD6159 /* MBProgressHUD */,
-				DFF3E70C3E16FAC09C28AD8F /* Masonry */,
-				DDBF5E9431A9548AFF2C7C92 /* SSKeychain */,
-				729FFF56DA09B8BFDF763269 /* VENTouchLock */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		729FFF56DA09B8BFDF763269 /* VENTouchLock */ = {
-			isa = PBXGroup;
-			children = (
-				1A779DAFF3C925CE62E4896C /* UIViewController+VENTouchLock.h */,
-				0E968BFC417185EEDAAF1B44 /* UIViewController+VENTouchLock.m */,
-				4087193521BFAAE9FC8F1571 /* VENTouchLock.h */,
-				8D5A59C75C7FCC2339C00422 /* VENTouchLock.m */,
-				2FC1DED935B21E978C9F00DF /* VENTouchLockAppearance.h */,
-				7AD8A704AC34F114456A0399 /* VENTouchLockAppearance.m */,
-				1472A0A1D451DAC788A30770 /* VENTouchLockCreatePasscodeViewController.h */,
-				66AE345EC349D866930E1E2D /* VENTouchLockCreatePasscodeViewController.m */,
-				33CBF0CFA014B7A1C0D14018 /* VENTouchLockEnterPasscodeViewController.h */,
-				4D38784B62F0713F1210B24D /* VENTouchLockEnterPasscodeViewController.m */,
-				11CAA6AD6AB9BFD58256A39F /* VENTouchLockPasscodeCharacterView.h */,
-				070D5D42634D818F8FB9EA01 /* VENTouchLockPasscodeCharacterView.m */,
-				98D162410D67C59381529600 /* VENTouchLockPasscodeView.h */,
-				9612C5F6AA2171A563B7693D /* VENTouchLockPasscodeView.m */,
-				8A8232B9C91DE833C0A115F5 /* VENTouchLockPasscodeViewController.h */,
-				6FE1ADF57EA79E0C70D5EF58 /* VENTouchLockPasscodeViewController.m */,
-				C1CF9D0100228C10FC5DDFA4 /* VENTouchLockSplashViewController.h */,
-				7C860EA23BA8484F760222F0 /* VENTouchLockSplashViewController.m */,
-				A48F15ADA3849327042A32CA /* Resources */,
-				930AB1D855AFF141B35DA452 /* Support Files */,
-			);
-			path = VENTouchLock;
-			sourceTree = "<group>";
-		};
-		7991BF8D5E3B21029C7F4FD7 /* Colours */ = {
-			isa = PBXGroup;
-			children = (
-				80C5BC6572F287F76D94797F /* Colours.h */,
-				D2A0BDA929A500214CD4CBC5 /* Colours.m */,
-				2BAD2D05312D1A79599571B2 /* Support Files */,
-			);
-			path = Colours;
-			sourceTree = "<group>";
-		};
-		8CD90F4348845C93B8EA497F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				007081C4F0D84CB2E7633E66 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		930AB1D855AFF141B35DA452 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				98B9A89F2EDF772B5D1BF0CE /* Pods-MemoOC-VENTouchLock.xcconfig */,
-				167F91A924219606804930DD /* Pods-MemoOC-VENTouchLock-Private.xcconfig */,
-				398A92034355CC07E1BD2349 /* Pods-MemoOC-VENTouchLock-dummy.m */,
-				D5A93373E0D4545C5BC1432F /* Pods-MemoOC-VENTouchLock-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-MemoOC-VENTouchLock";
-			sourceTree = "<group>";
-		};
-		A48F15ADA3849327042A32CA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				4BAEBA0D039FC6037249FF92 /* VENTouchLockPasscodeView.xib */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		B3F6A8B7ADE7F759A89FA4A7 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B08C74EEE8597D6F9D8F581A /* Pods-MemoOC-MBProgressHUD.xcconfig */,
-				ACF2C6F22432D4435AA756D9 /* Pods-MemoOC-MBProgressHUD-Private.xcconfig */,
-				88A06AD37FB52209BA34FE98 /* Pods-MemoOC-MBProgressHUD-dummy.m */,
-				EA43D28D2DD61953A57FD0F3 /* Pods-MemoOC-MBProgressHUD-prefix.pch */,
+				051D8EDEAC96A3AB22159169 /* Pods-MemoOC-MBProgressHUD.xcconfig */,
+				919B02E4E815A1F81113EAC2 /* Pods-MemoOC-MBProgressHUD-Private.xcconfig */,
+				9086785D7C6670497419BC70 /* Pods-MemoOC-MBProgressHUD-dummy.m */,
+				482A2702E74699DD94EEF942 /* Pods-MemoOC-MBProgressHUD-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-MemoOC-MBProgressHUD";
 			sourceTree = "<group>";
 		};
-		C6BF5BA16BF8FA86C1CD6159 /* MBProgressHUD */ = {
+		0685951689A5863ED5D1FEE8 /* Colours */ = {
 			isa = PBXGroup;
 			children = (
-				679EEEE23437B393082E2C73 /* MBProgressHUD.h */,
-				6D19771446C2852CC738829B /* MBProgressHUD.m */,
-				B3F6A8B7ADE7F759A89FA4A7 /* Support Files */,
+				B101C15E366490D3FFF3E29C /* Colours.h */,
+				697D109155068C5014DF6FE1 /* Colours.m */,
+				AF738432706F336A0FABAD4E /* Support Files */,
 			);
-			path = MBProgressHUD;
+			path = Colours;
 			sourceTree = "<group>";
 		};
-		D6111AF0177E6C015D3305A5 /* Targets Support Files */ = {
+		2AFDA6BF052AEC18919CE6E1 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
-				E3DDBB630CD25D1D7A579680 /* Pods-MemoOC */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		DDBF5E9431A9548AFF2C7C92 /* SSKeychain */ = {
-			isa = PBXGroup;
-			children = (
-				7D8CACD49FD46C1D48394C18 /* SSKeychain.h */,
-				70F8E2E63EA64CB125283217 /* SSKeychain.m */,
-				DE1D879AF29D8C4D958E19F6 /* SSKeychainQuery.h */,
-				602C89F4C0E7B179ACA94049 /* SSKeychainQuery.m */,
-				3A8A84C73FB3054D8423DE26 /* Support Files */,
-			);
-			path = SSKeychain;
-			sourceTree = "<group>";
-		};
-		DFF3E70C3E16FAC09C28AD8F /* Masonry */ = {
-			isa = PBXGroup;
-			children = (
-				05121A72628FD27626621A3B /* MASCompositeConstraint.h */,
-				6F75A92B260FDC7CD4BD45A6 /* MASCompositeConstraint.m */,
-				D1F2AF4D4F31444B494522AF /* MASConstraint.h */,
-				828858777A0FC97BDC283B83 /* MASConstraint.m */,
-				A63ED06CC199A4966A2490E9 /* MASConstraint+Private.h */,
-				159F83566EA360801CDE32BC /* MASConstraintMaker.h */,
-				CFCD2D81F2CB899E90B857BE /* MASConstraintMaker.m */,
-				80568BE21F58F8E17A754C5D /* MASLayoutConstraint.h */,
-				9BDB5EC2B82A7A490193EA2C /* MASLayoutConstraint.m */,
-				36A0FFB485368EE331486030 /* MASUtilities.h */,
-				DAB73ED7EA6A2DFB8338C8D6 /* MASViewAttribute.h */,
-				F7E0C8F1C9CD7754671B6A87 /* MASViewAttribute.m */,
-				C450CF5914D91A87A32CBFE2 /* MASViewConstraint.h */,
-				D1493A05DFF423A04A033C79 /* MASViewConstraint.m */,
-				A7AB34C042DB19FF364D6382 /* Masonry.h */,
-				14BD0A58A0508B23C1FD2EFF /* NSArray+MASAdditions.h */,
-				6B3B8BE4DB6BBC50F225D886 /* NSArray+MASAdditions.m */,
-				39A08C1078C2BF62241748FE /* NSArray+MASShorthandAdditions.h */,
-				3DAAD80D3CBF7F2929B2386E /* NSLayoutConstraint+MASDebugAdditions.h */,
-				4B7C1C67CDEDD0BD92AD487F /* NSLayoutConstraint+MASDebugAdditions.m */,
-				0EF68486D2C495B29311F172 /* View+MASAdditions.h */,
-				2EE69E721D4DC8EDD17DFFDB /* View+MASAdditions.m */,
-				B51CC3C6D8E2C3C3FF0FBB84 /* View+MASShorthandAdditions.h */,
-				EA740C90916EAFBD8B2BB9E1 /* ViewController+MASAdditions.h */,
-				4291EBF9D62F16A4870F3CFA /* ViewController+MASAdditions.m */,
-				36B79F9D3F97C39D8ADB5052 /* Support Files */,
+				F6C28F5AF7BE9DA555D9E34E /* MASCompositeConstraint.h */,
+				A7595830004BD3D261729DF0 /* MASCompositeConstraint.m */,
+				9FB9046E7ADC141191FEC7B0 /* MASConstraint.h */,
+				C1EC1B3F9A964F16BF6DCA31 /* MASConstraint.m */,
+				F7DAD62904D899EAF0CEA745 /* MASConstraint+Private.h */,
+				34013B8FDBAAB28F11017F54 /* MASConstraintMaker.h */,
+				AFADE06E68044EEA9B1CF3D3 /* MASConstraintMaker.m */,
+				FCDB41358C6FFED3F2B5454F /* MASLayoutConstraint.h */,
+				FE305379C53E930A5FC756E7 /* MASLayoutConstraint.m */,
+				4990D3BF1814516E11B9ADDD /* MASUtilities.h */,
+				A83535C9EC4D8A139B9D467B /* MASViewAttribute.h */,
+				EEDE29CB272E74C50324653E /* MASViewAttribute.m */,
+				64E45377FDBF8CA317C71CF1 /* MASViewConstraint.h */,
+				044AA16EAD239420CFE1A52F /* MASViewConstraint.m */,
+				30F70E337AA77BB677DC5CB0 /* Masonry.h */,
+				F0FAA38F1930CD83EF7E49DD /* NSArray+MASAdditions.h */,
+				30997FF75C7E683083333926 /* NSArray+MASAdditions.m */,
+				62440982F17482A2AA606EB5 /* NSArray+MASShorthandAdditions.h */,
+				4A960735C29B2FA7F030F03D /* NSLayoutConstraint+MASDebugAdditions.h */,
+				E4F180B85058E617B5B4A429 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				E4C920DD3B7D64839F2B0822 /* View+MASAdditions.h */,
+				4119BF1E6D5F8310A6482B36 /* View+MASAdditions.m */,
+				57D014F6920673ABE24F425E /* View+MASShorthandAdditions.h */,
+				63C4CFA11E3430A549ACD65E /* ViewController+MASAdditions.h */,
+				812638FBA74C0B9DA31F480E /* ViewController+MASAdditions.m */,
+				81D7F2C9AB3CE9742EBA145F /* Support Files */,
 			);
 			path = Masonry;
 			sourceTree = "<group>";
 		};
-		E3DDBB630CD25D1D7A579680 /* Pods-MemoOC */ = {
+		322B061EC3BA4E76763E609D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				27CAE75C5BC7E319EFE9AC3C /* Pods-MemoOC-acknowledgements.markdown */,
-				3C254E509B9918E6B0393076 /* Pods-MemoOC-acknowledgements.plist */,
-				A10F664066C93EC3199F93D2 /* Pods-MemoOC-dummy.m */,
-				0360BAF1D1BC8967E3125582 /* Pods-MemoOC-environment.h */,
-				D146C6C61C7DB6CCDFB84E73 /* Pods-MemoOC-resources.sh */,
-				D1BD60F5E475232414FEA537 /* Pods-MemoOC.debug.xcconfig */,
-				591221D9C03F7DCDFAC50771 /* Pods-MemoOC.release.xcconfig */,
+				BF1797D7428427FBE87F1CEA /* Pods-MemoOC-SSKeychain.xcconfig */,
+				5A07D96215C891C35A5469FA /* Pods-MemoOC-SSKeychain-Private.xcconfig */,
+				1AF0257D65A62765F3C50494 /* Pods-MemoOC-SSKeychain-dummy.m */,
+				97FBCECE920793B11877ADF0 /* Pods-MemoOC-SSKeychain-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-MemoOC-SSKeychain";
+			sourceTree = "<group>";
+		};
+		332FA899DE18DA15325736CB = {
+			isa = PBXGroup;
+			children = (
+				0B3DAF537F90348A23C7E769 /* Podfile */,
+				9D42AE5E02ED2448FA2AABD0 /* Frameworks */,
+				FEDBB59BC23BBE9685D591FE /* Pods */,
+				9D166438E108F98261996D29 /* Products */,
+				71436CB9BE07ADDAD0A06201 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		36DD838417E2563DB5CA53F4 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				FB63587D277B59F16DDFA575 /* Support Files */,
+				3D4B82E9137C8EBDA0CB9A01 /* common */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		3D4B82E9137C8EBDA0CB9A01 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				87DD718EC3B8ADD7DBEBEC2B /* FMDB.h */,
+				77E5B70955BDCD5F22A7E961 /* FMDatabase.h */,
+				D4A1FC96F9E5200C456BEBA9 /* FMDatabase.m */,
+				0850C5A7004D1AD5068786B6 /* FMDatabaseAdditions.h */,
+				DE57B6F1ACC660E1F0E2093A /* FMDatabaseAdditions.m */,
+				6256C3671C4F957F287A2D5B /* FMDatabasePool.h */,
+				32793B64BA04803EF37BD3E1 /* FMDatabasePool.m */,
+				FE5CAA3C53380BF8DEB84F5C /* FMDatabaseQueue.h */,
+				E9F94DCF84C67AD447EEC03D /* FMDatabaseQueue.m */,
+				9AE984CAA4CC803A7F2B1353 /* FMResultSet.h */,
+				5096A2C1A7F31CEE7EABE46C /* FMResultSet.m */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		5D76010025A2948E0E601AAA /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				622CC2A209E971F645479655 /* MJExtension.h */,
+				BBA4536B77FD514BFC0A3400 /* MJExtensionConst.h */,
+				C7B25095F8A1E704BD795C62 /* MJExtensionConst.m */,
+				AF112DC6A87C20B2CB7A0D6E /* MJFoundation.h */,
+				924687C9A42C33FFFDBF9615 /* MJFoundation.m */,
+				F5B8DF1051EAD42FFBB23036 /* MJProperty.h */,
+				C1BB5BF144D2B3A69B0701E6 /* MJProperty.m */,
+				A6D57B27E08A92234117CA77 /* MJType.h */,
+				7CBBE043F03049CD23BA2A1C /* MJType.m */,
+				EF1EDBA36E95243F0163E586 /* NSObject+MJCoding.h */,
+				E6A9F5CCFE23692C003D632C /* NSObject+MJCoding.m */,
+				41A6869A37DF5B07CF1C2439 /* NSObject+MJKeyValue.h */,
+				78471F5BEE5E9904FDEA4EB2 /* NSObject+MJKeyValue.m */,
+				5D38488616554D729D19F780 /* NSObject+MJProperty.h */,
+				5934A60B6825AC1A8CFD1111 /* NSObject+MJProperty.m */,
+				8505FA2AF69114F9CEDB47AD /* NSString+MJExtension.h */,
+				92351600005540B1BDDB11AD /* NSString+MJExtension.m */,
+				6CA9BACC7D16AF46A5D427E6 /* Support Files */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		6CA9BACC7D16AF46A5D427E6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDD230DA4E338FDF87AC0DB9 /* Pods-MemoOC-MJExtension.xcconfig */,
+				C6AF9574134255B5F78219C0 /* Pods-MemoOC-MJExtension-Private.xcconfig */,
+				5DD2236CD5DEF1FA9CAB1CE5 /* Pods-MemoOC-MJExtension-dummy.m */,
+				E9AF7EB002064F6284FD5A8B /* Pods-MemoOC-MJExtension-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-MemoOC-MJExtension";
+			sourceTree = "<group>";
+		};
+		71436CB9BE07ADDAD0A06201 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3098C32B04261539C7D4F87 /* Pods-MemoOC */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7B2E1F329C23EE67981CBE1E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6FF22D104998832B6690FF6D /* CoreGraphics.framework */,
+				C0B4DEE2D53499FEA3F14B03 /* Foundation.framework */,
+				8051A8BA50906B693900B32A /* LocalAuthentication.framework */,
+				751399CEDB1E5403DA4A7A0F /* Security.framework */,
+				39AB6CBC3731B9664AA52105 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		81D7F2C9AB3CE9742EBA145F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				984D86B1EF92B54A89A61984 /* Pods-MemoOC-Masonry.xcconfig */,
+				54DD974EC246AA7B2C63C1F8 /* Pods-MemoOC-Masonry-Private.xcconfig */,
+				044FFE26090490389FCD5EEA /* Pods-MemoOC-Masonry-dummy.m */,
+				E8F7CBF9C1C659C966B845CC /* Pods-MemoOC-Masonry-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-MemoOC-Masonry";
+			sourceTree = "<group>";
+		};
+		9B11DA5BF2E3B930FEAFA38D /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA7FE6FFBACA967B94C218 /* MBProgressHUD.h */,
+				2FFC2BB6943DC4712E088E33 /* MBProgressHUD.m */,
+				04D91AE3FE4948E90CF0E667 /* Support Files */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		9D166438E108F98261996D29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE6AACE9802EED3EA743C8F3 /* libPods-MemoOC.a */,
+				39576B3FCAD58533EF09B41D /* libPods-MemoOC-Colours.a */,
+				BFE73E928BA47B5684E00134 /* libPods-MemoOC-FMDB.a */,
+				51CB9076B4B3AB29E383D95E /* libPods-MemoOC-MBProgressHUD.a */,
+				EE533FA77AAFA1D291CDBE99 /* libPods-MemoOC-MJExtension.a */,
+				C4762C0ED7D03F2006F270E4 /* libPods-MemoOC-Masonry.a */,
+				E776D15C0A6605235FD67FB2 /* libPods-MemoOC-SSKeychain.a */,
+				315628867696D74F1DC8888C /* libPods-MemoOC-VENTouchLock.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D42AE5E02ED2448FA2AABD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B2E1F329C23EE67981CBE1E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2520D305818E5BA243A9C24 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F3E5CDA75206FE546F86F7F /* Pods-MemoOC-VENTouchLock.xcconfig */,
+				ED494B753714C745FA5502CE /* Pods-MemoOC-VENTouchLock-Private.xcconfig */,
+				F6275243490E2CDC507688C6 /* Pods-MemoOC-VENTouchLock-dummy.m */,
+				7402BAB4D7A5D4537809A9D8 /* Pods-MemoOC-VENTouchLock-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-MemoOC-VENTouchLock";
+			sourceTree = "<group>";
+		};
+		AC785D3A95949541CD8D5978 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0793A0E5B61E7FFA043246CF /* VENTouchLockPasscodeView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AF738432706F336A0FABAD4E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				662D3E3FF5A669121027BC72 /* Pods-MemoOC-Colours.xcconfig */,
+				5D5DC09A726652CA4A924E43 /* Pods-MemoOC-Colours-Private.xcconfig */,
+				949EFB2820927F37277C09CC /* Pods-MemoOC-Colours-dummy.m */,
+				D797DC5E6736A70FED4C7BCC /* Pods-MemoOC-Colours-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-MemoOC-Colours";
+			sourceTree = "<group>";
+		};
+		CB107553354D5FDE3A566662 /* VENTouchLock */ = {
+			isa = PBXGroup;
+			children = (
+				479B9A7DF9A42E87000BEE34 /* UIViewController+VENTouchLock.h */,
+				C84ED164856B2D07091BC534 /* UIViewController+VENTouchLock.m */,
+				6C04576CDC6192C9A7DEC269 /* VENTouchLock.h */,
+				1AD75105B21D131950B6BEE9 /* VENTouchLock.m */,
+				69D00273F3A12B13DAA5EE1B /* VENTouchLockAppearance.h */,
+				5CCE6C71A69BB6EDC848CAC0 /* VENTouchLockAppearance.m */,
+				734144B8165C6AA90A9F71C0 /* VENTouchLockCreatePasscodeViewController.h */,
+				1D8A47A69457BC0BED73C4BE /* VENTouchLockCreatePasscodeViewController.m */,
+				132F2AE6C9B3941E381EB11A /* VENTouchLockEnterPasscodeViewController.h */,
+				7E4639A9723FA6130CEB6075 /* VENTouchLockEnterPasscodeViewController.m */,
+				3C9839D07134ED9B466BC72E /* VENTouchLockPasscodeCharacterView.h */,
+				C162530CAE6A9BCFA67AA8DC /* VENTouchLockPasscodeCharacterView.m */,
+				F4FA09F8F4C803B7531EB24C /* VENTouchLockPasscodeView.h */,
+				DAB8925D0CE60B991ACD057B /* VENTouchLockPasscodeView.m */,
+				7E66DD6A5CC5407200E27158 /* VENTouchLockPasscodeViewController.h */,
+				CCB19CF1BA0C90C5F6242EA3 /* VENTouchLockPasscodeViewController.m */,
+				CCB359088E2C23FB72829342 /* VENTouchLockSplashViewController.h */,
+				E38C37862471AFB427474670 /* VENTouchLockSplashViewController.m */,
+				AC785D3A95949541CD8D5978 /* Resources */,
+				A2520D305818E5BA243A9C24 /* Support Files */,
+			);
+			path = VENTouchLock;
+			sourceTree = "<group>";
+		};
+		F20ED2F66CB9E6F6639209BC /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				655B5ED8B6F1513D7533373A /* SSKeychain.h */,
+				BFBD32BB9EBC077319BF88CC /* SSKeychain.m */,
+				DAFB10D3F984E8451205F95A /* SSKeychainQuery.h */,
+				6D1330B5A46AFC50A1558DF8 /* SSKeychainQuery.m */,
+				322B061EC3BA4E76763E609D /* Support Files */,
+			);
+			path = SSKeychain;
+			sourceTree = "<group>";
+		};
+		F3098C32B04261539C7D4F87 /* Pods-MemoOC */ = {
+			isa = PBXGroup;
+			children = (
+				0E6A411F06FE2C13CC63E239 /* Pods-MemoOC-acknowledgements.markdown */,
+				930DEF4E6AE644274D01F4C4 /* Pods-MemoOC-acknowledgements.plist */,
+				3289847C30E8B7A81C42D5D1 /* Pods-MemoOC-dummy.m */,
+				B00CFB59327C062A8792DC8A /* Pods-MemoOC-environment.h */,
+				1FE52091DE4AA58167051442 /* Pods-MemoOC-resources.sh */,
+				49AB04A156D10973319ECFF7 /* Pods-MemoOC.debug.xcconfig */,
+				602838D8CE5CC1ED82B4ABB0 /* Pods-MemoOC.release.xcconfig */,
 			);
 			name = "Pods-MemoOC";
 			path = "Target Support Files/Pods-MemoOC";
 			sourceTree = "<group>";
 		};
-		EF64EF2F25EB17441BA170CB /* Products */ = {
+		FB63587D277B59F16DDFA575 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				74D5F34D5BD165691689811C /* libPods-MemoOC.a */,
-				584A22DDFA5B4BF9E46EF0A6 /* libPods-MemoOC-Colours.a */,
-				CF92ED5AB6BCA26CEF3310C8 /* libPods-MemoOC-MBProgressHUD.a */,
-				6C2B47CB8A2DB4D41466B708 /* libPods-MemoOC-Masonry.a */,
-				6BD98FB3B57BE604A0CD42D8 /* libPods-MemoOC-SSKeychain.a */,
-				1673EBCDBF765F71BC6A9B8C /* libPods-MemoOC-VENTouchLock.a */,
+				4436ED278F9F92E944215A9C /* Pods-MemoOC-FMDB.xcconfig */,
+				865FA773E9E3E1C84AF50087 /* Pods-MemoOC-FMDB-Private.xcconfig */,
+				ED2CA75ABC6F475006207D33 /* Pods-MemoOC-FMDB-dummy.m */,
+				CC17941ADFBF42897BC50920 /* Pods-MemoOC-FMDB-prefix.pch */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/Pods-MemoOC-FMDB";
+			sourceTree = "<group>";
+		};
+		FEDBB59BC23BBE9685D591FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0685951689A5863ED5D1FEE8 /* Colours */,
+				36DD838417E2563DB5CA53F4 /* FMDB */,
+				9B11DA5BF2E3B930FEAFA38D /* MBProgressHUD */,
+				5D76010025A2948E0E601AAA /* MJExtension */,
+				2AFDA6BF052AEC18919CE6E1 /* Masonry */,
+				F20ED2F66CB9E6F6639209BC /* SSKeychain */,
+				CB107553354D5FDE3A566662 /* VENTouchLock */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		260BB96F3A757FF723096AD2 /* Headers */ = {
+		3B3CB3EA2DEB721B4E2B389E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41CC5BB8C3A64B9FFCCEFEE0 /* SSKeychain.h in Headers */,
-				E0378FDB6ACE7232B19D2984 /* SSKeychainQuery.h in Headers */,
+				ADB9A56C106EB0DAC89DF16D /* MASCompositeConstraint.h in Headers */,
+				5A2CB8322796850BC1C2BCA1 /* MASConstraint+Private.h in Headers */,
+				BE270EA0668FE3F26444783B /* MASConstraint.h in Headers */,
+				CDC0D7B7DE7238DC2898E3CE /* MASConstraintMaker.h in Headers */,
+				159979D6E49A80CDEF07E9F5 /* MASLayoutConstraint.h in Headers */,
+				9AEE9E89981D6B4AD074450C /* MASUtilities.h in Headers */,
+				AED658A20598E7443A21293A /* MASViewAttribute.h in Headers */,
+				5748054AC324995F682E7FFF /* MASViewConstraint.h in Headers */,
+				BBFAC89720F48AE5E2FA7859 /* Masonry.h in Headers */,
+				0B15BC82870CFB198DB27CD5 /* NSArray+MASAdditions.h in Headers */,
+				EFE1DA2838F104A418BC8447 /* NSArray+MASShorthandAdditions.h in Headers */,
+				BC55AF3EA974605292EF6BCF /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				FCF5890207A8D6774F72BA9A /* View+MASAdditions.h in Headers */,
+				70144E287FA59988F1EBFFFA /* View+MASShorthandAdditions.h in Headers */,
+				53BCA78C22D87D98F3A38364 /* ViewController+MASAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41A031E84405F0CC836BD90C /* Headers */ = {
+		937F09B9201D86E417362430 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				870B2CFD696CE6AF405727C8 /* MBProgressHUD.h in Headers */,
+				453D899EBF3A4AFA60F05C9D /* MJExtension.h in Headers */,
+				2FA3F415DC1F5BB005335926 /* MJExtensionConst.h in Headers */,
+				C272370BC8F08777D848937C /* MJFoundation.h in Headers */,
+				DEFE9255AF3B22B47CDF2C5D /* MJProperty.h in Headers */,
+				45A4C408E526A58147055129 /* MJType.h in Headers */,
+				ADBED3D93548766BA211A162 /* NSObject+MJCoding.h in Headers */,
+				F98F0A1591BAA4DB9AE68949 /* NSObject+MJKeyValue.h in Headers */,
+				9896ACFE80E02D6EE5DA5E20 /* NSObject+MJProperty.h in Headers */,
+				4619A3ACEE9428018DE89D9A /* NSString+MJExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E6CA1951D16038196116BD9 /* Headers */ = {
+		978E13A1C74D6D9F33627C13 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DCC7AFAD676236AA25AD578 /* MASCompositeConstraint.h in Headers */,
-				04D3388165A7EB800BE55049 /* MASConstraint+Private.h in Headers */,
-				AB017215ED119F5606B837ED /* MASConstraint.h in Headers */,
-				DEDEF66CFF6C356CD53308DA /* MASConstraintMaker.h in Headers */,
-				85A6DD4AD8B13688B562135F /* MASLayoutConstraint.h in Headers */,
-				B4AA382D6D320EDF1D4647A9 /* MASUtilities.h in Headers */,
-				6290CCE4377F2AAAB5C5FE3D /* MASViewAttribute.h in Headers */,
-				D9EEA91B1EF7D44DBD340DBB /* MASViewConstraint.h in Headers */,
-				8799B5ECA8627AE1DFF9204C /* Masonry.h in Headers */,
-				BDB2B26831C52F44AB9B8A40 /* NSArray+MASAdditions.h in Headers */,
-				151D4A303FA794D4BBC57A8F /* NSArray+MASShorthandAdditions.h in Headers */,
-				028B154A1DF75C5182D07B9A /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
-				ABB8978175CF010712293917 /* View+MASAdditions.h in Headers */,
-				97D8EBCD2D5910D737977961 /* View+MASShorthandAdditions.h in Headers */,
-				2C8B55834A0C091BD9494ADB /* ViewController+MASAdditions.h in Headers */,
+				C72BA1F8811900382EB1FEA3 /* SSKeychain.h in Headers */,
+				A0F99CD3E22C83C2BC95C5C8 /* SSKeychainQuery.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E21CE203E80022E02D6AF762 /* Headers */ = {
+		A9C5E57ACE5205E214F725A3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B4ECBC141CA14038FD924C9 /* Colours.h in Headers */,
+				7294BBCB2E1C06E335494903 /* Colours.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F569990DB649453D47770248 /* Headers */ = {
+		B0AEB3B9C20CDEFBEB556FB8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD386E8BA2654388F46D7F6 /* UIViewController+VENTouchLock.h in Headers */,
-				487B893E10172B555CAE7479 /* VENTouchLock.h in Headers */,
-				4AE5D72E4FFB05E59D15F30E /* VENTouchLockAppearance.h in Headers */,
-				B845402ED121537618193F3D /* VENTouchLockCreatePasscodeViewController.h in Headers */,
-				4ABC08B7244B934936703C5E /* VENTouchLockEnterPasscodeViewController.h in Headers */,
-				68AE36C2B2782B238DCA456E /* VENTouchLockPasscodeCharacterView.h in Headers */,
-				E08899634709CBF643D1C3E8 /* VENTouchLockPasscodeView.h in Headers */,
-				EA4D17D9DB314511F2913721 /* VENTouchLockPasscodeViewController.h in Headers */,
-				C0C142EC9D0C2A9BBEA4BADB /* VENTouchLockSplashViewController.h in Headers */,
+				9C35C918093834576CB83504 /* FMDB.h in Headers */,
+				B72F450F4A816274E3B142B1 /* FMDatabase.h in Headers */,
+				53A37726C35A4557C13A3E0D /* FMDatabaseAdditions.h in Headers */,
+				949B43C87F579F2D07ECBF57 /* FMDatabasePool.h in Headers */,
+				306142D4C92C61B94AA780E2 /* FMDatabaseQueue.h in Headers */,
+				575199155F0814B2D22B67C6 /* FMResultSet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1064D33EAD4C9A77CFB94F9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79C215D53DB2AA430C76BA05 /* MBProgressHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B83CF639310162AD141FE3DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0A8C816790655D3C5104E82 /* UIViewController+VENTouchLock.h in Headers */,
+				43826A31C743474B1F82E68C /* VENTouchLock.h in Headers */,
+				7656FB03D4CD3F6240299C84 /* VENTouchLockAppearance.h in Headers */,
+				6B1C10B9AF8096E80A388233 /* VENTouchLockCreatePasscodeViewController.h in Headers */,
+				58FD45999C1D6E0163A74999 /* VENTouchLockEnterPasscodeViewController.h in Headers */,
+				F1B95877BE97492EF9F7C7CF /* VENTouchLockPasscodeCharacterView.h in Headers */,
+				773E697560CBD3F875D4363B /* VENTouchLockPasscodeView.h in Headers */,
+				29BB6358120E388CBE9C02F4 /* VENTouchLockPasscodeViewController.h in Headers */,
+				E616F61836BA4091687F615D /* VENTouchLockSplashViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		15A6F5A8B57010F74D9E031A /* Pods-MemoOC-VENTouchLock */ = {
+		3263379F64AC6BAE1BA86ED2 /* Pods-MemoOC-SSKeychain */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C57878A5CD3B91FA0A691B16 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-VENTouchLock" */;
+			buildConfigurationList = 47CC678C855F5F1D03435CB1 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-SSKeychain" */;
 			buildPhases = (
-				52CD667A015445B4CCB545C7 /* Sources */,
-				0A3C80264BF27D82D992E3C0 /* Frameworks */,
-				F569990DB649453D47770248 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				33B737124DD4AC1F20842E68 /* PBXTargetDependency */,
-			);
-			name = "Pods-MemoOC-VENTouchLock";
-			productName = "Pods-MemoOC-VENTouchLock";
-			productReference = 1673EBCDBF765F71BC6A9B8C /* libPods-MemoOC-VENTouchLock.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		1B44484E186135609A9E2CA7 /* Pods-MemoOC-MBProgressHUD */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A2165AC0DD97D239F6CD3524 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-MBProgressHUD" */;
-			buildPhases = (
-				6A76E137DCD780F7F077D402 /* Sources */,
-				7B7EB8EE41B11EAD51180506 /* Frameworks */,
-				41A031E84405F0CC836BD90C /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-MemoOC-MBProgressHUD";
-			productName = "Pods-MemoOC-MBProgressHUD";
-			productReference = CF92ED5AB6BCA26CEF3310C8 /* libPods-MemoOC-MBProgressHUD.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		28EEDF53FE7720EFDE35002A /* Pods-MemoOC-Colours */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8D954A07C928763A4500086B /* Build configuration list for PBXNativeTarget "Pods-MemoOC-Colours" */;
-			buildPhases = (
-				D79E262ACB90533BA13EA386 /* Sources */,
-				36412654EAF5476CFBD66D39 /* Frameworks */,
-				E21CE203E80022E02D6AF762 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-MemoOC-Colours";
-			productName = "Pods-MemoOC-Colours";
-			productReference = 584A22DDFA5B4BF9E46EF0A6 /* libPods-MemoOC-Colours.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		2A9AE367EC88A1E062CC0A81 /* Pods-MemoOC */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4AE493B670B77A505C387B57 /* Build configuration list for PBXNativeTarget "Pods-MemoOC" */;
-			buildPhases = (
-				2EBC53E4F41E668B9EB0DBCD /* Sources */,
-				EC5EAFA64EB86224F358B45C /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				72511FD8EA268E2BD1AEE19D /* PBXTargetDependency */,
-				C772A8A6D6492C861A3DE255 /* PBXTargetDependency */,
-				A67ED5C6438C98ED43D0EA7E /* PBXTargetDependency */,
-				D9D22CADA71A089035BDCD42 /* PBXTargetDependency */,
-				2220B6496091DB774DFEEDF8 /* PBXTargetDependency */,
-			);
-			name = "Pods-MemoOC";
-			productName = "Pods-MemoOC";
-			productReference = 74D5F34D5BD165691689811C /* libPods-MemoOC.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		907D54217F8C377C08B0E2B9 /* Pods-MemoOC-SSKeychain */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9D1727A5288FD159417416FF /* Build configuration list for PBXNativeTarget "Pods-MemoOC-SSKeychain" */;
-			buildPhases = (
-				037B85575EB1FAC03C417B10 /* Sources */,
-				D0465600EEA70332548B2050 /* Frameworks */,
-				260BB96F3A757FF723096AD2 /* Headers */,
+				0AA21C127AFF44A1C1EFF891 /* Sources */,
+				93BFB85CCB363885BD24A247 /* Frameworks */,
+				978E13A1C74D6D9F33627C13 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -666,16 +802,16 @@
 			);
 			name = "Pods-MemoOC-SSKeychain";
 			productName = "Pods-MemoOC-SSKeychain";
-			productReference = 6BD98FB3B57BE604A0CD42D8 /* libPods-MemoOC-SSKeychain.a */;
+			productReference = E776D15C0A6605235FD67FB2 /* libPods-MemoOC-SSKeychain.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		AD01562C416D363421FE1694 /* Pods-MemoOC-Masonry */ = {
+		6DD0C0584D0B649B8BB43B18 /* Pods-MemoOC-Masonry */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2747C2D24874F5AB12AEBDE2 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-Masonry" */;
+			buildConfigurationList = 6085C83C450FF19CE9D945E7 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-Masonry" */;
 			buildPhases = (
-				D9412E5CAAE2BFB407B4D658 /* Sources */,
-				6604A6341010C2AE02E11A5F /* Frameworks */,
-				6E6CA1951D16038196116BD9 /* Headers */,
+				5CC2C5E068B19FE6305F42A4 /* Sources */,
+				7CFAFA935667FA49A6F726DA /* Frameworks */,
+				3B3CB3EA2DEB721B4E2B389E /* Headers */,
 			);
 			buildRules = (
 			);
@@ -683,160 +819,312 @@
 			);
 			name = "Pods-MemoOC-Masonry";
 			productName = "Pods-MemoOC-Masonry";
-			productReference = 6C2B47CB8A2DB4D41466B708 /* libPods-MemoOC-Masonry.a */;
+			productReference = C4762C0ED7D03F2006F270E4 /* libPods-MemoOC-Masonry.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84E1B0224445CCE1F12F26E4 /* Pods-MemoOC-VENTouchLock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45EB6800C038C86D60E7ABF2 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-VENTouchLock" */;
+			buildPhases = (
+				27DBF5CFE3257E6BB0AD5221 /* Sources */,
+				495903310F7EF181B83D4638 /* Frameworks */,
+				B83CF639310162AD141FE3DE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF69B605D3C12CB90B442D61 /* PBXTargetDependency */,
+			);
+			name = "Pods-MemoOC-VENTouchLock";
+			productName = "Pods-MemoOC-VENTouchLock";
+			productReference = 315628867696D74F1DC8888C /* libPods-MemoOC-VENTouchLock.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AA3E3D92B4BE4C21FC04BE50 /* Pods-MemoOC-Colours */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7167FAF4EFA9961DC2918BF /* Build configuration list for PBXNativeTarget "Pods-MemoOC-Colours" */;
+			buildPhases = (
+				C84CA79D89075F9A120EF68A /* Sources */,
+				21D53C8BB310B1F5B67AAC0A /* Frameworks */,
+				A9C5E57ACE5205E214F725A3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MemoOC-Colours";
+			productName = "Pods-MemoOC-Colours";
+			productReference = 39576B3FCAD58533EF09B41D /* libPods-MemoOC-Colours.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B2C455BC1219022ED79EA8C0 /* Pods-MemoOC-MBProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2DB7A275A1963F71F0E36C0 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-MBProgressHUD" */;
+			buildPhases = (
+				77B139F5C8EB260CFE79BD4E /* Sources */,
+				D222F529FAD7B578E4E0966D /* Frameworks */,
+				B1064D33EAD4C9A77CFB94F9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MemoOC-MBProgressHUD";
+			productName = "Pods-MemoOC-MBProgressHUD";
+			productReference = 51CB9076B4B3AB29E383D95E /* libPods-MemoOC-MBProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BEA709E8B9FBF1180035B882 /* Pods-MemoOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51E4540A7C58C1D95B9C51B1 /* Build configuration list for PBXNativeTarget "Pods-MemoOC" */;
+			buildPhases = (
+				61BB1322AAEC35EE7A88D1E2 /* Sources */,
+				21DF66019609B903E6AFB7C8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A762192E214C9803D4C647F /* PBXTargetDependency */,
+				5C6B71B256C4D55B864473B4 /* PBXTargetDependency */,
+				51CFCF57959604F8400CA292 /* PBXTargetDependency */,
+				711F6141822BFB9152744CF5 /* PBXTargetDependency */,
+				27DCDD801DE32B17F20449F8 /* PBXTargetDependency */,
+				E5161C3B5654C95252E7E82A /* PBXTargetDependency */,
+				0154BD328CE867CBC7F5506E /* PBXTargetDependency */,
+			);
+			name = "Pods-MemoOC";
+			productName = "Pods-MemoOC";
+			productReference = BE6AACE9802EED3EA743C8F3 /* libPods-MemoOC.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C15EC6EA3FC0535FFC37F919 /* Pods-MemoOC-FMDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB7389905F6C1C3170228E4A /* Build configuration list for PBXNativeTarget "Pods-MemoOC-FMDB" */;
+			buildPhases = (
+				E4A8D9EE6F8B6B25AEBD71D7 /* Sources */,
+				F2599FC9C2A236E01FE764BA /* Frameworks */,
+				B0AEB3B9C20CDEFBEB556FB8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MemoOC-FMDB";
+			productName = "Pods-MemoOC-FMDB";
+			productReference = BFE73E928BA47B5684E00134 /* libPods-MemoOC-FMDB.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F97B5F5B7FA34054E2CC870D /* Pods-MemoOC-MJExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93A285355CE06E67F199112E /* Build configuration list for PBXNativeTarget "Pods-MemoOC-MJExtension" */;
+			buildPhases = (
+				8E32737C82811CB0137C70EA /* Sources */,
+				52624401E7119A9C0CB3E213 /* Frameworks */,
+				937F09B9201D86E417362430 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MemoOC-MJExtension";
+			productName = "Pods-MemoOC-MJExtension";
+			productReference = EE533FA77AAFA1D291CDBE99 /* libPods-MemoOC-MJExtension.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		84142320243E9351CD617129 /* Project object */ = {
+		19D60E55EFAEA7247A9F90E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 2822D1281F6E8EAECD95853A /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = A901FDE208EE3925F3F80E31 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 2F07A990C32CA8374ECA784A;
-			productRefGroup = EF64EF2F25EB17441BA170CB /* Products */;
+			mainGroup = 332FA899DE18DA15325736CB;
+			productRefGroup = 9D166438E108F98261996D29 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A9AE367EC88A1E062CC0A81 /* Pods-MemoOC */,
-				28EEDF53FE7720EFDE35002A /* Pods-MemoOC-Colours */,
-				1B44484E186135609A9E2CA7 /* Pods-MemoOC-MBProgressHUD */,
-				AD01562C416D363421FE1694 /* Pods-MemoOC-Masonry */,
-				907D54217F8C377C08B0E2B9 /* Pods-MemoOC-SSKeychain */,
-				15A6F5A8B57010F74D9E031A /* Pods-MemoOC-VENTouchLock */,
+				BEA709E8B9FBF1180035B882 /* Pods-MemoOC */,
+				AA3E3D92B4BE4C21FC04BE50 /* Pods-MemoOC-Colours */,
+				C15EC6EA3FC0535FFC37F919 /* Pods-MemoOC-FMDB */,
+				B2C455BC1219022ED79EA8C0 /* Pods-MemoOC-MBProgressHUD */,
+				F97B5F5B7FA34054E2CC870D /* Pods-MemoOC-MJExtension */,
+				6DD0C0584D0B649B8BB43B18 /* Pods-MemoOC-Masonry */,
+				3263379F64AC6BAE1BA86ED2 /* Pods-MemoOC-SSKeychain */,
+				84E1B0224445CCE1F12F26E4 /* Pods-MemoOC-VENTouchLock */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		037B85575EB1FAC03C417B10 /* Sources */ = {
+		0AA21C127AFF44A1C1EFF891 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				066D269D8C19DCDCF813F2BF /* Pods-MemoOC-SSKeychain-dummy.m in Sources */,
-				5E129107F029ADC6943C9698 /* SSKeychain.m in Sources */,
-				A44368F78BBC735A99619914 /* SSKeychainQuery.m in Sources */,
+				3DE66578FAE73F69BD7705F6 /* Pods-MemoOC-SSKeychain-dummy.m in Sources */,
+				D72EB3146051CD99DB562AD2 /* SSKeychain.m in Sources */,
+				7DF14980C4C5591BC7B3F6F9 /* SSKeychainQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EBC53E4F41E668B9EB0DBCD /* Sources */ = {
+		27DBF5CFE3257E6BB0AD5221 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7AB8BCDCB16F4C1AEAE5BCF /* Pods-MemoOC-dummy.m in Sources */,
+				80208D6A52593E7BC04D3885 /* Pods-MemoOC-VENTouchLock-dummy.m in Sources */,
+				E0885ED7D50D5FE7B282DA49 /* UIViewController+VENTouchLock.m in Sources */,
+				D344BE467893BDBDDB33C393 /* VENTouchLock.m in Sources */,
+				582A413C6538BFA453EB1A0C /* VENTouchLockAppearance.m in Sources */,
+				23DAEF80A0D5915648AE3106 /* VENTouchLockCreatePasscodeViewController.m in Sources */,
+				D575B7404CF38B976C64C6D0 /* VENTouchLockEnterPasscodeViewController.m in Sources */,
+				17D70E1FFAAB0BF0D3F65FF3 /* VENTouchLockPasscodeCharacterView.m in Sources */,
+				915773B92A48ACA5A0113C61 /* VENTouchLockPasscodeView.m in Sources */,
+				9A050F6D8302846B6F2C4B7C /* VENTouchLockPasscodeViewController.m in Sources */,
+				73E20B34BCBEBAF6DB86F3C0 /* VENTouchLockSplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52CD667A015445B4CCB545C7 /* Sources */ = {
+		5CC2C5E068B19FE6305F42A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66E60E95F8AFACBF201003DE /* Pods-MemoOC-VENTouchLock-dummy.m in Sources */,
-				BCD012B2A7F1725B0DA01E36 /* UIViewController+VENTouchLock.m in Sources */,
-				F3F99FD9FAB0CDE226A05AA0 /* VENTouchLock.m in Sources */,
-				A4A901D23B8CE96DD979717E /* VENTouchLockAppearance.m in Sources */,
-				7785F5D7BDDFF092E8B68E93 /* VENTouchLockCreatePasscodeViewController.m in Sources */,
-				0ED7E09D7E18031CF68BAA85 /* VENTouchLockEnterPasscodeViewController.m in Sources */,
-				ED7A9128DD68FC3956EA0F8D /* VENTouchLockPasscodeCharacterView.m in Sources */,
-				E27F0184869D02911DD93A95 /* VENTouchLockPasscodeView.m in Sources */,
-				DCE2F757B1FD742BF095D0CD /* VENTouchLockPasscodeViewController.m in Sources */,
-				0B3E87BF982B926CC4459CEA /* VENTouchLockSplashViewController.m in Sources */,
+				6196802A8FB48CF7326530B1 /* MASCompositeConstraint.m in Sources */,
+				D0DDF408B53FF5CDBC0DC50B /* MASConstraint.m in Sources */,
+				B1FFB173799F3A653EA6C314 /* MASConstraintMaker.m in Sources */,
+				D959E020CFF4ADE48C6429DE /* MASLayoutConstraint.m in Sources */,
+				DA517EDD63279CBC8A790390 /* MASViewAttribute.m in Sources */,
+				535350140372B3A129EB8E11 /* MASViewConstraint.m in Sources */,
+				688F7BB24307F8AC455005BB /* NSArray+MASAdditions.m in Sources */,
+				1027EFA3D7C45AAD8D060FD8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				BD522F721B06EFA21CDDB431 /* Pods-MemoOC-Masonry-dummy.m in Sources */,
+				493EBA58A492D2E18EA118CA /* View+MASAdditions.m in Sources */,
+				6FFA68BFD27FF6CD5D53B1BF /* ViewController+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A76E137DCD780F7F077D402 /* Sources */ = {
+		61BB1322AAEC35EE7A88D1E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8109B3A749A048C42FEE565B /* MBProgressHUD.m in Sources */,
-				D23FCC8EA3FE8885C55A622D /* Pods-MemoOC-MBProgressHUD-dummy.m in Sources */,
+				78E2BA2C91A3B620B0391A32 /* Pods-MemoOC-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D79E262ACB90533BA13EA386 /* Sources */ = {
+		77B139F5C8EB260CFE79BD4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17813FE856A806E420A6AE17 /* Colours.m in Sources */,
-				AB1B0E817D9F303C88C91CBF /* Pods-MemoOC-Colours-dummy.m in Sources */,
+				2518790F85C84E17ADA9DEFC /* MBProgressHUD.m in Sources */,
+				FC4F58240AB215B929CE2DFF /* Pods-MemoOC-MBProgressHUD-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D9412E5CAAE2BFB407B4D658 /* Sources */ = {
+		8E32737C82811CB0137C70EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20D13B9B039A140DC88DF8B3 /* MASCompositeConstraint.m in Sources */,
-				C804047E1AFF6DF78AD93360 /* MASConstraint.m in Sources */,
-				2A8AB377B78FCD9640290371 /* MASConstraintMaker.m in Sources */,
-				B4FE01B0F99228076358A92B /* MASLayoutConstraint.m in Sources */,
-				F3331E5A36BCA1969207233B /* MASViewAttribute.m in Sources */,
-				7C42698EDEDD2CBC2C6E1675 /* MASViewConstraint.m in Sources */,
-				728E806E92171E09DEC5A696 /* NSArray+MASAdditions.m in Sources */,
-				7BEA0B453483F37160697886 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				8F4E73491576C98FB0F12ECC /* Pods-MemoOC-Masonry-dummy.m in Sources */,
-				62640BF752CC52C405BCC019 /* View+MASAdditions.m in Sources */,
-				691E9A1B24F9CF1A2868D853 /* ViewController+MASAdditions.m in Sources */,
+				17E23BFEEA6545072800E177 /* MJExtensionConst.m in Sources */,
+				C9FB99383090F4AA33C9D5E2 /* MJFoundation.m in Sources */,
+				65660F7CF8BA010245D4DBB3 /* MJProperty.m in Sources */,
+				32D02D8D94D1C95BD5E04E20 /* MJType.m in Sources */,
+				EA2A196CC14A8A74D36F480C /* NSObject+MJCoding.m in Sources */,
+				146B28CEE3FC68ABEC0DCDF4 /* NSObject+MJKeyValue.m in Sources */,
+				6A776BDB09924EF2EAC01E6D /* NSObject+MJProperty.m in Sources */,
+				CE3D4A7EE64B5471B7E6C237 /* NSString+MJExtension.m in Sources */,
+				64FD0C0478A8E3D453725E5F /* Pods-MemoOC-MJExtension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84CA79D89075F9A120EF68A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4898249ACC07E1103A8E4800 /* Colours.m in Sources */,
+				26456BAA1AB1F38F22111446 /* Pods-MemoOC-Colours-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4A8D9EE6F8B6B25AEBD71D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FD09223AF4738E734B89380 /* FMDatabase.m in Sources */,
+				A49E9D45E60D4F8B51ADFAD2 /* FMDatabaseAdditions.m in Sources */,
+				3D77AD04CD5991B7C8D2A219 /* FMDatabasePool.m in Sources */,
+				60F0940D96463D5D72D66D50 /* FMDatabaseQueue.m in Sources */,
+				077FBF521CEC301E71030A45 /* FMResultSet.m in Sources */,
+				F88546E15E0F4D53D8754195 /* Pods-MemoOC-FMDB-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2220B6496091DB774DFEEDF8 /* PBXTargetDependency */ = {
+		0154BD328CE867CBC7F5506E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-MemoOC-VENTouchLock";
-			target = 15A6F5A8B57010F74D9E031A /* Pods-MemoOC-VENTouchLock */;
-			targetProxy = 6AE25F441B5565C5B86C5B24 /* PBXContainerItemProxy */;
+			target = 84E1B0224445CCE1F12F26E4 /* Pods-MemoOC-VENTouchLock */;
+			targetProxy = 5D5DFE3EEB071658A6E7CFF4 /* PBXContainerItemProxy */;
 		};
-		33B737124DD4AC1F20842E68 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-MemoOC-SSKeychain";
-			target = 907D54217F8C377C08B0E2B9 /* Pods-MemoOC-SSKeychain */;
-			targetProxy = 26AA7ED1A45C48C13B0D76E5 /* PBXContainerItemProxy */;
-		};
-		72511FD8EA268E2BD1AEE19D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-MemoOC-Colours";
-			target = 28EEDF53FE7720EFDE35002A /* Pods-MemoOC-Colours */;
-			targetProxy = 211F50B310EC81CA1F335F58 /* PBXContainerItemProxy */;
-		};
-		A67ED5C6438C98ED43D0EA7E /* PBXTargetDependency */ = {
+		27DCDD801DE32B17F20449F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-MemoOC-Masonry";
-			target = AD01562C416D363421FE1694 /* Pods-MemoOC-Masonry */;
-			targetProxy = CE87412666B46B6148DDB3C3 /* PBXContainerItemProxy */;
+			target = 6DD0C0584D0B649B8BB43B18 /* Pods-MemoOC-Masonry */;
+			targetProxy = 0C919E39A6422FFF105CEF73 /* PBXContainerItemProxy */;
 		};
-		C772A8A6D6492C861A3DE255 /* PBXTargetDependency */ = {
+		51CFCF57959604F8400CA292 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-MemoOC-MBProgressHUD";
-			target = 1B44484E186135609A9E2CA7 /* Pods-MemoOC-MBProgressHUD */;
-			targetProxy = 63C4EC65F9FF65919749A602 /* PBXContainerItemProxy */;
+			target = B2C455BC1219022ED79EA8C0 /* Pods-MemoOC-MBProgressHUD */;
+			targetProxy = 83B05015A57BE9A76CB85767 /* PBXContainerItemProxy */;
 		};
-		D9D22CADA71A089035BDCD42 /* PBXTargetDependency */ = {
+		5C6B71B256C4D55B864473B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MemoOC-FMDB";
+			target = C15EC6EA3FC0535FFC37F919 /* Pods-MemoOC-FMDB */;
+			targetProxy = 290D4782E1BEBD3896F60BA8 /* PBXContainerItemProxy */;
+		};
+		6A762192E214C9803D4C647F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MemoOC-Colours";
+			target = AA3E3D92B4BE4C21FC04BE50 /* Pods-MemoOC-Colours */;
+			targetProxy = FE433D54F81A21BDC319C610 /* PBXContainerItemProxy */;
+		};
+		711F6141822BFB9152744CF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MemoOC-MJExtension";
+			target = F97B5F5B7FA34054E2CC870D /* Pods-MemoOC-MJExtension */;
+			targetProxy = 5FB28B13A9AFA2E79FD1785E /* PBXContainerItemProxy */;
+		};
+		AF69B605D3C12CB90B442D61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-MemoOC-SSKeychain";
-			target = 907D54217F8C377C08B0E2B9 /* Pods-MemoOC-SSKeychain */;
-			targetProxy = 9533CA6782EE183DCA8C56DB /* PBXContainerItemProxy */;
+			target = 3263379F64AC6BAE1BA86ED2 /* Pods-MemoOC-SSKeychain */;
+			targetProxy = 0D88CF76753EEEFF5633B134 /* PBXContainerItemProxy */;
+		};
+		E5161C3B5654C95252E7E82A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MemoOC-SSKeychain";
+			target = 3263379F64AC6BAE1BA86ED2 /* Pods-MemoOC-SSKeychain */;
+			targetProxy = AC0E1EB63FF079E7DE16E8CC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		45589D4F34EDE3987F485511 /* Debug */ = {
+		136B6C7E27E420FB2F222CDF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1BD60F5E475232414FEA537 /* Pods-MemoOC.debug.xcconfig */;
+			baseConfigurationReference = 602838D8CE5CC1ED82B4ABB0 /* Pods-MemoOC.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -844,14 +1132,14 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		4B5CEDB56798B985DDFB2638 /* Debug */ = {
+		1CE26A20BDFA2A7FFFA1844E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A174EE57C161FE7F0148C7C5 /* Pods-MemoOC-SSKeychain-Private.xcconfig */;
+			baseConfigurationReference = C6AF9574134255B5F78219C0 /* Pods-MemoOC-MJExtension-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-SSKeychain/Pods-MemoOC-SSKeychain-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-MJExtension/Pods-MemoOC-MJExtension-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -862,28 +1150,12 @@
 			};
 			name = Debug;
 		};
-		53D3E805AC871855EF35E41D /* Release */ = {
+		223115E7BC5862DCEF1A1E0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A174EE57C161FE7F0148C7C5 /* Pods-MemoOC-SSKeychain-Private.xcconfig */;
+			baseConfigurationReference = 54DD974EC246AA7B2C63C1F8 /* Pods-MemoOC-Masonry-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-SSKeychain/Pods-MemoOC-SSKeychain-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		5B0C674027BA093A88701304 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63D7B64B57E3B0883E29A221 /* Pods-MemoOC-Colours-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-Colours/Pods-MemoOC-Colours-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-Masonry/Pods-MemoOC-Masonry-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -894,46 +1166,28 @@
 			};
 			name = Debug;
 		};
-		6D8A788364593CD70EC2EFB5 /* Release */ = {
+		40E4EC6CA7A734A9F8272C99 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		84BC9B29258E870A9C588EFE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63D7B64B57E3B0883E29A221 /* Pods-MemoOC-Colours-Private.xcconfig */;
+			baseConfigurationReference = ED494B753714C745FA5502CE /* Pods-MemoOC-VENTouchLock-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-Colours/Pods-MemoOC-Colours-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-VENTouchLock/Pods-MemoOC-VENTouchLock-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4BCEF9CFDE2F0ADB0240A3C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED494B753714C745FA5502CE /* Pods-MemoOC-VENTouchLock-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-VENTouchLock/Pods-MemoOC-VENTouchLock-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -944,7 +1198,23 @@
 			};
 			name = Release;
 		};
-		9A6BD44903F86D46691C8602 /* Debug */ = {
+		514E9FE3C19AFE96771C93BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 865FA773E9E3E1C84AF50087 /* Pods-MemoOC-FMDB-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-FMDB/Pods-MemoOC-FMDB-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7756DE76C3A1002F7A0E67B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -983,12 +1253,12 @@
 			};
 			name = Debug;
 		};
-		AA52F9C63BD0FA459B536175 /* Release */ = {
+		79733842C914B65236FFE328 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 167F91A924219606804930DD /* Pods-MemoOC-VENTouchLock-Private.xcconfig */;
+			baseConfigurationReference = 5D5DC09A726652CA4A924E43 /* Pods-MemoOC-Colours-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-VENTouchLock/Pods-MemoOC-VENTouchLock-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-Colours/Pods-MemoOC-Colours-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -999,57 +1269,9 @@
 			};
 			name = Release;
 		};
-		B0BE35EADE523C80D8D1E6BA /* Debug */ = {
+		7EA2B09421C1717E18F13D49 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 167F91A924219606804930DD /* Pods-MemoOC-VENTouchLock-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-VENTouchLock/Pods-MemoOC-VENTouchLock-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		C0578AB3869B7521EE87DCB0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACF2C6F22432D4435AA756D9 /* Pods-MemoOC-MBProgressHUD-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-MBProgressHUD/Pods-MemoOC-MBProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		CE81971B6CB1244555090A1B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACF2C6F22432D4435AA756D9 /* Pods-MemoOC-MBProgressHUD-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-MBProgressHUD/Pods-MemoOC-MBProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		E5EEFBD759265817C8C22AE1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EADD6A275D3444A3FA284C7B /* Pods-MemoOC-Masonry-Private.xcconfig */;
+			baseConfigurationReference = 54DD974EC246AA7B2C63C1F8 /* Pods-MemoOC-Masonry-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-Masonry/Pods-MemoOC-Masonry-prefix.pch";
@@ -1063,13 +1285,13 @@
 			};
 			name = Release;
 		};
-		F09E419443694F04935923DF /* Release */ = {
+		808A9F3193A275D3A958A2CF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 591221D9C03F7DCDFAC50771 /* Pods-MemoOC.release.xcconfig */;
+			baseConfigurationReference = 49AB04A156D10973319ECFF7 /* Pods-MemoOC.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1077,14 +1299,64 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		F3F86478D3344B87DDA6DC70 /* Debug */ = {
+		85565860108BFBA53E72FF70 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EADD6A275D3444A3FA284C7B /* Pods-MemoOC-Masonry-Private.xcconfig */;
+			baseConfigurationReference = 5A07D96215C891C35A5469FA /* Pods-MemoOC-SSKeychain-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-Masonry/Pods-MemoOC-Masonry-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-SSKeychain/Pods-MemoOC-SSKeychain-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A7FD7D9BE28D0AF1D1AF2FF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEFE5D048CC76DF326D74059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A07D96215C891C35A5469FA /* Pods-MemoOC-SSKeychain-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-SSKeychain/Pods-MemoOC-SSKeychain-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -1095,73 +1367,171 @@
 			};
 			name = Debug;
 		};
+		DC1C2F6FB469407A03431DA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 919B02E4E815A1F81113EAC2 /* Pods-MemoOC-MBProgressHUD-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-MBProgressHUD/Pods-MemoOC-MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		ECEDD740E2DA03495FEE8D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 865FA773E9E3E1C84AF50087 /* Pods-MemoOC-FMDB-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-FMDB/Pods-MemoOC-FMDB-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F1AF67C0ADC3DD504DC6530B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D5DC09A726652CA4A924E43 /* Pods-MemoOC-Colours-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-Colours/Pods-MemoOC-Colours-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F1FA87578D0CFB6490F2D8C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 919B02E4E815A1F81113EAC2 /* Pods-MemoOC-MBProgressHUD-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-MBProgressHUD/Pods-MemoOC-MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F27EA53FE3D491939FBC6E1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6AF9574134255B5F78219C0 /* Pods-MemoOC-MJExtension-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MemoOC-MJExtension/Pods-MemoOC-MJExtension-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2747C2D24874F5AB12AEBDE2 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-Masonry" */ = {
+		45EB6800C038C86D60E7ABF2 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-VENTouchLock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3F86478D3344B87DDA6DC70 /* Debug */,
-				E5EEFBD759265817C8C22AE1 /* Release */,
+				40E4EC6CA7A734A9F8272C99 /* Debug */,
+				4BCEF9CFDE2F0ADB0240A3C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2822D1281F6E8EAECD95853A /* Build configuration list for PBXProject "Pods" */ = {
+		47CC678C855F5F1D03435CB1 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-SSKeychain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9A6BD44903F86D46691C8602 /* Debug */,
-				6D8A788364593CD70EC2EFB5 /* Release */,
+				BEFE5D048CC76DF326D74059 /* Debug */,
+				85565860108BFBA53E72FF70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4AE493B670B77A505C387B57 /* Build configuration list for PBXNativeTarget "Pods-MemoOC" */ = {
+		51E4540A7C58C1D95B9C51B1 /* Build configuration list for PBXNativeTarget "Pods-MemoOC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				45589D4F34EDE3987F485511 /* Debug */,
-				F09E419443694F04935923DF /* Release */,
+				808A9F3193A275D3A958A2CF /* Debug */,
+				136B6C7E27E420FB2F222CDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D954A07C928763A4500086B /* Build configuration list for PBXNativeTarget "Pods-MemoOC-Colours" */ = {
+		6085C83C450FF19CE9D945E7 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-Masonry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B0C674027BA093A88701304 /* Debug */,
-				84BC9B29258E870A9C588EFE /* Release */,
+				223115E7BC5862DCEF1A1E0A /* Debug */,
+				7EA2B09421C1717E18F13D49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9D1727A5288FD159417416FF /* Build configuration list for PBXNativeTarget "Pods-MemoOC-SSKeychain" */ = {
+		93A285355CE06E67F199112E /* Build configuration list for PBXNativeTarget "Pods-MemoOC-MJExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4B5CEDB56798B985DDFB2638 /* Debug */,
-				53D3E805AC871855EF35E41D /* Release */,
+				1CE26A20BDFA2A7FFFA1844E /* Debug */,
+				F27EA53FE3D491939FBC6E1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A2165AC0DD97D239F6CD3524 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-MBProgressHUD" */ = {
+		A901FDE208EE3925F3F80E31 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C0578AB3869B7521EE87DCB0 /* Debug */,
-				CE81971B6CB1244555090A1B /* Release */,
+				7756DE76C3A1002F7A0E67B8 /* Debug */,
+				A7FD7D9BE28D0AF1D1AF2FF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C57878A5CD3B91FA0A691B16 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-VENTouchLock" */ = {
+		B7167FAF4EFA9961DC2918BF /* Build configuration list for PBXNativeTarget "Pods-MemoOC-Colours" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B0BE35EADE523C80D8D1E6BA /* Debug */,
-				AA52F9C63BD0FA459B536175 /* Release */,
+				F1AF67C0ADC3DD504DC6530B /* Debug */,
+				79733842C914B65236FFE328 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2DB7A275A1963F71F0E36C0 /* Build configuration list for PBXNativeTarget "Pods-MemoOC-MBProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1FA87578D0CFB6490F2D8C7 /* Debug */,
+				DC1C2F6FB469407A03431DA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB7389905F6C1C3170228E4A /* Build configuration list for PBXNativeTarget "Pods-MemoOC-FMDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				514E9FE3C19AFE96771C93BE /* Debug */,
+				ECEDD740E2DA03495FEE8D6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 84142320243E9351CD617129 /* Project object */;
+	rootObject = 19D60E55EFAEA7247A9F90E4 /* Project object */;
 }
