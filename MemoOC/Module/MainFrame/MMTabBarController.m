@@ -8,6 +8,8 @@
 
 #import "MMTabBarController.h"
 #import "MMNoteListViewController.h"
+//#import "MMSettingTableViewController.h"
+#import "MMNavigationController.h"
 @interface MMTabBarController ()
 
 @end
@@ -59,7 +61,8 @@
 */
 #pragma mark - NOTIFICATION
 - (void)setting:(UIButton *)sender {
-    
+    MMNavigationController *settingNVC = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil] instantiateInitialViewController];
+    [self presentViewController:settingNVC animated:YES completion:nil];
 }
 - (void)postAddNotification {
     [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationAdd object:nil];

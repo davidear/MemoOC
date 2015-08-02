@@ -26,6 +26,9 @@
 		B2F9DE281B6C7269003A7DCA /* MMNoteData.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9DE271B6C7269003A7DCA /* MMNoteData.m */; };
 		B2F9DE2B1B6C79B9003A7DCA /* FMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9DE2A1B6C79B9003A7DCA /* FMDBHelper.m */; };
 		B2F9DE2E1B6CF7AB003A7DCA /* MMNoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9DE2D1B6CF7AB003A7DCA /* MMNoteListViewController.m */; };
+		B2FB70791B6DF23800BA05AA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FB70781B6DF23800BA05AA /* Setting.storyboard */; };
+		B2FB707C1B6DF27400BA05AA /* MMSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FB707B1B6DF27400BA05AA /* MMSettingTableViewController.m */; };
+		B2FB707E1B6DF2C500BA05AA /* SettingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2FB707D1B6DF2C500BA05AA /* SettingList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,10 @@
 		B2F9DE2A1B6C79B9003A7DCA /* FMDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBHelper.m; sourceTree = "<group>"; };
 		B2F9DE2C1B6CF7AB003A7DCA /* MMNoteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNoteListViewController.h; sourceTree = "<group>"; };
 		B2F9DE2D1B6CF7AB003A7DCA /* MMNoteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNoteListViewController.m; sourceTree = "<group>"; };
+		B2FB70781B6DF23800BA05AA /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		B2FB707A1B6DF27400BA05AA /* MMSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSettingTableViewController.h; sourceTree = "<group>"; };
+		B2FB707B1B6DF27400BA05AA /* MMSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSettingTableViewController.m; sourceTree = "<group>"; };
+		B2FB707D1B6DF2C500BA05AA /* SettingList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SettingList.plist; sourceTree = "<group>"; };
 		E12BD68C3625EC2705FACCBF /* libPods-MemoOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -188,6 +195,7 @@
 		B2F88CB01B6B99A6002567BE /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				B2FB70731B6DF14F00BA05AA /* Setting */,
 				B2F88CB11B6B99A6002567BE /* MainFrame */,
 				B2F88CB41B6B99A6002567BE /* Note */,
 				B2F88CBE1B6B99A6002567BE /* TouchLock */,
@@ -287,6 +295,25 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B2FB70731B6DF14F00BA05AA /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				B2FB70771B6DF22800BA05AA /* Source */,
+				B2FB707A1B6DF27400BA05AA /* MMSettingTableViewController.h */,
+				B2FB707B1B6DF27400BA05AA /* MMSettingTableViewController.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		B2FB70771B6DF22800BA05AA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B2FB70781B6DF23800BA05AA /* Setting.storyboard */,
+				B2FB707D1B6DF2C500BA05AA /* SettingList.plist */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		E9B144FFE9756721C97BF9E6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,8 +408,10 @@
 				B2F88C991B6B9712002567BE /* LaunchScreen.xib in Resources */,
 				B2F88D101B6BC6C4002567BE /* Main.Storyboard in Resources */,
 				B2F88CE61B6B99A6002567BE /* Note.storyboard in Resources */,
+				B2FB707E1B6DF2C500BA05AA /* SettingList.plist in Resources */,
 				B2F88C961B6B9712002567BE /* Images.xcassets in Resources */,
 				B2F9DE251B6C722E003A7DCA /* NoteList.plist in Resources */,
+				B2FB70791B6DF23800BA05AA /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F88D0B1B6BBEA3002567BE /* MMTouchLockSplashViewController.m in Sources */,
+				B2FB707C1B6DF27400BA05AA /* MMSettingTableViewController.m in Sources */,
 				B2F88D081B6BBD66002567BE /* MMNoteEditViewController.m in Sources */,
 				B2F88C8E1B6B9712002567BE /* AppDelegate.m in Sources */,
 				B2F88CF81B6B9A06002567BE /* CommonHelper.m in Sources */,
