@@ -7,19 +7,28 @@
 //
 
 #import "MMSettingTableViewController.h"
-//@interface MMSettingListCell: UITableViewCell
-//
-//@end
-//@implementation MMSettingListCell
-//
-//
-//@end
+#import "VENTouchLock.h"
+@interface MMSettingSwitchCell: UITableViewCell
+
+@end
+@implementation MMSettingSwitchCell
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        UISwitch *switchButton = [[UISwitch alloc] init];
+        self.accessoryView = switchButton;
+    }
+    return self;
+}
+
+@end
 @interface MMSettingTableViewController ()
 @property (strong, nonatomic) NSMutableArray *dataArray;
 @end
 
 @implementation MMSettingTableViewController
 static NSString * const reuseIdentifier = @"Cell";
+static NSString * const SwitchReuseIdentifier = @"SwitchCell";
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
@@ -45,7 +54,7 @@ static NSString * const reuseIdentifier = @"Cell";
     self.dataArray = [NSMutableArray arrayWithContentsOfFile:path];
 }
 - (void)setUI {
-
+    [self.tableView registerClass:[MMSettingSwitchCell class] forCellReuseIdentifier:SwitchReuseIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,18 +79,49 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell;
+    if (indexPath.row == 0) {
+        cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    }else {
+        cell = [tableView dequeueReusableCellWithIdentifier:SwitchReuseIdentifier forIndexPath:indexPath];
+        UISwitch *switchButton = (UISwitch *)cell.accessoryView;
+        [switchButton addTarget:self action:@selector(switchValueChanged:) forControlEvents:UIControlEventValueChanged];
+    }
+    
     
     // Configure the cell...
     cell.textLabel.text = self.dataArray[indexPath.row][@"title"];
     return cell;
 }
-
+#pragma mark - Button Action
+- (void)switchValueChanged:(UISwitch *)sender {
+    
+}
 #pragma mark - Table View Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if ([[VENTouchLock sharedInstance] isPasscodeSet]) {
+        VENTouchLockEnterPasscodeViewController *vc = [[VENTouchLockEnterPasscodeViewController alloc] init];
+        vc.willFinishWithResult = ^void(BOOL success) {
+            if (success) {
+                VENTouchLockCreatePasscodeViewController *createVC = [[VENTouchLockCreatePasscodeViewController alloc] init];
+                [self.navigationController pushViewController:createVC animated:YES];
+            }
+        };
+        [self.navigationController pushViewController:vc animated:YES];
+    }else {
+        VENTouchLockCreatePasscodeViewController *vc = [[VENTouchLockCreatePasscodeViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+
 }
 
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 1) {
+        return NO;
+    }
+    return YES;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

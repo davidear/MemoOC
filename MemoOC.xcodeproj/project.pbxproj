@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0AD095A42B015280ACB9C777 /* libPods-MemoOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E12BD68C3625EC2705FACCBF /* libPods-MemoOC.a */; };
 		B25AAC9F1B6F53A500E2502F /* MMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25AAC9E1B6F53A500E2502F /* MMTableViewController.m */; };
+		B25AACA21B6F5A5600E2502F /* AccessHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B25AACA11B6F5A5600E2502F /* AccessHelper.m */; };
+		B25AACA51B6F717D00E2502F /* MMChangePasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25AACA41B6F717D00E2502F /* MMChangePasscodeViewController.m */; };
 		B2620B4C1B6F04CD001496AB /* MMNotebookSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2620B4B1B6F04CD001496AB /* MMNotebookSelectionTableViewController.m */; };
 		B2F88C8B1B6B9712002567BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88C8A1B6B9712002567BE /* main.m */; };
 		B2F88C8E1B6B9712002567BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88C8D1B6B9712002567BE /* AppDelegate.m */; };
@@ -48,6 +50,10 @@
 		4283CCFC37DA233488C5BB96 /* Pods-MemoOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoOC/Pods-MemoOC.debug.xcconfig"; sourceTree = "<group>"; };
 		B25AAC9D1B6F53A500E2502F /* MMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewController.h; sourceTree = "<group>"; };
 		B25AAC9E1B6F53A500E2502F /* MMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableViewController.m; sourceTree = "<group>"; };
+		B25AACA01B6F5A5600E2502F /* AccessHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessHelper.h; sourceTree = "<group>"; };
+		B25AACA11B6F5A5600E2502F /* AccessHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessHelper.m; sourceTree = "<group>"; };
+		B25AACA31B6F717D00E2502F /* MMChangePasscodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMChangePasscodeViewController.h; sourceTree = "<group>"; };
+		B25AACA41B6F717D00E2502F /* MMChangePasscodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMChangePasscodeViewController.m; sourceTree = "<group>"; };
 		B2620B4A1B6F04CD001496AB /* MMNotebookSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNotebookSelectionTableViewController.h; sourceTree = "<group>"; };
 		B2620B4B1B6F04CD001496AB /* MMNotebookSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNotebookSelectionTableViewController.m; sourceTree = "<group>"; };
 		B2F88C851B6B9712002567BE /* MemoOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +200,8 @@
 				B2F88CF91B6B9A46002567BE /* Singleton.h */,
 				B2F88CF61B6B9A06002567BE /* CommonHelper.h */,
 				B2F88CF71B6B9A06002567BE /* CommonHelper.m */,
+				B25AACA01B6F5A5600E2502F /* AccessHelper.h */,
+				B25AACA11B6F5A5600E2502F /* AccessHelper.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -311,6 +319,8 @@
 				B2FB70771B6DF22800BA05AA /* Source */,
 				B2FB707A1B6DF27400BA05AA /* MMSettingTableViewController.h */,
 				B2FB707B1B6DF27400BA05AA /* MMSettingTableViewController.m */,
+				B25AACA31B6F717D00E2502F /* MMChangePasscodeViewController.h */,
+				B25AACA41B6F717D00E2502F /* MMChangePasscodeViewController.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -479,10 +489,12 @@
 				B2F88C8E1B6B9712002567BE /* AppDelegate.m in Sources */,
 				B2F88CF81B6B9A06002567BE /* CommonHelper.m in Sources */,
 				B2F9DE2E1B6CF7AB003A7DCA /* MMNoteListViewController.m in Sources */,
+				B25AACA51B6F717D00E2502F /* MMChangePasscodeViewController.m in Sources */,
 				B2F88C8B1B6B9712002567BE /* main.m in Sources */,
 				B2F9DE281B6C7269003A7DCA /* MMNoteData.m in Sources */,
 				B2F88CFF1B6B9C32002567BE /* MMNavigationController.m in Sources */,
 				B2620B4C1B6F04CD001496AB /* MMNotebookSelectionTableViewController.m in Sources */,
+				B25AACA21B6F5A5600E2502F /* AccessHelper.m in Sources */,
 				B2F88CFC1B6B9AA7002567BE /* MMViewController.m in Sources */,
 				B2F9DE2B1B6C79B9003A7DCA /* FMDBHelper.m in Sources */,
 				B2F88D021B6B9C57002567BE /* MMTabBarController.m in Sources */,

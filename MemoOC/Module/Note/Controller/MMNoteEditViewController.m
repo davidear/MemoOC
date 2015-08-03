@@ -47,7 +47,7 @@
 */
 - (void)keyboardWillChangeFrameNotification:(NSNotification *)aNotification {
     NSDictionary *userInfo = aNotification.userInfo;
-    double animationDuration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+//    double animationDuration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     float keyboardHeight = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
     _editTextView.contentInset = UIEdgeInsetsMake(0, 0, keyboardHeight, 0);
     [_editTextView scrollRangeToVisible:_editTextView.selectedRange];

@@ -8,7 +8,7 @@
 
 #import "MMNotebookSelectionTableViewController.h"
 
-@interface MMNotebookSelectionTableViewController ()<UISearchControllerDelegate, UISearchResultsUpdating>
+@interface MMNotebookSelectionTableViewController ()<UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate>
 @property (strong, nonatomic) UISearchController *searchController;
 
 @property (strong, nonatomic) NSArray *dataArray;
