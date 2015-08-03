@@ -1,86 +1,59 @@
 //
-//  MMSettingTableViewController.m
+//  MMTableViewController.m
 //  MemoOC
 //
-//  Created by dai.fengyi on 15/8/2.
+//  Created by dai.fengyi on 15/8/3.
 //  Copyright (c) 2015年 childrenOurFuture. All rights reserved.
 //
 
-#import "MMSettingTableViewController.h"
-//@interface MMSettingListCell: UITableViewCell
-//
-//@end
-//@implementation MMSettingListCell
-//
-//
-//@end
-@interface MMSettingTableViewController ()
-@property (strong, nonatomic) NSMutableArray *dataArray;
+#import "MMTableViewController.h"
+
+@interface MMTableViewController ()
+
 @end
 
-@implementation MMSettingTableViewController
-static NSString * const reuseIdentifier = @"Cell";
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        [self loadData];
-    }
-    return self;
-}
-
-//- (void)awakeFromNib {
-//    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(dismissVC)];
-//    [left setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorFromHexString:kColorDark]} forState:UIControlStateNormal];
-//    self.navigationItem.leftBarButtonItem = left;
-//
-//}
+@implementation MMTableViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setUI];
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(dismissVC)];
+    [left setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorFromHexString:kColorDark]} forState:UIControlStateNormal];
+    self.navigationItem.leftBarButtonItem = left;
 }
 
-- (void)loadData {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"SettingList" ofType:@"plist"];
-    self.dataArray = [NSMutableArray arrayWithContentsOfFile:path];
-}
-- (void)setUI {
-
+#pragma mark - Button action
+- (void)dismissVC {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-//#pragma mark - Button action
-//- (void)dismissVC {
-//    [self dismissViewControllerAnimated:YES completion:nil];
-//}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return self.dataArray.count;
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = self.dataArray[indexPath.row][@"title"];
+    
     return cell;
 }
-
-#pragma mark - Table View Delegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
+*/
 
 /*
 // Override to support conditional editing of the table view.

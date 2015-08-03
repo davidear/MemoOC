@@ -8,6 +8,7 @@
 
 #import "MMNoteEditViewController.h"
 #import "MMNoteEditTextView.h"
+#import "MMNotebookSelectionTableViewController.h"
 @interface MMNoteEditViewController ()
 @property (strong, nonatomic) MMNoteEditTextView * editTextView;
 @end
@@ -31,6 +32,8 @@
         make.bottom.equalTo(self.view).offset(0);
         make.right.equalTo(self.view).offset(0);
     }];
+    
+    [_editTextView.notebook addTarget:self action:@selector(notebookSelection:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 /*
@@ -50,4 +53,10 @@
     [_editTextView scrollRangeToVisible:_editTextView.selectedRange];
 }
 
+#pragma mark - Button Aciton
+- (void)notebookSelection:(UIButton *)sender {
+    MMNotebookSelectionTableViewController *vc = [[MMNotebookSelectionTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:naVC animated:YES completion:nil];
+}
 @end

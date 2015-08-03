@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MMNoteEditTextView : UITextView
-
+@property (strong, nonatomic) UILabel *locationInfo;
+@property (strong, nonatomic) UIButton *notebook;
+@property (strong, nonatomic) UIButton *locationButton;
 @end

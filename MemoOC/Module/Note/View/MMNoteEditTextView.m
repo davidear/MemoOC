@@ -8,9 +8,6 @@
 
 #import "MMNoteEditTextView.h"
 @interface MMNoteEditTextView()
-@property (strong, nonatomic) UILabel *locationInfo;
-@property (strong, nonatomic) UIButton *notebook;
-@property (strong, nonatomic) UIButton *locationButton;
 @end
 @implementation MMNoteEditTextView
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -42,11 +39,14 @@
 - (void)setUI {
     _locationInfo.font = [UIFont systemFontOfSize:13];
     _locationInfo.textColor = [UIColor colorFromHexString:kColorDark];
+    _locationInfo.text = @"note comes from shenzhen city 1088";
+    
     [_notebook setImage:[UIImage imageNamed:@"iconfont-bijiben"] forState:UIControlStateNormal];
     [_notebook setTitleColor:[UIColor colorFromHexString:kColorDark] forState:UIControlStateNormal];
-    [_locationButton setImage:[UIImage imageNamed:@"iconfont-ditu"] forState:UIControlStateNormal];
     [_notebook setTitle:@"notebook" forState:UIControlStateNormal];
-    _locationInfo.text = @"note comes from shenzhen city 1088";
+    
+    [_locationButton setImage:[UIImage imageNamed:@"iconfont-ditu"] forState:UIControlStateNormal];
+    
 }
 
 - (void)layoutSubviews {

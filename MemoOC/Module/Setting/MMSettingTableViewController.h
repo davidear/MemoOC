@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 childrenOurFuture. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MMTableViewController.h"
 
-@interface MMSettingTableViewController : UITableViewController
+@interface MMSettingTableViewController : MMTableViewController
 
 @end
