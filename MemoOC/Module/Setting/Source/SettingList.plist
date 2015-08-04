@@ -8,6 +8,10 @@
 	</dict>
 	<dict>
 		<key>title</key>
+		<string>清除密码</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>指纹识别</string>
 	</dict>
 </array>
