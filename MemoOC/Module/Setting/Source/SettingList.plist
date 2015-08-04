@@ -5,6 +5,8 @@
 	<dict>
 		<key>title</key>
 		<string>设置密码</string>
+		<key>title2</key>
+		<string>修改密码</string>
 	</dict>
 	<dict>
 		<key>title</key>
