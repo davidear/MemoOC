@@ -15,8 +15,12 @@
 @implementation MMNavigationController
 +(void)initialize {
     [super initialize];
-    [[UINavigationBar appearance] setBackgroundColor:[UIColor colorFromHexString:kColorDark]];
+//    [[UINavigationBar appearance] setTranslucent:YES];
+    
+//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navi-dark-bg-64"] forBarMetrics:UIBarMetricsDefault];
+    
     [[UINavigationBar appearance] setTintColor:[UIColor colorFromHexString:kColorDark]];
+//    [[UINavigationBar appearance] setTitleTextAttributes:<#(NSDictionary *)#>]
     
     
 }

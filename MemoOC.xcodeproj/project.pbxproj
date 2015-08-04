@@ -20,7 +20,6 @@
 		B2F88CE61B6B99A6002567BE /* Note.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F88CBB1B6B99A6002567BE /* Note.storyboard */; };
 		B2F88CF81B6B9A06002567BE /* CommonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88CF71B6B9A06002567BE /* CommonHelper.m */; };
 		B2F88CFC1B6B9AA7002567BE /* MMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88CFB1B6B9AA7002567BE /* MMViewController.m */; };
-		B2F88CFF1B6B9C32002567BE /* MMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88CFE1B6B9C32002567BE /* MMNavigationController.m */; };
 		B2F88D021B6B9C57002567BE /* MMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88D011B6B9C57002567BE /* MMTabBarController.m */; };
 		B2F88D081B6BBD66002567BE /* MMNoteEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88D071B6BBD66002567BE /* MMNoteEditViewController.m */; };
 		B2F88D0B1B6BBEA3002567BE /* MMTouchLockSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88D0A1B6BBEA3002567BE /* MMTouchLockSplashViewController.m */; };
@@ -30,6 +29,7 @@
 		B2F9DE281B6C7269003A7DCA /* MMNoteData.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9DE271B6C7269003A7DCA /* MMNoteData.m */; };
 		B2F9DE2B1B6C79B9003A7DCA /* FMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9DE2A1B6C79B9003A7DCA /* FMDBHelper.m */; };
 		B2F9DE2E1B6CF7AB003A7DCA /* MMNoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9DE2D1B6CF7AB003A7DCA /* MMNoteListViewController.m */; };
+		B2FB2CE41B70693400F8F605 /* MMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FB2CE31B70693400F8F605 /* MMNavigationController.m */; };
 		B2FB70791B6DF23800BA05AA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FB70781B6DF23800BA05AA /* Setting.storyboard */; };
 		B2FB707C1B6DF27400BA05AA /* MMSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FB707B1B6DF27400BA05AA /* MMSettingTableViewController.m */; };
 		B2FB707E1B6DF2C500BA05AA /* SettingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2FB707D1B6DF2C500BA05AA /* SettingList.plist */; };
@@ -72,8 +72,6 @@
 		B2F88CF91B6B9A46002567BE /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		B2F88CFA1B6B9AA7002567BE /* MMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMViewController.h; sourceTree = "<group>"; };
 		B2F88CFB1B6B9AA7002567BE /* MMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMViewController.m; sourceTree = "<group>"; };
-		B2F88CFD1B6B9C32002567BE /* MMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNavigationController.h; sourceTree = "<group>"; };
-		B2F88CFE1B6B9C32002567BE /* MMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNavigationController.m; sourceTree = "<group>"; };
 		B2F88D001B6B9C57002567BE /* MMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTabBarController.h; sourceTree = "<group>"; };
 		B2F88D011B6B9C57002567BE /* MMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTabBarController.m; sourceTree = "<group>"; };
 		B2F88D061B6BBD66002567BE /* MMNoteEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNoteEditViewController.h; sourceTree = "<group>"; };
@@ -92,6 +90,8 @@
 		B2F9DE2A1B6C79B9003A7DCA /* FMDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBHelper.m; sourceTree = "<group>"; };
 		B2F9DE2C1B6CF7AB003A7DCA /* MMNoteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNoteListViewController.h; sourceTree = "<group>"; };
 		B2F9DE2D1B6CF7AB003A7DCA /* MMNoteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNoteListViewController.m; sourceTree = "<group>"; };
+		B2FB2CE21B70693400F8F605 /* MMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNavigationController.h; sourceTree = "<group>"; };
+		B2FB2CE31B70693400F8F605 /* MMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNavigationController.m; sourceTree = "<group>"; };
 		B2FB70781B6DF23800BA05AA /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		B2FB707A1B6DF27400BA05AA /* MMSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSettingTableViewController.h; sourceTree = "<group>"; };
 		B2FB707B1B6DF27400BA05AA /* MMSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSettingTableViewController.m; sourceTree = "<group>"; };
@@ -220,8 +220,6 @@
 		B2F88CB11B6B99A6002567BE /* MainFrame */ = {
 			isa = PBXGroup;
 			children = (
-				B2F88CFD1B6B9C32002567BE /* MMNavigationController.h */,
-				B2F88CFE1B6B9C32002567BE /* MMNavigationController.m */,
 				B2F88D001B6B9C57002567BE /* MMTabBarController.h */,
 				B2F88D011B6B9C57002567BE /* MMTabBarController.m */,
 			);
@@ -289,6 +287,8 @@
 		B2F88CC01B6B99A6002567BE /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				B2FB2CE21B70693400F8F605 /* MMNavigationController.h */,
+				B2FB2CE31B70693400F8F605 /* MMNavigationController.m */,
 				B2F88CFA1B6B9AA7002567BE /* MMViewController.h */,
 				B2F88CFB1B6B9AA7002567BE /* MMViewController.m */,
 				B25AAC9D1B6F53A500E2502F /* MMTableViewController.h */,
@@ -492,7 +492,7 @@
 				B25AACA51B6F717D00E2502F /* MMChangePasscodeViewController.m in Sources */,
 				B2F88C8B1B6B9712002567BE /* main.m in Sources */,
 				B2F9DE281B6C7269003A7DCA /* MMNoteData.m in Sources */,
-				B2F88CFF1B6B9C32002567BE /* MMNavigationController.m in Sources */,
+				B2FB2CE41B70693400F8F605 /* MMNavigationController.m in Sources */,
 				B2620B4C1B6F04CD001496AB /* MMNotebookSelectionTableViewController.m in Sources */,
 				B25AACA21B6F5A5600E2502F /* AccessHelper.m in Sources */,
 				B2F88CFC1B6B9AA7002567BE /* MMViewController.m in Sources */,

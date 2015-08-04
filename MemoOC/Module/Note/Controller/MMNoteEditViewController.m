@@ -23,34 +23,21 @@
 - (void)initSubviews {
     self.editTextView = [[MMNoteEditTextView alloc] init];
     [self.view addSubview:self.editTextView];
+    
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(saveNote)];
+    [right setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorFromHexString:kColorDark]} forState:UIControlStateNormal];
+    self.navigationItem.rightBarButtonItem = right;
 }
 - (void)setUI {
-//    CGRect rect = [UIScreen mainScreen].applicationFrame;
+    self.view.backgroundColor = [UIColor whiteColor];
     [_editTextView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view).offset(0);
-        make.left.equalTo(self.view).offset(0);
-        make.bottom.equalTo(self.view).offset(0);
-        make.right.equalTo(self.view).offset(0);
+        make.left.equalTo(self.view).offset(8);
+        make.bottom.equalTo(self.view).offset(-8);
+        make.right.equalTo(self.view).offset(-8);
     }];
     
     [_editTextView.notebook addTarget:self action:@selector(notebookSelection:) forControlEvents:UIControlEventTouchUpInside];
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-- (void)keyboardWillChangeFrameNotification:(NSNotification *)aNotification {
-    NSDictionary *userInfo = aNotification.userInfo;
-//    double animationDuration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    float keyboardHeight = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
-    _editTextView.contentInset = UIEdgeInsetsMake(0, 0, keyboardHeight, 0);
-    [_editTextView scrollRangeToVisible:_editTextView.selectedRange];
 }
 
 #pragma mark - Button Aciton
@@ -58,5 +45,17 @@
     MMNotebookSelectionTableViewController *vc = [[MMNotebookSelectionTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:naVC animated:YES completion:nil];
+}
+
+- (void)saveNote {
+    
+}
+#pragma mark - Keyboard Notification
+- (void)keyboardWillChangeFrameNotification:(NSNotification *)aNotification {
+    NSDictionary *userInfo = aNotification.userInfo;
+    //    double animationDuration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    float keyboardHeight = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
+    _editTextView.contentInset = UIEdgeInsetsMake(0, 0, keyboardHeight, 0);
+    [_editTextView scrollRangeToVisible:_editTextView.selectedRange];
 }
 @end
