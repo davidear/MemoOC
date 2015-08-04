@@ -8,6 +8,7 @@
 
 #import "MMSettingTableViewController.h"
 #import "VENTouchLock.h"
+#import "MMNavigationController.h"
 @interface MMSettingSwitchCell: UITableViewCell
 
 @end
@@ -102,16 +103,21 @@ static NSString * const SwitchReuseIdentifier = @"SwitchCell";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([[VENTouchLock sharedInstance] isPasscodeSet]) {
         VENTouchLockEnterPasscodeViewController *vc = [[VENTouchLockEnterPasscodeViewController alloc] init];
+        __weak typeof(vc) weakself = vc;
         vc.willFinishWithResult = ^void(BOOL success) {
             if (success) {
                 VENTouchLockCreatePasscodeViewController *createVC = [[VENTouchLockCreatePasscodeViewController alloc] init];
-                [self.navigationController pushViewController:createVC animated:YES];
+                [weakself.navigationController pushViewController:createVC animated:YES];
             }
         };
-        [self.navigationController pushViewController:vc animated:YES];
+        MMNavigationController *nvc = [[MMNavigationController alloc] initWithRootViewController:vc];
+        [self presentViewController:nvc animated:YES completion:nil];
+
     }else {
         VENTouchLockCreatePasscodeViewController *vc = [[VENTouchLockCreatePasscodeViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
+//        [self.navigationController pushViewController:vc animated:YES];
+        MMNavigationController *nvc = [[MMNavigationController alloc] initWithRootViewController:vc];
+        [self presentViewController:nvc animated:YES completion:nil];
     }
 
 }
