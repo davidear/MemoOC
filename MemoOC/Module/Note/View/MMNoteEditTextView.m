@@ -44,6 +44,7 @@
     [_notebook setImage:[UIImage imageNamed:@"iconfont-bijiben"] forState:UIControlStateNormal];
     [_notebook setTitleColor:[UIColor colorFromHexString:kColorDark] forState:UIControlStateNormal];
     [_notebook setTitle:@"notebook" forState:UIControlStateNormal];
+    [_notebook setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     
     [_locationButton setImage:[UIImage imageNamed:@"iconfont-ditu"] forState:UIControlStateNormal];
     
