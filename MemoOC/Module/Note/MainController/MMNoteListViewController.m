@@ -8,6 +8,7 @@
 
 #import "MMNoteListViewController.h"
 #import "MMNoteEditViewController.h"
+#import "MMNotebookSelectionTableViewController.h"
 @interface MMNoteLayout: UICollectionViewFlowLayout
 
 @end
@@ -112,6 +113,17 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark Button Action
 - (void)createNote:(UIButton *)sender {
      [self.navigationController pushViewController:[[MMNoteEditViewController alloc] init] animated:YES];
+}
+- (IBAction)selectNotebook:(UIButton *)sender {
+    MMNotebookSelectionTableViewController *vc = [[MMNotebookSelectionTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    __weak typeof(sender) button = sender;
+    vc.selection = ^void(NSString *notebookName) {
+        [button setTitle:notebookName forState:UIControlStateNormal];
+    };
+    UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:naVC animated:YES completion:nil];
+}
+- (IBAction)selectLocation:(UIButton *)sender {
 }
 #pragma mark <UICollectionViewDataSource>
 

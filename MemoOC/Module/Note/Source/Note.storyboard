@@ -25,6 +25,9 @@
                                     <color key="titleColor" red="0.62745098040000002" green="0.84705882349999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectNotebook:" destination="YNS-D1-sqS" eventType="touchUpInside" id="xMT-Xe-nD4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9c-8d-24z">
                                 <rect key="frame" x="540" y="0.0" width="44" height="44"/>
@@ -36,6 +39,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="iconfont-list"/>
+                                <connections>
+                                    <action selector="selectLocation:" destination="YNS-D1-sqS" eventType="touchUpInside" id="xhs-ho-XTe"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BsP-vd-ige">
                                 <rect key="frame" x="0.0" y="44" width="600" height="512"/>
