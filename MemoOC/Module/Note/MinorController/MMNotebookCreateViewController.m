@@ -51,8 +51,11 @@
 }
 #pragma mark - Button Action
 - (void)saveNotebook {
+//    [CommonHelper showMsg:[MMNoteData createNotebook:self.textField.text] ? @"创建成功" : @"创建失败"];
+    if ([MMNoteData createNotebook:self.textField.text]) {
+        self.create(self.textField.text);
+    }
     [self.navigationController popViewControllerAnimated:YES];
-    [CommonHelper showMsg:[MMNoteData createNotebook:self.textField.text] ? @"创建成功" : @"创建失败"];
 }
 #pragma mark - TextField Delegate
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

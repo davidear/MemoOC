@@ -90,7 +90,14 @@ static NSString * const reuseIdentifier = @"Cell";
     if (indexPath.section == 0) {
         MMNotebookCreateViewController *vc = [[MMNotebookCreateViewController alloc] init];
 //        MMNotebookCreateTableViewController *vc = [[MMNotebookCreateTableViewController alloc] init];
+        vc.create = ^void(NSString *notebookName) {
+            self.selection(notebookName);
+            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        };
         [self.navigationController pushViewController:vc animated:YES];
+    }else {
+        self.selection(_dataArray[indexPath.row]);
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     }
 }
 #pragma mark - UISearchResultsUpdating

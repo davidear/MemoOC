@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void(^CreateBlock)(NSString *notebookName);
 @interface MMNotebookCreateViewController : UIViewController
-
+@property (strong, nonatomic)CreateBlock create;
 @end

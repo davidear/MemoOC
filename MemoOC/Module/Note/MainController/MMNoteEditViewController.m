@@ -44,6 +44,10 @@
 #pragma mark - Button Aciton
 - (void)notebookSelection:(UIButton *)sender {
     MMNotebookSelectionTableViewController *vc = [[MMNotebookSelectionTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    vc.selection = ^void(NSString *notebookName) {
+        _editTextView.note.notebook = notebookName;
+        [_editTextView.notebook setTitle:notebookName forState:UIControlStateNormal];
+    };
     UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:naVC animated:YES completion:nil];
 }
@@ -58,7 +62,7 @@
  @property (strong, nonatomic) NSString *topic;
  @property (strong, nonatomic) NSString *article;*/
 - (void)saveNote {
-//    MMNote *note = [[MMNote alloc] init];
+    MMNote *note = [[MMNote alloc] init];
 //    [MMNoteData  createNotebook:@"def"];
 //    NSArray *array = [MMNoteData readAllNotes];
 //    NSLog(@"");
