@@ -63,7 +63,10 @@
 - (void)saveNote {
     _editTextView.note.topic = _editTextView.topicTextField.text;
     _editTextView.note.article = _editTextView.text;
-    [MMNoteData saveNote:_editTextView.note];
+    if ([MMNoteData saveNote:_editTextView.note]) {
+        self.afterEdit(_editTextView.note.notebook);
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 #pragma mark - Keyboard Notification
 - (void)keyboardWillChangeFrameNotification:(NSNotification *)aNotification {

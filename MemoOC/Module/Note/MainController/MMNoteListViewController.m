@@ -9,6 +9,7 @@
 #import "MMNoteListViewController.h"
 #import "MMNoteEditViewController.h"
 #import "MMNotebookSelectionTableViewController.h"
+#import "MMNavigationController.h"
 #import "MMNoteData.h"
 @interface MMNoteLayout: UICollectionViewFlowLayout
 
@@ -65,6 +66,7 @@
 #pragma mark -
 
 @interface MMNoteListViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+@property (weak, nonatomic) IBOutlet UINavigationBar *naviBar;//尽为UI服务，实际的navigaitonbar已经被隐藏
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIButton *notebookButton;
 @property (weak, nonatomic) IBOutlet MMNoteLayout *noteLayout;
@@ -94,10 +96,12 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(createNote:) name:kNotificationAdd object:nil];
 }
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 - (void)loadData {
@@ -110,6 +114,8 @@ static NSString * const reuseIdentifier = @"Cell";
     }
 }
 - (void)setUI {
+    [self.naviBar setBackgroundImage:[UIImage imageNamed:@"navi-dark-bg"] forBarMetrics:UIBarMetricsDefault];
+
     self.noteLayout.itemSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, 44);
     //    noteLayout.headerReferenceSize = CGSizeMake(UIScreen.mainScreen().bounds.width - 40, <#height: CGFloat#>)
     self.noteLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
@@ -118,27 +124,38 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 #pragma mark Button Action
 - (void)createNote:(UIButton *)sender {
-     [self.navigationController pushViewController:[[MMNoteEditViewController alloc] init] animated:YES];
+    MMNoteEditViewController *vc = [[MMNoteEditViewController alloc] init];
+    __weak typeof(self) weakSelf = self;
+    vc.afterEdit = ^(NSString *notebookName) {
+        weakSelf.selectedNotebook = notebookName;
+    };
+    [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)selectNotebook:(UIButton *)sender {
     MMNotebookSelectionTableViewController *vc = [[MMNotebookSelectionTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     vc.addedOptionForAll = YES;
-    __weak typeof(sender) button = sender;
+    __weak typeof(self) weakSelf = self;
     vc.selection = ^void(NSString *notebookName) {
-        self.selectedNotebook = notebookName;
-//        [button setTitle:notebookName forState:UIControlStateNormal];
+        weakSelf.selectedNotebook = notebookName;
     };
     UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:naVC animated:YES completion:nil];
 }
 - (IBAction)selectLocation:(UIButton *)sender {
 }
+#pragma mark - NOTIFICATION
+- (IBAction)setting:(UIButton *)sender {
+    MMNavigationController *settingNVC = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil] instantiateInitialViewController];
+    [self presentViewController:settingNVC animated:YES completion:nil];
+}
+- (IBAction)postAddNotification {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationAdd object:nil];
+}
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return self.dataArray.count;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 1;
