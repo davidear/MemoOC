@@ -29,5 +29,5 @@
 + (BOOL)createNotebook:(NSString *)name;
 + (BOOL)saveNote:(MMNote *)note;
 + (NSArray *)readAllNotes;
-+ (NSArray *)readNoteBook:(MMNotebook *)notebook;
++ (NSArray *)readNoteInNotebook:(NSString *)name;
 @end

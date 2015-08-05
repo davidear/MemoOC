@@ -65,13 +65,14 @@ single_implementation(FMDBHelper);
  @property (strong, nonatomic) NSString *article;
  */
 #pragma mark 数据库public
-- (BOOL)insertNotebook:(NSString *)notebookName {
+- (BOOL)insertNotebook:(NSString *)name {
     BOOL flag = NO;
     if (![self openDB]) {
         return flag;
     }
-    if (![self.db tableExists:notebookName]) {
-        flag = [self.db executeUpdate:@"CREATE TABLE ? (id text, topic text, creatDate text, editDate text, article text, tags text)" withArgumentsInArray:@[notebookName]];
+    if (![self.db tableExists:name]) {
+        NSString *tempStr = [NSString stringWithFormat:@"CREATE TABLE %@ (id text, topic text, creatDate text, editDate text, article text, tags text)", name];
+        flag = [self.db executeUpdate:tempStr];
     }else flag = YES;
     [self closeDB];
     return flag;
@@ -91,11 +92,25 @@ single_implementation(FMDBHelper);
     return flag;
 }
 
-- (NSArray *)readNotebook:(MMNotebook *)notebook {
+- (NSArray *)readAllNotebook {
     if (![self openDB]) {
         return nil;
     }
-    if (![self.db tableExists:notebook.name]) {
+    FMResultSet *rs = [self.db executeQuery:@"SELECT name FROM sqlite_master WHERE type='table'ORDER BY name"];
+    NSMutableArray *mutableArray = [NSMutableArray array];
+    while ([rs next]) {
+        [mutableArray addObject:[rs objectForColumnName:@"name"]];
+    }
+    [rs close];
+    [self closeDB];
+    return [NSArray arrayWithArray:mutableArray];
+}
+
+- (NSArray *)readNoteInNotebook:(NSString *)name {
+    if (![self openDB]) {
+        return nil;
+    }
+    if (![self.db tableExists:name]) {
         return nil;
     }
     FMResultSet *rs = [self.db executeQuery:@"select * from MaterialCatalogs" withArgumentsInArray:nil];

@@ -16,7 +16,8 @@
 single_interface(FMDBHelper);
 - (BOOL)insertNotebook:(NSString *)notebookName;
 - (BOOL)insertNote:(MMNote *)note;
-- (NSArray *)readNotebook:(MMNotebook *)notebook;
+- (NSArray *)readAllNotebook;
+- (NSArray *)readNoteInNotebook:(NSString *)name;
 /*
 //登录
 - (void)saveLoginResultWithDataVersion:(int)dataVersion DepartmentId:(NSString *)departmentId;

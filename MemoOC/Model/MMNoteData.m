@@ -19,11 +19,11 @@
 + (BOOL)saveNote:(MMNote *)note {
     return [[FMDBHelper sharedFMDBHelper] insertNote:note];
 }
-//+ (NSArray *)readAllNotes {
-//    [FMDBHelper sharedFMDBHelper] readNotebook:<#(MMNotebook *)#>
-//}
-+ (NSArray *)readNoteBook:(MMNotebook *)notebook {
-    NSArray *array = [[FMDBHelper sharedFMDBHelper] readNotebook:notebook];
++ (NSArray *)readAllNotes {
+    return [[FMDBHelper sharedFMDBHelper] readAllNotebook];
+}
++ (NSArray *)readNoteInNotebook:(NSString *)name {
+    NSArray *array = [[FMDBHelper sharedFMDBHelper] readNoteInNotebook:name];
     NSMutableArray *mutArray = [NSMutableArray array];
     for (NSDictionary *dic in array) {
         MMNote *note = [MMNote objectWithKeyValues:dic];
