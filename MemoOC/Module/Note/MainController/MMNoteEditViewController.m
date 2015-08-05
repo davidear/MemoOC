@@ -55,17 +55,15 @@
 /*
  @property (strong, nonatomic) NSString *noteId;
  @property (strong, nonatomic) NSString *notebook;
- //@property (strong, nonatomic) NSString *notebookId;
  @property (strong, nonatomic) NSDate *creatDate;
  @property (strong, nonatomic) NSDate *editDate;
  @property (strong, nonatomic) NSArray *tags;
  @property (strong, nonatomic) NSString *topic;
  @property (strong, nonatomic) NSString *article;*/
 - (void)saveNote {
-    MMNote *note = [[MMNote alloc] init];
-//    [MMNoteData  createNotebook:@"def"];
-//    NSArray *array = [MMNoteData readAllNotes];
-//    NSLog(@"");
+    _editTextView.note.topic = _editTextView.topicTextField.text;
+    _editTextView.note.article = _editTextView.text;
+    [MMNoteData saveNote:_editTextView.note];
 }
 #pragma mark - Keyboard Notification
 - (void)keyboardWillChangeFrameNotification:(NSNotification *)aNotification {

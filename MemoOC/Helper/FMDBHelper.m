@@ -71,7 +71,7 @@ single_implementation(FMDBHelper);
         return flag;
     }
     if (![self.db tableExists:name]) {
-        NSString *tempStr = [NSString stringWithFormat:@"CREATE TABLE %@ (id text, topic text, creatDate text, editDate text, article text, tags text)", name];
+        NSString *tempStr = [NSString stringWithFormat:@"CREATE TABLE %@ (id int identity(1,1) primary key, topic text, creatDate text, editDate text, article text, tags text)", name];
         flag = [self.db executeUpdate:tempStr];
     }else flag = YES;
     [self closeDB];
@@ -83,10 +83,11 @@ single_implementation(FMDBHelper);
     if (![self openDB]) {
         return flag;
     }
-    if (![self.db tableExists:note.notebook]) {
-        [self.db executeUpdate:@"CREATE TABLE ? (id text, topic text, creatDate text, editDate text, article text, tags text)" withArgumentsInArray:@[note.notebook]];
+    if ([self.db tableExists:note.notebook]) {
+//    flag = [self.db executeUpdate:@"INSERT INTO ? (id, topic, creatDate, editDate, article, tags) VALUES (?,?,?,?,?,?)" withArgumentsInArray:@[note.notebook, note.noteId, note.topic, note.creatDate, note.editDate, note.article, note.tags]];
+        NSString *str = [NSString stringWithFormat:@"INSERT INTO %@ (id, topic, creatDate, editDate, article, tags) VALUES (?,?,?,?,?,?)", note.notebook];
+        flag = [self.db executeUpdate:str, nil, note.topic, note.creatDate, @"2015.8.6", note.article, @"郊游"];
     }
-    flag = [self.db executeUpdate:@"INSERT INTO ? (id, topic, creatDate, editDate, article, tags)" withArgumentsInArray:@[note.notebook, note.noteId, note.topic, note.creatDate, note.editDate, note.article, note.tags]];
     
     [self closeDB];
     return flag;
