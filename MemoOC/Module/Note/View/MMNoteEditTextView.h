@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MMNoteData.h"
 @interface MMNoteEditTextView : UITextView
-@property (strong, nonatomic) UILabel *locationInfo;
+@property (strong, nonatomic) UITextField *topicTextField;
 @property (strong, nonatomic) UIButton *notebook;
 @property (strong, nonatomic) UIButton *locationButton;
+//DATA
+@property (strong, nonatomic) MMNote *note;
 @end

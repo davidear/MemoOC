@@ -92,7 +92,14 @@ static NSString * const reuseIdentifier = @"Cell";
     //    [self loadData];
     [self setUI];
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(createNote:) name:kNotificationAdd object:nil];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 - (void)loadData {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"NoteList" ofType:@"plist"];
     self.dataArray = [NSMutableArray arrayWithContentsOfFile:path];
@@ -102,7 +109,10 @@ static NSString * const reuseIdentifier = @"Cell";
     //    noteLayout.headerReferenceSize = CGSizeMake(UIScreen.mainScreen().bounds.width - 40, <#height: CGFloat#>)
     self.noteLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
 }
-
+#pragma mark Button Action
+- (void)createNote:(UIButton *)sender {
+     [self.navigationController pushViewController:[[MMNoteEditViewController alloc] init] animated:YES];
+}
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
