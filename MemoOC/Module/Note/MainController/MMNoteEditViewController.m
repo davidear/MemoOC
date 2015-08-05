@@ -9,6 +9,7 @@
 #import "MMNoteEditViewController.h"
 #import "MMNoteEditTextView.h"
 #import "MMNotebookSelectionTableViewController.h"
+#import "MMNoteData.h"
 @interface MMNoteEditViewController ()
 @property (strong, nonatomic) MMNoteEditTextView * editTextView;
 @end
@@ -47,8 +48,20 @@
     [self presentViewController:naVC animated:YES completion:nil];
 }
 
+/*
+ @property (strong, nonatomic) NSString *noteId;
+ @property (strong, nonatomic) NSString *notebook;
+ //@property (strong, nonatomic) NSString *notebookId;
+ @property (strong, nonatomic) NSDate *creatDate;
+ @property (strong, nonatomic) NSDate *editDate;
+ @property (strong, nonatomic) NSArray *tags;
+ @property (strong, nonatomic) NSString *topic;
+ @property (strong, nonatomic) NSString *article;*/
 - (void)saveNote {
-    
+//    MMNote *note = [[MMNote alloc] init];
+//    [MMNoteData  createNotebook:@"def"];
+//    NSArray *array = [MMNoteData readAllNotes];
+//    NSLog(@"");
 }
 #pragma mark - Keyboard Notification
 - (void)keyboardWillChangeFrameNotification:(NSNotification *)aNotification {

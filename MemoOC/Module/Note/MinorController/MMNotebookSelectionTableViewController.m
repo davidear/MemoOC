@@ -7,6 +7,9 @@
 //
 
 #import "MMNotebookSelectionTableViewController.h"
+#import "MMNotebookCreateViewController.h"
+#import "MMNotebookCreateTableViewController.h"
+#import "MMNoteData.h"
 
 @interface MMNotebookSelectionTableViewController ()<UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate>
 @property (strong, nonatomic) UISearchController *searchController;
@@ -25,13 +28,19 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self loadData];
     [self initSubviews];
-    
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self loadData];
+}
+- (void)setFiltedArray:(NSMutableArray *)filtedArray {
+    _filtedArray = filtedArray;
+    [self.tableView reloadData];
+}
 - (void)loadData {
-    self.dataArray = @[@"ordinary", @"sex", @"family", @"work", @"money", @"dream", @"ios", @"stock", @"saving"];
+    self.dataArray = [MMNoteData readAllNotes];
     self.filtedArray = [self.dataArray mutableCopy];
 }
 - (void)initSubviews {
@@ -51,8 +60,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 }
 
-#pragma mark - Table view data source
-
+#pragma mark - Table view delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 2;
@@ -62,7 +70,6 @@ static NSString * const reuseIdentifier = @"Cell";
     // Return the number of rows in the section.
     return section == 0 ? 1 : self.filtedArray.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
@@ -79,6 +86,13 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        MMNotebookCreateViewController *vc = [[MMNotebookCreateViewController alloc] init];
+//        MMNotebookCreateTableViewController *vc = [[MMNotebookCreateTableViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
 #pragma mark - UISearchResultsUpdating
 //david
 //这个筛选需要优化
