@@ -20,6 +20,10 @@
 
 @implementation MMNotebookSelectionTableViewController
 static NSString * const reuseIdentifier = @"Cell";
+- (void)setAddedOptionForAll:(BOOL)addedOptionForAll {
+    _addedOptionForAll = addedOptionForAll;
+    [self loadData];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -40,7 +44,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.tableView reloadData];
 }
 - (void)loadData {
-    self.dataArray = [MMNoteData readAllNotes];
+    self.dataArray = [MMNoteData readAllNotebook];
     self.filtedArray = [self.dataArray mutableCopy];
 }
 - (void)initSubviews {
@@ -63,12 +67,18 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - Table view delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 2 + (int)self.addedOptionForAll;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return section == 0 ? 1 : self.filtedArray.count;
+    if (section == 0) {
+        return 1;
+    }else if (section == 1) {
+        return self.addedOptionForAll ? 1 : self.filtedArray.count;
+    }else {
+        return self.filtedArray.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -80,6 +90,8 @@ static NSString * const reuseIdentifier = @"Cell";
     if (indexPath.section == 0) {
         cell.imageView.image = [UIImage imageNamed:@"iconfont-xinzeng"];
         cell.textLabel.text = @"新增笔记本";
+    }else if (indexPath.section == 1) {
+        cell.textLabel.text = self.addedOptionForAll ? @"全部笔记" : self.filtedArray[indexPath.row];
     }else {
         cell.textLabel.text = self.filtedArray[indexPath.row];
     }
@@ -95,6 +107,9 @@ static NSString * const reuseIdentifier = @"Cell";
             [self.navigationController dismissViewControllerAnimated:YES completion:nil];
         };
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.section == 1 && self.addedOptionForAll) {
+        self.selection(@"全部笔记");
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     }else {
         self.selection(_dataArray[indexPath.row]);
         [self.navigationController dismissViewControllerAnimated:YES completion:nil];

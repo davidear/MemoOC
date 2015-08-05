@@ -9,5 +9,6 @@
 #import "MMTableViewController.h"
 typedef void(^SelectionBlock)(NSString *notebookName);
 @interface MMNotebookSelectionTableViewController : MMTableViewController
-@property (strong, nonatomic)SelectionBlock selection;
+@property (strong, nonatomic) SelectionBlock selection;
+@property (assign, nonatomic) BOOL addedOptionForAll;
 @end

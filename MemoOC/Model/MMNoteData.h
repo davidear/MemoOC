@@ -28,6 +28,6 @@
 @interface MMNoteData : NSObject
 + (BOOL)createNotebook:(NSString *)name;
 + (BOOL)saveNote:(MMNote *)note;
-+ (NSArray *)readAllNotes;
++ (NSArray *)readAllNotebook;
 + (NSArray *)readNoteInNotebook:(NSString *)name;
 @end

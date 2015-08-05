@@ -102,8 +102,8 @@ static NSString * const reuseIdentifier = @"Cell";
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 - (void)loadData {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"NoteList" ofType:@"plist"];
-    self.dataArray = [NSMutableArray arrayWithContentsOfFile:path];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"NoteList" ofType:@"plist"];
+//    self.dataArray = [NSMutableArray arrayWithContentsOfFile:path];
 }
 - (void)setUI {
     self.noteLayout.itemSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, 44);
@@ -116,6 +116,7 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 - (IBAction)selectNotebook:(UIButton *)sender {
     MMNotebookSelectionTableViewController *vc = [[MMNotebookSelectionTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    vc.addedOptionForAll = YES;
     __weak typeof(sender) button = sender;
     vc.selection = ^void(NSString *notebookName) {
         [button setTitle:notebookName forState:UIControlStateNormal];

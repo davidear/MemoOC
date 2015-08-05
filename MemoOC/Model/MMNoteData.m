@@ -19,7 +19,7 @@
 + (BOOL)saveNote:(MMNote *)note {
     return [[FMDBHelper sharedFMDBHelper] insertNote:note];
 }
-+ (NSArray *)readAllNotes {
++ (NSArray *)readAllNotebook {
     return [[FMDBHelper sharedFMDBHelper] readAllNotebook];
 }
 + (NSArray *)readNoteInNotebook:(NSString *)name {
