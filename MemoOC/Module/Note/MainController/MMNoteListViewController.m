@@ -9,6 +9,7 @@
 #import "MMNoteListViewController.h"
 #import "MMNoteEditViewController.h"
 #import "MMNotebookSelectionTableViewController.h"
+#import "MMNoteData.h"
 @interface MMNoteLayout: UICollectionViewFlowLayout
 
 @end
@@ -65,32 +66,30 @@
 
 @interface MMNoteListViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIButton *notebookButton;
 @property (weak, nonatomic) IBOutlet MMNoteLayout *noteLayout;
 
-@property (strong, nonatomic) NSMutableArray *dataArray;
+@property (strong, nonatomic) NSString *selectedNotebook;
+@property (strong, nonatomic) NSArray *dataArray;
 
 @end
 
 @implementation MMNoteListViewController
 static NSString * const reuseIdentifier = @"Cell";
+- (void)setSelectedNotebook:(NSString *)selectedNotebook {
+    _selectedNotebook = selectedNotebook;
+    [self loadData];
+    [self.notebookButton setTitle:selectedNotebook forState:UIControlStateNormal];
+    [self.collectionView reloadData];
+}
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self loadData];
     }
     return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-    //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
-    //    [self loadData];
     [self setUI];
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -104,11 +103,18 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)loadData {
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"NoteList" ofType:@"plist"];
 //    self.dataArray = [NSMutableArray arrayWithContentsOfFile:path];
+    if ([self.selectedNotebook isEqualToString:@"全部笔记"]) {
+        self.dataArray = [MMNoteData readAllNote];
+    }else {
+        self.dataArray = [MMNoteData readNoteInNotebook:self.selectedNotebook];
+    }
 }
 - (void)setUI {
     self.noteLayout.itemSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, 44);
     //    noteLayout.headerReferenceSize = CGSizeMake(UIScreen.mainScreen().bounds.width - 40, <#height: CGFloat#>)
     self.noteLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    
+    self.selectedNotebook = @"全部笔记";
 }
 #pragma mark Button Action
 - (void)createNote:(UIButton *)sender {
@@ -119,7 +125,8 @@ static NSString * const reuseIdentifier = @"Cell";
     vc.addedOptionForAll = YES;
     __weak typeof(sender) button = sender;
     vc.selection = ^void(NSString *notebookName) {
-        [button setTitle:notebookName forState:UIControlStateNormal];
+        self.selectedNotebook = notebookName;
+//        [button setTitle:notebookName forState:UIControlStateNormal];
     };
     UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:naVC animated:YES completion:nil];
@@ -140,9 +147,10 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MMnoteCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     // Configure the cell
-    cell.logo.image = [UIImage imageNamed:self.dataArray[indexPath.section][@"logo"]];
-    cell.name.text = self.dataArray[indexPath.section][@"name"];
-    cell.amount.text = @"5";
+//    cell.logo.image = [UIImage imageNamed:self.dataArray[indexPath.section][@"logo"]];]
+    MMNote *note = self.dataArray[indexPath.section];
+    cell.name.text = note.topic;
+//    cell.amount.text = @"5";
     return cell;
 }
 

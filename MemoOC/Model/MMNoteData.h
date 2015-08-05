@@ -30,4 +30,5 @@
 + (BOOL)saveNote:(MMNote *)note;
 + (NSArray *)readAllNotebook;
 + (NSArray *)readNoteInNotebook:(NSString *)name;
++ (NSArray *)readAllNote;
 @end

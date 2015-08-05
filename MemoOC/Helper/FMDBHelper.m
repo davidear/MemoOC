@@ -114,7 +114,8 @@ single_implementation(FMDBHelper);
     if (![self.db tableExists:name]) {
         return nil;
     }
-    FMResultSet *rs = [self.db executeQuery:@"select * from MaterialCatalogs" withArgumentsInArray:nil];
+    NSString *str = [NSString stringWithFormat:@"select * from %@",name];
+    FMResultSet *rs = [self.db executeQuery:str withArgumentsInArray:nil];
     NSMutableArray *mutableArray = [NSMutableArray array];
     while ([rs next]) {
         NSMutableDictionary *mutableDic = [NSMutableDictionary dictionary];

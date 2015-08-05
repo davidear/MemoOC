@@ -142,6 +142,7 @@
                     <connections>
                         <outlet property="collectionView" destination="BsP-vd-ige" id="4I7-7T-ona"/>
                         <outlet property="noteLayout" destination="EDc-tT-oL2" id="fmA-4p-jWj"/>
+                        <outlet property="notebookButton" destination="KKC-Uj-NqU" id="eRK-8o-6ws"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fjb-Rb-dqK" userLabel="First Responder" sceneMemberID="firstResponder"/>

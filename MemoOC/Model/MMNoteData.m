@@ -31,4 +31,13 @@
     }
     return [NSArray arrayWithArray:mutArray];
 }
++ (NSArray *)readAllNote {
+    NSArray *notebookArray = [self readAllNotebook];
+    NSMutableArray *mutArray = [NSMutableArray array];
+    for (NSString *notebookName in notebookArray) {
+        NSArray *noteArray = [self readNoteInNotebook:notebookName];
+        [mutArray addObjectsFromArray:noteArray];
+    }
+    return [NSArray arrayWithArray:mutArray];
+}
 @end
