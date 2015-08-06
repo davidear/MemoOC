@@ -132,7 +132,7 @@ static NSString * const reuseIdentifier = @"Cell";
     vc.selection = ^void(NSString *notebookName) {
         weakSelf.selectedNotebook = notebookName;
     };
-    UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:vc];
+    MMNavigationController *naVC = [[MMNavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:naVC animated:YES completion:nil];
 }
 - (IBAction)selectLocation:(UIButton *)sender {

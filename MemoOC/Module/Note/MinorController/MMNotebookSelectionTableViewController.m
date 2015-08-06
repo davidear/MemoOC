@@ -88,7 +88,7 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     // Configure the cell...
     if (indexPath.section == 0) {
-        cell.imageView.image = [UIImage imageNamed:@"iconfont-xinzeng"];
+        cell.imageView.image = [UIImage imageNamed:@"iconfont-dark-xinzeng"];
         cell.textLabel.text = @"新增笔记本";
     }else if (indexPath.section == 1) {
         cell.textLabel.text = self.addedOptionForAll ? @"全部笔记" : self.filtedArray[indexPath.row];

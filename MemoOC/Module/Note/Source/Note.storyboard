@@ -39,7 +39,7 @@
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9O9-rF-0wt">
                                                 <rect key="frame" x="451" y="7" width="21" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="iconfont-xinzeng">
+                                                <state key="normal" image="iconfont-light-xinzeng">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -55,7 +55,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="8bF-cE-HQO"/>
                                 </constraints>
-                                <state key="normal" title="notebook" image="iconfont-bijiben">
+                                <state key="normal" title="notebook" image="iconfont-light-bijiben">
                                     <color key="titleColor" red="0.62745098040000002" green="0.84705882349999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -198,11 +198,11 @@
     </scenes>
     <resources>
         <image name="iconfont-biji" width="21" height="21"/>
-        <image name="iconfont-bijiben" width="21" height="21"/>
         <image name="iconfont-jiantou" width="21" height="21"/>
+        <image name="iconfont-light-bijiben" width="21" height="21"/>
+        <image name="iconfont-light-xinzeng" width="21" height="21"/>
         <image name="iconfont-list" width="21" height="21"/>
         <image name="iconfont-shange" width="21" height="21"/>
         <image name="iconfont-shezhi" width="21" height="21"/>
-        <image name="iconfont-xinzeng" width="21" height="21"/>
     </resources>
 </document>

@@ -53,12 +53,12 @@
     _topicTextField.textColor = [UIColor colorFromHexString:kColorDark];
     _topicTextField.placeholder = @"note comes from shenzhen city 1088";
     
-    [_notebook setImage:[UIImage imageNamed:@"iconfont-bijiben"] forState:UIControlStateNormal];
+    [_notebook setImage:[UIImage imageNamed:@"iconfont-dark-bijiben"] forState:UIControlStateNormal];
     [_notebook setTitleColor:[UIColor colorFromHexString:kColorDark] forState:UIControlStateNormal];
     [_notebook setTitle:self.note.notebook forState:UIControlStateNormal];
     [_notebook setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     
-    [_locationButton setImage:[UIImage imageNamed:@"iconfont-ditu"] forState:UIControlStateNormal];
+    [_locationButton setImage:[UIImage imageNamed:@"iconfont-dark-ditu"] forState:UIControlStateNormal];
     
 }
 
