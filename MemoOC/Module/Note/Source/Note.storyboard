@@ -95,7 +95,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="468" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XkI-2L-O0e">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfont-biji" translatesAutoresizingMaskIntoConstraints="NO" id="XkI-2L-O0e">
                                                     <rect key="frame" x="8" y="12" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="5Ra-gR-FFv"/>
@@ -118,7 +118,7 @@
                                                     <color key="textColor" red="0.62745098040000002" green="0.84705882349999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g63-uO-yUQ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g63-uO-yUQ">
                                                     <rect key="frame" x="390" y="11" width="42" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Kmt-Q0-Qus"/>
@@ -148,9 +148,9 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="amount" destination="g63-uO-yUQ" id="n3c-dv-ETX"/>
+                                            <outlet property="createdDate" destination="g63-uO-yUQ" id="ucL-dd-ZSa"/>
                                             <outlet property="logo" destination="XkI-2L-O0e" id="dqG-m4-FaD"/>
-                                            <outlet property="name" destination="2mL-i5-Lyb" id="dcS-gg-HJJ"/>
+                                            <outlet property="topic" destination="2mL-i5-Lyb" id="luC-uT-ulT"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -197,6 +197,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iconfont-biji" width="21" height="21"/>
         <image name="iconfont-bijiben" width="21" height="21"/>
         <image name="iconfont-jiantou" width="21" height="21"/>
         <image name="iconfont-list" width="21" height="21"/>

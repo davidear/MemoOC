@@ -52,8 +52,8 @@
 #pragma mark -
 @interface MMnoteCollectionCell: UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
-@property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UILabel *amount;
+@property (weak, nonatomic) IBOutlet UILabel *topic;
+@property (weak, nonatomic) IBOutlet UILabel *createdDate;
 @end
 
 @implementation MMnoteCollectionCell
@@ -160,8 +160,8 @@ static NSString * const reuseIdentifier = @"Cell";
     // Configure the cell
 //    cell.logo.image = [UIImage imageNamed:self.dataArray[indexPath.section][@"logo"]];]
     MMNote *note = self.dataArray[indexPath.section];
-    cell.name.text = note.topic;
-//    cell.amount.text = @"5";
+    cell.topic.text = note.topic;
+//    cell.createdDate.text = note.creatDate 
     return cell;
 }
 
