@@ -13,5 +13,5 @@
 @property (strong, nonatomic) UIButton *notebook;
 @property (strong, nonatomic) UIButton *locationButton;
 //DATA
-@property (strong, nonatomic) MMNote *note;
+@property (weak, nonatomic) MMNote *note;
 @end

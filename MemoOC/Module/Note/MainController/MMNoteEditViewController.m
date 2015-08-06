@@ -15,18 +15,27 @@
 @end
 
 @implementation MMNoteEditViewController
-
+- (MMNote *)note {
+    if (_note == nil) {
+        _note = [[MMNote alloc] init];
+    }
+    return _note;
+}
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
 - (void)initSubviews {
-    self.editTextView = [[MMNoteEditTextView alloc] init];
+    MMNoteEditTextView *editTextView = [[MMNoteEditTextView alloc] init];
+    editTextView.note = self.note;
+    self.editTextView = editTextView;
     [self.view addSubview:self.editTextView];
     
     UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(saveNote)];
@@ -72,6 +81,7 @@
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
+
 #pragma mark - Keyboard Notification
 - (void)keyboardWillChangeFrameNotification:(NSNotification *)aNotification {
     NSDictionary *userInfo = aNotification.userInfo;

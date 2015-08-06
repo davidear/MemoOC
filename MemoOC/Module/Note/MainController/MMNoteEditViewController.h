@@ -7,7 +7,9 @@
 //
 
 #import "MMViewController.h"
+@class MMNote;
 typedef void(^EditBlock)(NSString *notebookName);
 @interface MMNoteEditViewController : MMViewController
 @property (strong, nonatomic) EditBlock afterEdit;
+@property (strong, nonatomic) MMNote *note;
 @end
