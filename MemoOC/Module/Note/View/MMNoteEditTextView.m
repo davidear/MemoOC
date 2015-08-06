@@ -15,6 +15,7 @@
     _note = note;
     _topicTextField.text = note.topic;
     [_notebook setTitle:note.notebook forState:UIControlStateNormal];
+    self.text = note.article;
 }
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];

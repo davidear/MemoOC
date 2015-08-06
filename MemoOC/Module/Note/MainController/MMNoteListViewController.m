@@ -66,7 +66,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *notebookButton;
 @property (weak, nonatomic) IBOutlet MMNoteLayout *noteLayout;
 
-@property (strong, nonatomic) NSString *selectedNotebook;
+@property (copy, nonatomic) NSString *selectedNotebook;
 @property (strong, nonatomic) NSArray *dataArray;
 
 @end
@@ -167,7 +167,13 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark <UICollectionViewDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self.navigationController pushViewController:[[MMNoteEditViewController alloc] init] animated:YES];
+    MMNoteEditViewController *vc = [[MMNoteEditViewController alloc] init];
+    vc.note = self.dataArray[indexPath.row];
+    __weak typeof(self) weakSelf = self;
+    vc.afterEdit = ^void(NSString *notebookName) {
+        weakSelf.selectedNotebook = notebookName;
+    };
+    [self.navigationController pushViewController:vc animated:YES];
 }
 /*
  // Uncomment this method to specify if the specified item should be highlighted during tracking

@@ -17,7 +17,7 @@
 @implementation MMNoteEditViewController
 - (MMNote *)note {
     if (_note == nil) {
-        _note = [[MMNote alloc] init];
+        self.note = [[MMNote alloc] init];
     }
     return _note;
 }
@@ -74,12 +74,11 @@
  @property (strong, nonatomic) NSString *topic;
  @property (strong, nonatomic) NSString *article;*/
 - (void)saveNote {
-    _editTextView.note.topic = _editTextView.topicTextField.text;
-    _editTextView.note.article = _editTextView.text;
-    if ([MMNoteData saveNote:_editTextView.note]) {
-        self.afterEdit(_editTextView.note.notebook);
-        [self.navigationController popViewControllerAnimated:YES];
-    }
+    _note.topic = _editTextView.topicTextField.text;
+    _note.article = _editTextView.text;
+    [MMNoteData saveNote:_note];
+    self.afterEdit(self.note.notebook);
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Keyboard Notification
