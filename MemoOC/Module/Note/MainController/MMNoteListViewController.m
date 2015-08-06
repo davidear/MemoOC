@@ -12,8 +12,8 @@
 #import "MMNavigationController.h"
 #import "MMNoteData.h"
 @interface MMNoteLayout: UICollectionViewFlowLayout
-
 @end
+
 @implementation MMNoteLayout
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
     return YES;
@@ -26,8 +26,6 @@
     
     if (offset.y < topMinY) {
         CGFloat deltaY = fabs((offset.y - topMinY) / 10);
-        
-        
         for (UICollectionViewLayoutAttributes *attrs in attrsArray) {
             if (attrs.representedElementKind == nil) {
                 CGRect frame = attrs.frame;
@@ -39,8 +37,6 @@
     
     if (offset.y > bottomMaxY) {
         CGFloat deltaY = fabs((offset.y - bottomMaxY) / 10);
-        
-        
         for (UICollectionViewLayoutAttributes *attrs in attrsArray) {
             if (attrs.representedElementKind == nil) {
                 CGRect frame = attrs.frame;
@@ -58,13 +54,12 @@
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *amount;
-
 @end
+
 @implementation MMnoteCollectionCell
-
 @end
-#pragma mark -
 
+#pragma mark -
 @interface MMNoteListViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UINavigationBar *naviBar;//尽为UI服务，实际的navigaitonbar已经被隐藏
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -101,7 +96,6 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 - (void)loadData {
