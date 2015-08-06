@@ -101,7 +101,7 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 - (void)loadData {
