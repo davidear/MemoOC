@@ -71,8 +71,8 @@
 //}
 - (void)layoutSubviews {
     _topicTextField.frame = CGRectMake(8, 0, self.bounds.size.width - 16, 44);
-    _notebook.frame = CGRectMake(8, CGRectGetMaxY(_topicTextField.frame), 100, 30);
-    _locationButton.frame = CGRectMake(self.bounds.size.width - 8 - 30, _notebook.frame.origin.y, 30, 30);
+    _notebook.frame = CGRectMake(8, CGRectGetMaxY(_topicTextField.frame), 100, 44);
+    _locationButton.frame = CGRectMake(self.bounds.size.width - 8 - 30, _notebook.frame.origin.y, 44, 44);
     self.textContainerInset = UIEdgeInsetsMake(CGRectGetMaxY(_locationButton.frame), 0, 0, 0);
 }
 
