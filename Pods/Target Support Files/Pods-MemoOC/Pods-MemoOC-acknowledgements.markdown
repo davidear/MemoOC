@@ -1,6 +1,11 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## AMapCloudMap
+
+Copyright © 2014 AutoNavi. All Rights Reserved.
+
+
 ## Colours
 
 Copyright (C) 2013 by Benjamin Gordon

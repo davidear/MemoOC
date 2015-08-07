@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AD095A42B015280ACB9C777 /* libPods-MemoOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E12BD68C3625EC2705FACCBF /* libPods-MemoOC.a */; };
+		B247FCFB1B74F5A500A0AAB4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B247FCFA1B74F5A500A0AAB4 /* CoreLocation.framework */; };
 		B25AAC9F1B6F53A500E2502F /* MMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25AAC9E1B6F53A500E2502F /* MMTableViewController.m */; };
 		B25AACA21B6F5A5600E2502F /* AccessHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B25AACA11B6F5A5600E2502F /* AccessHelper.m */; };
 		B2F88C8B1B6B9712002567BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88C8A1B6B9712002567BE /* main.m */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		0CB710FF5605CD19DEE6C6B1 /* Pods-MemoOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoOC/Pods-MemoOC.release.xcconfig"; sourceTree = "<group>"; };
 		4283CCFC37DA233488C5BB96 /* Pods-MemoOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoOC/Pods-MemoOC.debug.xcconfig"; sourceTree = "<group>"; };
+		B247FCFA1B74F5A500A0AAB4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B25AAC9D1B6F53A500E2502F /* MMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewController.h; sourceTree = "<group>"; };
 		B25AAC9E1B6F53A500E2502F /* MMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableViewController.m; sourceTree = "<group>"; };
 		B25AACA01B6F5A5600E2502F /* AccessHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessHelper.h; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B247FCFB1B74F5A500A0AAB4 /* CoreLocation.framework in Frameworks */,
 				0AD095A42B015280ACB9C777 /* libPods-MemoOC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +127,7 @@
 		66483BC40F980CBB515C034E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B247FCFA1B74F5A500A0AAB4 /* CoreLocation.framework */,
 				E12BD68C3625EC2705FACCBF /* libPods-MemoOC.a */,
 			);
 			name = Frameworks;

@@ -8,7 +8,9 @@
 
 #import "MMNoteEditTextView.h"
 #import "MMNoteData.h"
-@interface MMNoteEditTextView()<UITextViewDelegate, UITextFieldDelegate>
+#import <CoreLocation/CoreLocation.h>
+@interface MMNoteEditTextView()<UITextViewDelegate, UITextFieldDelegate, CLLocationManagerDelegate>
+@property (strong, nonatomic) CLLocationManager *manager;
 @end
 @implementation MMNoteEditTextView
 - (void)setNote:(MMNote *)note {
@@ -34,6 +36,7 @@
         [self initSubviews];
         [self setUI];
 //        [self addNotificationObserver];
+        [self locate];
     }
     return self;
 }
@@ -55,7 +58,8 @@
 - (void)setUI {
     _topicTextField.font = [UIFont systemFontOfSize:13];
     _topicTextField.textColor = [UIColor colorFromHexString:kColorDark];
-    _topicTextField.placeholder = @"note comes from shenzhen city 1088";
+//    _topicTextField.placeholder = @"note comes from shenzhen city 1088";
+    
     
     [_notebook setImage:[UIImage imageNamed:@"iconfont-dark-bijiben"] forState:UIControlStateNormal];
     [_notebook setTitleColor:[UIColor colorFromHexString:kColorDark] forState:UIControlStateNormal];
@@ -63,6 +67,15 @@
     [_notebook setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     
     [_locationButton setImage:[UIImage imageNamed:@"iconfont-dark-ditu"] forState:UIControlStateNormal];
+    
+}
+
+- (void)locate {
+    [CLLocationManager locationServicesEnabled];
+    self.manager = [[CLLocationManager alloc] init];
+    self.manager.delegate = self;
+    [self.manager requestWhenInUseAuthorization];
+    [self.manager startUpdatingLocation];
     
 }
 
@@ -93,4 +106,29 @@
 //    _notebook = nil;
 //    _locationButton = nil;
 //}
+#pragma mark - CLLocationManagerDelegate
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    switch (status) {
+        case kCLAuthorizationStatusNotDetermined:
+            if ([self.manager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+                [self.manager requestAlwaysAuthorization];
+            }
+            break;
+        default:
+            break;
+            
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    CLLocation *location = [locations firstObject];
+//    CLLocationCoordinate2D coordinate = location.coordinate;
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+        CLPlacemark *placemark = [placemarks firstObject];
+        NSLog(@"详细信息:%@",placemark.addressDictionary);
+        self.topicTextField.placeholder = placemark.name;
+    }];
+    [manager stopUpdatingLocation];
+}
 @end

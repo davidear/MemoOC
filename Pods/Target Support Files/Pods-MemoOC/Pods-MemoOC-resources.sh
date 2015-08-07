@@ -58,9 +58,11 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "AMapCloudMap/AMapCloudKit.framework/Versions/1.2.0.5565057/Resources/AMapCloud.bundle"
   install_resource "VENTouchLock/VENTouchLock/Views/VENTouchLockPasscodeView.xib"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "AMapCloudMap/AMapCloudKit.framework/Versions/1.2.0.5565057/Resources/AMapCloud.bundle"
   install_resource "VENTouchLock/VENTouchLock/Views/VENTouchLockPasscodeView.xib"
 fi
 
