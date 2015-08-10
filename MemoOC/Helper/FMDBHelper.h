@@ -15,9 +15,12 @@
 @interface FMDBHelper : NSObject
 single_interface(FMDBHelper);
 - (BOOL)insertNotebook:(NSString *)notebookName;
-- (BOOL)insertNote:(MMNote *)note;
+- (BOOL)insertNote:(MMNote *)note notebook:(NSString *)notebookName;
+- (BOOL)modifyNote:(MMNote *)note notebook:(NSString *)notebookName;
+- (BOOL)deleteNoteWithNoteId:(NSNumber *)noteId notebook:(NSString *)notebookName;
 - (NSArray *)readAllNotebook;
 - (NSArray *)readNoteInNotebook:(NSString *)name;
+//- (NSArray *)readNoteWithNoteId:(int)noteId;
 /*
 //登录
 - (void)saveLoginResultWithDataVersion:(int)dataVersion DepartmentId:(NSString *)departmentId;

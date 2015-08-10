@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@interface MMNote : NSObject
-@property (strong, nonatomic) NSString *noteId;
+@interface MMNote : NSObject<NSCopying>
+@property (assign, nonatomic) NSNumber *noteId;
 @property (strong, nonatomic) NSString *notebook;
 //@property (strong, nonatomic) NSString *notebookId;
 @property (strong, nonatomic) NSDate *creatDate;
@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSString *topic;
 @property (strong, nonatomic) NSString *article;
 //@property (strong, nonatomic) 地址
+@property (strong, nonatomic) NSString *toNotebook;//仅用于处理过程中，从一个notebook换到另一个
 @end
 #pragma mark -
 @interface MMNotebook : NSObject

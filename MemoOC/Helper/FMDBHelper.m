@@ -9,7 +9,7 @@
 #import "FMDBHelper.h"
 #import "FMDB.h"
 #import "MMNoteData.h"
-#define kNotebookKeyArray       @[@"id", @"topic", @"creatDate", @"editDate", @"article",@"tags"]
+#define kNotebookKeyArray       @[@"noteId", @"topic", @"creatDate", @"editDate", @"article",@"tags"]
 
 @interface FMDBHelper ()
 @property (strong, nonatomic) NSString *dbPath;
@@ -29,6 +29,7 @@ single_implementation(FMDBHelper);
 //        NSString *dataBaseName = [NSString stringWithFormat:@"%@_Database.db",[[NSUserDefaults standardUserDefaults] objectForKey:@"DepartmentId"]];
 //        _dbPath = [documentDirectory stringByAppendingPathComponent:dataBaseName];
         _dbPath = [documentDirectory stringByAppendingPathComponent:@"MyDataBase.db"];
+        NSLog(@"\n%@",_dbPath);
         _db = [FMDatabase databaseWithPath:_dbPath];
     }
     return self;
@@ -71,22 +72,52 @@ single_implementation(FMDBHelper);
         return flag;
     }
     if (![self.db tableExists:name]) {
-        NSString *tempStr = [NSString stringWithFormat:@"CREATE TABLE %@ (id int identity(1,1) primary key, topic text, creatDate text, editDate text, article text, tags text)", name];
+        NSString *tempStr = [NSString stringWithFormat:@"CREATE TABLE %@ (noteId INTEGER PRIMARY KEY, topic text, creatDate text, editDate text, article text, tags text)", name];
         flag = [self.db executeUpdate:tempStr];
     }else flag = YES;
     [self closeDB];
     return flag;
 }
 
-- (BOOL)insertNote:(MMNote *)note {
+- (BOOL)insertNote:(MMNote *)note notebook:(NSString *)notebookName{
     BOOL flag = NO;
     if (![self openDB]) {
         return flag;
     }
-    if ([self.db tableExists:note.notebook]) {
+    if ([self.db tableExists:notebookName]) {
 //    flag = [self.db executeUpdate:@"INSERT INTO ? (id, topic, creatDate, editDate, article, tags) VALUES (?,?,?,?,?,?)" withArgumentsInArray:@[note.notebook, note.noteId, note.topic, note.creatDate, note.editDate, note.article, note.tags]];
-        NSString *str = [NSString stringWithFormat:@"INSERT INTO %@ (id, topic, creatDate, editDate, article, tags) VALUES (?,?,?,?,?,?)", note.notebook];
-        flag = [self.db executeUpdate:str, nil, note.topic, note.creatDate, @"2015.8.6", note.article, @"郊游"];
+        NSString *str = [NSString stringWithFormat:@"INSERT INTO %@ (topic, creatDate, editDate, article, tags) VALUES (?,?,?,?,?)", notebookName];
+        flag = [self.db executeUpdate:str, note.topic, note.creatDate, @"2015.8.6", note.article, @"郊游"];
+    }
+    
+    [self closeDB];
+    return flag;
+}
+
+- (BOOL)modifyNote:(MMNote *)note notebook:(NSString *)notebookName{
+    BOOL flag = NO;
+    if (![self openDB]) {
+        return flag;
+    }
+    if ([self.db tableExists:notebookName]) {
+        //    flag = [self.db executeUpdate:@"INSERT INTO ? (id, topic, creatDate, editDate, article, tags) VALUES (?,?,?,?,?,?)" withArgumentsInArray:@[note.notebook, note.noteId, note.topic, note.creatDate, note.editDate, note.article, note.tags]];
+        NSString *str = [NSString stringWithFormat:@"UPDATE %@ SET topic = ?, creatDate = ?, editDate = ?, article = ?, tags = ? WHERE noteId = %@", notebookName, note.noteId];
+        flag = [self.db executeUpdate:str, note.topic, note.creatDate, @"2015.8.6", note.article, @"郊游"];
+    }
+    
+    [self closeDB];
+    return flag;
+}
+
+- (BOOL)deleteNoteWithNoteId:(NSNumber *)noteId notebook:(NSString *)notebookName {
+    BOOL flag = NO;
+    if (![self openDB]) {
+        return flag;
+    }
+    if ([self.db tableExists:notebookName]) {
+        //    flag = [self.db executeUpdate:@"INSERT INTO ? (id, topic, creatDate, editDate, article, tags) VALUES (?,?,?,?,?,?)" withArgumentsInArray:@[note.notebook, note.noteId, note.topic, note.creatDate, note.editDate, note.article, note.tags]];
+        NSString *str = [NSString stringWithFormat:@"DELETE FROM %@ WHERE noteId = %@", notebookName, noteId];
+        flag = [self.db executeUpdate:str];
     }
     
     [self closeDB];

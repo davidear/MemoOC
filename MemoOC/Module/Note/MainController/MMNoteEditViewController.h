@@ -11,5 +11,5 @@
 typedef void(^EditBlock)(NSString *notebookName);
 @interface MMNoteEditViewController : MMViewController
 @property (strong, nonatomic) EditBlock afterEdit;
-@property (strong, nonatomic) MMNote *note;
+@property (copy, nonatomic) MMNote *note;
 @end

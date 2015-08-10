@@ -58,7 +58,7 @@
 - (void)notebookSelection:(UIButton *)sender {
     MMNotebookSelectionTableViewController *vc = [[MMNotebookSelectionTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     vc.selection = ^void(NSString *notebookName) {
-        _editTextView.note.notebook = notebookName;
+        _editTextView.note.toNotebook = notebookName;
         [_editTextView.notebook setTitle:notebookName forState:UIControlStateNormal];
     };
     UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:vc];
@@ -77,7 +77,7 @@
     _note.topic = _editTextView.topicTextField.text;
     _note.article = _editTextView.text;
     [MMNoteData saveNote:_note];
-    self.afterEdit(self.note.notebook);
+    self.afterEdit(self.note.toNotebook ? self.note.toNotebook : self.note.notebook);
     [self.navigationController popViewControllerAnimated:YES];
 }
 
