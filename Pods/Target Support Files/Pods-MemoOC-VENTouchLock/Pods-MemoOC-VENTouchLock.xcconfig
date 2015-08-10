@@ -1,1 +1,0 @@
-PODS_MEMOOC_VENTOUCHLOCK_OTHER_LDFLAGS = -framework "LocalAuthentication"
