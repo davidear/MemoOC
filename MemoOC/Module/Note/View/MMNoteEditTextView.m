@@ -9,6 +9,25 @@
 #import "MMNoteEditTextView.h"
 #import "MMNoteData.h"
 #import <CoreLocation/CoreLocation.h>
+@interface MMNoteEditinputAccessoryView : UIView
+@property (strong, nonatomic) UIButton *hideButton;
+@end
+@implementation MMNoteEditinputAccessoryView
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self initSubviews];
+    }
+    return self;
+}
+- (void)initSubviews {
+    UIButton *hideButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    [hideButton setImage:[UIImage imageNamed:@"iconfont-jianpan"] forState:UIControlStateNormal];
+    [self addSubview:hideButton];
+    self.hideButton = hideButton;
+}
+
+@end
 @interface MMNoteEditTextView()<UITextViewDelegate, UITextFieldDelegate, CLLocationManagerDelegate>
 @property (strong, nonatomic) CLLocationManager *manager;
 @end
@@ -56,11 +75,15 @@
     [self setUI];
 }
 - (void)setUI {
-    _topicTextField.font = [UIFont systemFontOfSize:13];
+    MMNoteEditinputAccessoryView *inputAccessoryView = [[MMNoteEditinputAccessoryView alloc] initWithFrame:CGRectMake(0, 0, 375, 44)];
+    inputAccessoryView.backgroundColor = [UIColor whiteColor];
+    [inputAccessoryView.hideButton addTarget:self action:@selector(hideKeyboard) forControlEvents:UIControlEventTouchUpInside];
+    self.inputAccessoryView = inputAccessoryView;
+    
+    self.font = [UIFont systemFontOfSize:14];
+    
+    _topicTextField.font = [UIFont systemFontOfSize:14];
     _topicTextField.textColor = [UIColor colorFromHexString:kColorDark];
-//    _topicTextField.placeholder = @"note comes from shenzhen city 1088";
-    
-    
     [_notebook setImage:[UIImage imageNamed:@"iconfont-dark-bijiben"] forState:UIControlStateNormal];
     [_notebook setTitleColor:[UIColor colorFromHexString:kColorDark] forState:UIControlStateNormal];
 //    [_notebook setTitle:self.note.notebook forState:UIControlStateNormal];
@@ -83,12 +106,17 @@
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldTextDidChange:) name:UITextFieldTextDidChangeNotification object:nil];
 //}
 - (void)layoutSubviews {
+    [super layoutSubviews];
     _topicTextField.frame = CGRectMake(8, 0, self.bounds.size.width - 16, 44);
     _notebook.frame = CGRectMake(8, CGRectGetMaxY(_topicTextField.frame), 100, 44);
     _locationButton.frame = CGRectMake(self.bounds.size.width - 8 - 30, _notebook.frame.origin.y, 44, 44);
-    self.textContainerInset = UIEdgeInsetsMake(CGRectGetMaxY(_locationButton.frame), 0, 0, 0);
+    self.textContainerInset = UIEdgeInsetsMake(CGRectGetMaxY(_locationButton.frame), 8, 8, 8);
 }
 
+#pragma mark - AccessoryView Button
+- (void)hideKeyboard {
+    [self endEditing: YES];
+}
 #pragma mark - Edit Change
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     self.note.topic = textField.text;

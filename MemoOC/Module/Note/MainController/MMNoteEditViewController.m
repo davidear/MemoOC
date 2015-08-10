@@ -24,8 +24,13 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self registerNotification];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self removeNotification];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,16 +49,23 @@
 }
 - (void)setUI {
     self.view.backgroundColor = [UIColor whiteColor];
-    [_editTextView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(0);
-        make.left.equalTo(self.view).offset(8);
-        make.bottom.equalTo(self.view).offset(-8);
-        make.right.equalTo(self.view).offset(-8);
-    }];
+//    [_editTextView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.view).offset(0);
+//        make.left.equalTo(self.view).offset(8);
+//        make.bottom.equalTo(self.view).offset(-8);
+//        make.right.equalTo(self.view).offset(-8);
+//    }];
+    _editTextView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 8);
     
     [_editTextView.notebook addTarget:self action:@selector(notebookSelection:) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)registerNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrameNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+- (void)removeNotification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 #pragma mark - Button Aciton
 - (void)notebookSelection:(UIButton *)sender {
     MMNotebookSelectionTableViewController *vc = [[MMNotebookSelectionTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
@@ -84,9 +96,18 @@
 #pragma mark - Keyboard Notification
 - (void)keyboardWillChangeFrameNotification:(NSNotification *)aNotification {
     NSDictionary *userInfo = aNotification.userInfo;
-    //    double animationDuration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+//    double animationDuration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    //弹入和弹出keyboard的beginH和endH都是一样的，而在已弹入keyboard后，由于改变键盘或者出现提示栏，这种情况的改变frame收到的通知，这里的beginH和endH是不一样的。
     float keyboardHeight = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
-    _editTextView.contentInset = UIEdgeInsetsMake(0, 0, keyboardHeight, 0);
+    float endH = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
+    float beginH = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height;
+    if (endH == beginH) {
+        keyboardHeight = MAX([userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue].origin.y - [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y , 0);
+    }
+    
+    UIEdgeInsets insets = _editTextView.contentInset;
+    insets.bottom = keyboardHeight;
+    _editTextView.contentInset = insets;
     [_editTextView scrollRangeToVisible:_editTextView.selectedRange];
 }
 @end
