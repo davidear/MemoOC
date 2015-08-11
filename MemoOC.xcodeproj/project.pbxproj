@@ -411,6 +411,7 @@
 				TargetAttributes = {
 					B2F88C841B6B9712002567BE = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 24EL9XJBYB;
 					};
 					B2F88C9D1B6B9712002567BE = {
 						CreatedOnToolsVersion = 6.4;
@@ -636,12 +637,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4283CCFC37DA233488C5BB96 /* Pods-MemoOC.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: fengyi dai (C8D6ERL39C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: fengyi dai (C8D6ERL39C)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MemoOC/MemoOC-Prefix.pch";
 				INFOPLIST_FILE = MemoOC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "920bbc96-72bf-42ef-85d5-a9bb6da87dca";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -649,12 +657,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0CB710FF5605CD19DEE6C6B1 /* Pods-MemoOC.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: fengyi dai (24EL9XJBYB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: fengyi dai (24EL9XJBYB)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MemoOC/MemoOC-Prefix.pch";
 				INFOPLIST_FILE = MemoOC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "034c8781-121e-423f-9fc0-7420a8c44b0d";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
