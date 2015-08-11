@@ -60,10 +60,12 @@ install_resource()
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "AMapCloudMap/AMapCloudKit.framework/Versions/1.2.0.5565057/Resources/AMapCloud.bundle"
   install_resource "VENTouchLock/VENTouchLock/Views/VENTouchLockPasscodeView.xib"
+  install_resource "${BUILT_PRODUCTS_DIR}/MWPhotoBrowser.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "AMapCloudMap/AMapCloudKit.framework/Versions/1.2.0.5565057/Resources/AMapCloud.bundle"
   install_resource "VENTouchLock/VENTouchLock/Views/VENTouchLockPasscodeView.xib"
+  install_resource "${BUILT_PRODUCTS_DIR}/MWPhotoBrowser.bundle"
 fi
 
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

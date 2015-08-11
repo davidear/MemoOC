@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0AD095A42B015280ACB9C777 /* libPods-MemoOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E12BD68C3625EC2705FACCBF /* libPods-MemoOC.a */; };
 		B247FCFB1B74F5A500A0AAB4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B247FCFA1B74F5A500A0AAB4 /* CoreLocation.framework */; };
+		B24967561B7A2DE600C6E286 /* MMNoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24967551B7A2DE600C6E286 /* MMNoteListViewController.m */; };
 		B25AAC9F1B6F53A500E2502F /* MMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25AAC9E1B6F53A500E2502F /* MMTableViewController.m */; };
 		B25AACA21B6F5A5600E2502F /* AccessHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B25AACA11B6F5A5600E2502F /* AccessHelper.m */; };
 		B2BCF5B21B7C471400464E67 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BCF5B11B7C471400464E67 /* Images.xcassets */; };
@@ -51,6 +52,8 @@
 		0CB710FF5605CD19DEE6C6B1 /* Pods-MemoOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoOC/Pods-MemoOC.release.xcconfig"; sourceTree = "<group>"; };
 		4283CCFC37DA233488C5BB96 /* Pods-MemoOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoOC/Pods-MemoOC.debug.xcconfig"; sourceTree = "<group>"; };
 		B247FCFA1B74F5A500A0AAB4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B24967541B7A2DE600C6E286 /* MMNoteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNoteListViewController.h; sourceTree = "<group>"; };
+		B24967551B7A2DE600C6E286 /* MMNoteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNoteListViewController.m; sourceTree = "<group>"; };
 		B25AAC9D1B6F53A500E2502F /* MMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewController.h; sourceTree = "<group>"; };
 		B25AAC9E1B6F53A500E2502F /* MMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableViewController.m; sourceTree = "<group>"; };
 		B25AACA01B6F5A5600E2502F /* AccessHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessHelper.h; sourceTree = "<group>"; };
@@ -131,6 +134,55 @@
 				E12BD68C3625EC2705FACCBF /* libPods-MemoOC.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B24967471B7A1B8200C6E286 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				B249674C1B7A1BB900C6E286 /* MainController */,
+				B249674D1B7A1BB900C6E286 /* MinorController */,
+				B24967491B7A1B8200C6E286 /* Model */,
+				B249674A1B7A1B8200C6E286 /* Source */,
+				B249674B1B7A1B8200C6E286 /* View */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		B24967491B7A1B8200C6E286 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B249674A1B7A1B8200C6E286 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B249674B1B7A1B8200C6E286 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B249674C1B7A1BB900C6E286 /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				B24967541B7A2DE600C6E286 /* MMNoteListViewController.h */,
+				B24967551B7A2DE600C6E286 /* MMNoteListViewController.m */,
+			);
+			path = MainController;
+			sourceTree = "<group>";
+		};
+		B249674D1B7A1BB900C6E286 /* MinorController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MinorController;
 			sourceTree = "<group>";
 		};
 		B2F88C7C1B6B9711002567BE = {
@@ -216,6 +268,7 @@
 		B2F88CB01B6B99A6002567BE /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				B24967471B7A1B8200C6E286 /* Photo */,
 				B2FB70731B6DF14F00BA05AA /* Setting */,
 				B2F88CB11B6B99A6002567BE /* MainFrame */,
 				B2F88CB41B6B99A6002567BE /* Note */,
@@ -518,6 +571,7 @@
 				B2F88D021B6B9C57002567BE /* MMTabBarController.m in Sources */,
 				B2FB15241B71F49600624419 /* MMNotebookCreateViewController.m in Sources */,
 				B2F88D0E1B6BBEE8002567BE /* MMNoteEditTextView.m in Sources */,
+				B24967561B7A2DE600C6E286 /* MMNoteListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

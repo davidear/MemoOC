@@ -9,6 +9,7 @@ pod 'Masonry', '~> 0.6.2'
 pod 'FMDB', '~> 2.5'
 pod 'MJExtension', '~> 2.5.3'
 pod 'AMapCloudMap' #云图SDK
+pod 'MWPhotoBrowser', '~> 2.1.1'
 end
 
 target 'MemoOCTests' do

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MMViewController : UIViewController
-
+- (void)setUI;
+- (void)initSubviews;
 @end
