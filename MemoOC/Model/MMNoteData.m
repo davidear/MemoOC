@@ -41,6 +41,10 @@
     return [[FMDBHelper sharedFMDBHelper] insertNotebook:name];
 }
 
++ (BOOL)deleteNotebook:(NSString *)name {
+    return [[FMDBHelper sharedFMDBHelper] deleteNotebook:name];
+}
+
 + (BOOL)saveNote:(MMNote *)note {
     if (note.noteId == nil) {//新增的note
         return [[FMDBHelper sharedFMDBHelper] insertNote:note notebook:note.toNotebook];

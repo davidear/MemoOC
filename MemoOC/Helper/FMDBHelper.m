@@ -79,7 +79,33 @@ single_implementation(FMDBHelper);
     return flag;
 }
 
-- (BOOL)insertNote:(MMNote *)note notebook:(NSString *)notebookName{
+- (BOOL)renameNotebook:(NSString *)oldName newName:(NSString *)newName {
+    BOOL flag = NO;
+    if (![self openDB]) {
+        return flag;
+    }
+    if ([self.db tableExists:oldName]) {
+        NSString *tempStr = [NSString stringWithFormat:@"ALTER TABLE %@ RENAME TO %@", oldName, newName];
+        flag = [self.db executeUpdate:tempStr];
+    }
+    [self closeDB];
+    return flag;
+}
+
+- (BOOL)deleteNotebook:(NSString *)notebookName {
+    BOOL flag = NO;
+    if (![self openDB]) {
+        return flag;
+    }
+    if ([self.db tableExists:notebookName]) {
+        NSString *tempStr = [NSString stringWithFormat:@"DROP TABLE %@", notebookName];
+        flag = [self.db executeUpdate:tempStr];
+    }
+    [self closeDB];
+    return flag;
+}
+
+- (BOOL)insertNote:(MMNote *)note notebook:(NSString *)notebookName {
     BOOL flag = NO;
     if (![self openDB]) {
         return flag;

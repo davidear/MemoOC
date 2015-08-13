@@ -28,6 +28,7 @@
 #pragma mark -
 @interface MMNoteData : NSObject
 + (BOOL)createNotebook:(NSString *)name;
++ (BOOL)deleteNotebook:(NSString *)name;
 + (BOOL)saveNote:(MMNote *)note;
 + (NSArray *)readAllNotebook;
 + (NSArray *)readNoteInNotebook:(NSString *)name;

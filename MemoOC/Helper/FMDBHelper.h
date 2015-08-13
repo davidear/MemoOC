@@ -15,6 +15,8 @@
 @interface FMDBHelper : NSObject
 single_interface(FMDBHelper);
 - (BOOL)insertNotebook:(NSString *)notebookName;
+- (BOOL)renameNotebook:(NSString *)oldName newName:(NSString *)newName;
+- (BOOL)deleteNotebook:(NSString *)notebookName;
 - (BOOL)insertNote:(MMNote *)note notebook:(NSString *)notebookName;
 - (BOOL)modifyNote:(MMNote *)note notebook:(NSString *)notebookName;
 - (BOOL)deleteNoteWithNoteId:(NSNumber *)noteId notebook:(NSString *)notebookName;

@@ -11,7 +11,7 @@
 #import "MMNotebookCreateTableViewController.h"
 #import "MMNoteData.h"
 
-@interface MMNotebookSelectionTableViewController ()<UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate>
+@interface MMNotebookSelectionTableViewController ()<UIAlertViewDelegate,UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate>
 @property (strong, nonatomic) UISearchController *searchController;
 
 @property (strong, nonatomic) NSArray *dataArray;
@@ -38,10 +38,11 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self loadData];
+    [self.tableView reloadData];
 }
 - (void)setFiltedArray:(NSMutableArray *)filtedArray {
     _filtedArray = filtedArray;
-    [self.tableView reloadData];
+//    [self.tableView reloadData];
 }
 - (void)loadData {
     self.dataArray = [MMNoteData readAllNotebook];
@@ -113,6 +114,39 @@ static NSString * const reuseIdentifier = @"Cell";
     }else {
         self.selection(_dataArray[indexPath.row]);
         [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+
+#pragma mark 删除动作
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @"删除";
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"删除日记本" message:@"该日记本下所有日记都会被删除" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    alert.tag = indexPath.row;
+    [alert show];
+}
+
+#pragma mark - UIAlertView 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        if ([MMNoteData deleteNotebook:self.dataArray[alertView.tag]]) {
+            //1. 删除表
+            [self loadData];
+            //2. 删除tableview的cell
+            [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:alertView.tag inSection:2]] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
     }
 }
 #pragma mark - UISearchResultsUpdating
