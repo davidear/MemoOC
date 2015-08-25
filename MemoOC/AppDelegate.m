@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "VenTouchLock.h"
 #import "MMTouchLockSplashViewController.h"
+#import "MMTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,7 +19,14 @@
   // Override point for customization after application launch.
     [VENTouchLock setShouldUseTouchID:YES];
     [[VENTouchLock sharedInstance] setKeychainService:@"TouchLock" keychainAccount:@"MyAccount" touchIDReason:@"please touch the Home Button" passcodeAttemptLimit:6 splashViewControllerClass:[MMTouchLockSplashViewController class]];
-  return YES;
+    
+    MMTabBarController *tabbarC = [[MMTabBarController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:tabbarC];
+    navi.navigationBarHidden = YES;
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = navi;
+    [self.window makeKeyAndVisible];
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

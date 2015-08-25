@@ -22,7 +22,6 @@
 		B2F88D021B6B9C57002567BE /* MMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88D011B6B9C57002567BE /* MMTabBarController.m */; };
 		B2F88D0B1B6BBEA3002567BE /* MMTouchLockSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88D0A1B6BBEA3002567BE /* MMTouchLockSplashViewController.m */; };
 		B2F88D0E1B6BBEE8002567BE /* MMNoteEditTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88D0D1B6BBEE8002567BE /* MMNoteEditTextView.m */; };
-		B2F88D101B6BC6C4002567BE /* Main.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F88D0F1B6BC6C4002567BE /* Main.Storyboard */; };
 		B2F9DE251B6C722E003A7DCA /* NoteList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2F9DE241B6C722E003A7DCA /* NoteList.plist */; };
 		B2F9DE281B6C7269003A7DCA /* MMNoteData.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9DE271B6C7269003A7DCA /* MMNoteData.m */; };
 		B2F9DE2B1B6C79B9003A7DCA /* FMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9DE2A1B6C79B9003A7DCA /* FMDBHelper.m */; };
@@ -100,7 +99,6 @@
 		B2F88D0A1B6BBEA3002567BE /* MMTouchLockSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTouchLockSplashViewController.m; sourceTree = "<group>"; };
 		B2F88D0C1B6BBEE8002567BE /* MMNoteEditTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNoteEditTextView.h; sourceTree = "<group>"; };
 		B2F88D0D1B6BBEE8002567BE /* MMNoteEditTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNoteEditTextView.m; sourceTree = "<group>"; };
-		B2F88D0F1B6BC6C4002567BE /* Main.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.Storyboard; sourceTree = "<group>"; };
 		B2F9DE211B6C65CB003A7DCA /* MMConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMConstant.h; sourceTree = "<group>"; };
 		B2F9DE221B6C66A4003A7DCA /* MemoOC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoOC-Prefix.pch"; sourceTree = "<group>"; };
 		B2F9DE241B6C722E003A7DCA /* NoteList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NoteList.plist; sourceTree = "<group>"; };
@@ -292,7 +290,6 @@
 				B2BCF5B11B7C471400464E67 /* Images.xcassets */,
 				B2F88C8C1B6B9712002567BE /* AppDelegate.h */,
 				B2F88C8D1B6B9712002567BE /* AppDelegate.m */,
-				B2F88D0F1B6BC6C4002567BE /* Main.Storyboard */,
 				B2F88C971B6B9712002567BE /* LaunchScreen.xib */,
 				B2F88C891B6B9712002567BE /* Info.plist */,
 				B2F88C8A1B6B9712002567BE /* main.m */,
@@ -571,7 +568,6 @@
 				B2FE8AD91B8C130F00032A1B /* 6.jpg in Resources */,
 				B2FE8ACA1B8C130F00032A1B /* 10.jpg in Resources */,
 				B2F88C991B6B9712002567BE /* LaunchScreen.xib in Resources */,
-				B2F88D101B6BC6C4002567BE /* Main.Storyboard in Resources */,
 				B2FE8ACF1B8C130F00032A1B /* 15.jpg in Resources */,
 				B2FE8ADC1B8C130F00032A1B /* 9.jpg in Resources */,
 				B2BCF5B21B7C471400464E67 /* Images.xcassets in Resources */,

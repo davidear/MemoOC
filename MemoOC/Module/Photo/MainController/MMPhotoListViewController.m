@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"相册";
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView registerClass:[RACollectionViewCell class] forCellWithReuseIdentifier:@"cellID"];
@@ -38,6 +39,7 @@
     }
 }
 
+#pragma mark = CollectionView
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;

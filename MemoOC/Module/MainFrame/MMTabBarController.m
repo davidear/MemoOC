@@ -16,8 +16,14 @@
 @end
 
 @implementation MMTabBarController
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self initSubControllers];
+        [self setUI];
+    }
+    return self;
 }
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
@@ -33,6 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 
 }
 - (void)initSubControllers {
@@ -43,6 +50,12 @@
     [self setViewControllers:@[noteVC, photoVC]];
 }
 
+- (void)setUI {
+    UITabBarItem *item1 = [self.tabBar.items objectAtIndex:0];
+    [item1 setImage:[UIImage imageNamed:@"iconfont-bijiben"]];
+    UITabBarItem *item2 = [self.tabBar.items objectAtIndex:1];
+    [item2 setImage:[UIImage imageNamed:@"iconfont-bijiben"]];
+}
 /*
 #pragma mark - Navigation
 
