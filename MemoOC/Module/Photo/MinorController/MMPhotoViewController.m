@@ -60,4 +60,8 @@
 - (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
     return [self.photos objectAtIndex:index];
 }
+
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
+  return [self.photos objectAtIndex:index];
+}
 @end
