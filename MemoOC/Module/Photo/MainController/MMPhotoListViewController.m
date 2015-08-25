@@ -9,6 +9,7 @@
 #import "MMPhotoListViewController.h"
 #import "RACollectionViewReorderableTripletLayout.h"
 #import "RACollectionViewCell.h"
+#import "MMPhotoViewController.h"
 
 @interface MMPhotoListViewController ()<RACollectionViewDelegateReorderableTripletLayout, RACollectionViewReorderableTripletLayoutDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -148,8 +149,10 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        return;
+        MMPhotoViewController *vc = [[MMPhotoViewController alloc] init];;
+        [self.navigationController pushViewController:vc animated:YES];
     }
+    return;
     if (_photosArray.count == 1) {
         return;
     }
