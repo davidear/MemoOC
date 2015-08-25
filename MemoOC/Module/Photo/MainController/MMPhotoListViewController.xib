@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MMPhotoListViewController">
+            <connections>
+                <outlet property="collectionView" destination="MSa-CW-Rnd" id="7Ul-wD-1Km"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="MSa-CW-Rnd">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <collectionViewLayout key="collectionViewLayout" id="bge-MY-Vtm" customClass="RACollectionViewReorderableTripletLayout"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Oks-R5-QwH"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="MSa-CW-Rnd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2ON-Ny-8Su"/>
+                <constraint firstAttribute="bottom" secondItem="MSa-CW-Rnd" secondAttribute="bottom" id="HBY-1D-pUZ"/>
+                <constraint firstItem="MSa-CW-Rnd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vq1-32-t5S"/>
+                <constraint firstAttribute="trailing" secondItem="MSa-CW-Rnd" secondAttribute="trailing" id="xY7-84-s7e"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="MSa-CW-Rnd"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="2ON-Ny-8Su"/>
+                    <exclude reference="HBY-1D-pUZ"/>
+                    <exclude reference="vq1-32-t5S"/>
+                    <exclude reference="xY7-84-s7e"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="MSa-CW-Rnd"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="2ON-Ny-8Su"/>
+                    <include reference="HBY-1D-pUZ"/>
+                    <include reference="vq1-32-t5S"/>
+                    <include reference="xY7-84-s7e"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

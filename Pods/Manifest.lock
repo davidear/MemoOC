@@ -14,6 +14,7 @@ PODS:
     - DACircularProgress (~> 2.3)
     - MBProgressHUD (~> 0.9)
     - SDWebImage (!= 3.7.2, ~> 3.7)
+  - RACollectionViewReorderableTripletLayout (0.1.0)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 0.9.1)
   - MJExtension (~> 2.5.3)
   - MWPhotoBrowser (~> 2.1.1)
+  - RACollectionViewReorderableTripletLayout
   - VENTouchLock (~> 1.0)
 
 SPEC CHECKSUMS:
@@ -40,8 +42,9 @@ SPEC CHECKSUMS:
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MJExtension: 5ea3e326162ccc07c60afe8cc36c936bba20d0d5
   MWPhotoBrowser: ba0d0c09ffda3a7ea10093518738c502c1c7141c
+  RACollectionViewReorderableTripletLayout: 929208004b2f8c2dde12326bf75b11e902959ddf
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
   VENTouchLock: f3145d6fbff243d6692dfb1107b88db06dc216c9
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

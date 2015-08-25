@@ -8,6 +8,7 @@
 
 #import "MMTabBarController.h"
 #import "MMNoteListViewController.h"
+#import "MMPhotoListViewController.h"
 //#import "MMSettingTableViewController.h"
 #import "MMNavigationController.h"
 @interface MMTabBarController ()
@@ -36,8 +37,10 @@
 }
 - (void)initSubControllers {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Note" bundle:nil];
-    MMNoteListViewController *vc = [storyboard instantiateInitialViewController];
-    [self setViewControllers:@[vc]];
+    MMNoteListViewController *noteVC = [storyboard instantiateInitialViewController];
+    
+    MMPhotoListViewController *photoVC = [[MMPhotoListViewController alloc] init];
+    [self setViewControllers:@[noteVC, photoVC]];
 }
 
 /*

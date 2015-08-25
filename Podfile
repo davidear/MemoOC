@@ -10,6 +10,7 @@ pod 'FMDB', '~> 2.5'
 pod 'MJExtension', '~> 2.5.3'
 pod 'AMapCloudMap' #云图SDK
 pod 'MWPhotoBrowser', '~> 2.1.1'
+pod "RACollectionViewReorderableTripletLayout"
 end
 
 target 'MemoOCTests' do
