@@ -120,6 +120,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)createNote:(UIButton *)sender {
     MMNoteEditViewController *vc = [[MMNoteEditViewController alloc] init];
     vc.note.notebook = self.selectedNotebook;
+    vc.note.toNotebook = self.selectedNotebook;
     __weak typeof(self) weakSelf = self;
     vc.afterEdit = ^(NSString *notebookName) {
         weakSelf.selectedNotebook = notebookName;
