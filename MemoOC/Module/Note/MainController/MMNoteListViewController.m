@@ -109,6 +109,7 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 - (void)setUI {
     [self.naviBar setBackgroundImage:[UIImage imageNamed:@"navi-dark-bg"] forBarMetrics:UIBarMetricsDefault];
+    self.collectionView.showsVerticalScrollIndicator = NO;
 
     self.noteLayout.itemSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, 44);
     //    noteLayout.headerReferenceSize = CGSizeMake(UIScreen.mainScreen().bounds.width - 40, <#height: CGFloat#>)
@@ -170,7 +171,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     MMNoteEditViewController *vc = [[MMNoteEditViewController alloc] init];
-    vc.note = self.dataArray[indexPath.row];
+    vc.note = self.dataArray[indexPath.section];
     __weak typeof(self) weakSelf = self;
     vc.afterEdit = ^void(NSString *notebookName) {
         weakSelf.selectedNotebook = notebookName;
