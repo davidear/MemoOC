@@ -22,19 +22,57 @@
                         <outlet property="dataSource" destination="-1" id="Oks-R5-QwH"/>
                     </connections>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCG-Le-qB6">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="7yo-je-D71">
+                            <variation key="heightClass=regular-widthClass=compact" constant="64"/>
+                        </constraint>
+                        <constraint firstAttribute="width" constant="60" id="MqC-CZ-rVi">
+                            <variation key="heightClass=regular-widthClass=compact" constant="64"/>
+                        </constraint>
+                    </constraints>
+                    <state key="normal" image="iconfont-paizhao">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="7yo-je-D71"/>
+                            <exclude reference="MqC-CZ-rVi"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="7yo-je-D71"/>
+                            <include reference="MqC-CZ-rVi"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="takePhoto:" destination="-1" eventType="touchUpInside" id="zpo-xM-IcZ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="MSa-CW-Rnd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2ON-Ny-8Su"/>
-                <constraint firstAttribute="bottom" secondItem="MSa-CW-Rnd" secondAttribute="bottom" id="HBY-1D-pUZ"/>
+                <constraint firstAttribute="centerX" secondItem="bCG-Le-qB6" secondAttribute="centerX" id="4jG-DC-4Nb"/>
+                <constraint firstAttribute="bottom" secondItem="MSa-CW-Rnd" secondAttribute="bottom" id="HBY-1D-pUZ">
+                    <variation key="heightClass=regular-widthClass=compact" constant="44"/>
+                </constraint>
                 <constraint firstItem="MSa-CW-Rnd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vq1-32-t5S"/>
+                <constraint firstAttribute="bottom" secondItem="bCG-Le-qB6" secondAttribute="bottom" constant="38" id="vsH-Jd-0d6">
+                    <variation key="heightClass=regular-widthClass=compact" constant="38"/>
+                </constraint>
                 <constraint firstAttribute="trailing" secondItem="MSa-CW-Rnd" secondAttribute="trailing" id="xY7-84-s7e"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="MSa-CW-Rnd"/>
+                    <exclude reference="bCG-Le-qB6"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="4jG-DC-4Nb"/>
+                    <exclude reference="vsH-Jd-0d6"/>
                     <exclude reference="2ON-Ny-8Su"/>
                     <exclude reference="HBY-1D-pUZ"/>
                     <exclude reference="vq1-32-t5S"/>
@@ -44,8 +82,11 @@
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="MSa-CW-Rnd"/>
+                    <include reference="bCG-Le-qB6"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="4jG-DC-4Nb"/>
+                    <include reference="vsH-Jd-0d6"/>
                     <include reference="2ON-Ny-8Su"/>
                     <include reference="HBY-1D-pUZ"/>
                     <include reference="vq1-32-t5S"/>
@@ -54,4 +95,7 @@
             </variation>
         </view>
     </objects>
+    <resources>
+        <image name="iconfont-paizhao" width="64" height="64"/>
+    </resources>
 </document>

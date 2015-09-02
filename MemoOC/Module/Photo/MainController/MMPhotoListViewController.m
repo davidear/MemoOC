@@ -11,7 +11,7 @@
 #import "RACollectionViewCell.h"
 #import "MMPhotoViewController.h"
 
-@interface MMPhotoListViewController ()<RACollectionViewDelegateReorderableTripletLayout, RACollectionViewReorderableTripletLayoutDataSource>
+@interface MMPhotoListViewController ()<RACollectionViewDelegateReorderableTripletLayout, RACollectionViewReorderableTripletLayoutDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray *photosArray;
 
@@ -46,7 +46,22 @@
     }
 }
 
-#pragma mark = CollectionView
+#pragma mark - ButtonAction
+- (IBAction)takePhoto:(UIButton *)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self presentViewController:picker animated:YES completion:^{
+        
+    }];
+}
+#pragma mark - ImagePickerController
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    NSLog(@"%@", info);
+    UIImage *image = info[@"UIImagePickerControllerEditedImage"];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+#pragma mark - CollectionView
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
