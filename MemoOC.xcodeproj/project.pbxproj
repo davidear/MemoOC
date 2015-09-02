@@ -13,6 +13,7 @@
 		B25AACA21B6F5A5600E2502F /* AccessHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B25AACA11B6F5A5600E2502F /* AccessHelper.m */; };
 		B2A013A71B8C52D30022E458 /* MMPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A013A61B8C52D30022E458 /* MMPhotoViewController.m */; };
 		B2BCF5B21B7C471400464E67 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BCF5B11B7C471400464E67 /* Images.xcassets */; };
+		B2F0E5BB1B9595B50013DC75 /* MMPhotoData.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F0E5BA1B9595B50013DC75 /* MMPhotoData.m */; };
 		B2F88C8B1B6B9712002567BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88C8A1B6B9712002567BE /* main.m */; };
 		B2F88C8E1B6B9712002567BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F88C8D1B6B9712002567BE /* AppDelegate.m */; };
 		B2F88C991B6B9712002567BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2F88C971B6B9712002567BE /* LaunchScreen.xib */; };
@@ -81,6 +82,8 @@
 		B2A013A51B8C52D30022E458 /* MMPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPhotoViewController.h; sourceTree = "<group>"; };
 		B2A013A61B8C52D30022E458 /* MMPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPhotoViewController.m; sourceTree = "<group>"; };
 		B2BCF5B11B7C471400464E67 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B2F0E5B91B9595B50013DC75 /* MMPhotoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPhotoData.h; sourceTree = "<group>"; };
+		B2F0E5BA1B9595B50013DC75 /* MMPhotoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPhotoData.m; sourceTree = "<group>"; };
 		B2F88C851B6B9712002567BE /* MemoOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F88C891B6B9712002567BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2F88C8A1B6B9712002567BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -427,6 +430,8 @@
 			children = (
 				B2F9DE261B6C7269003A7DCA /* MMNoteData.h */,
 				B2F9DE271B6C7269003A7DCA /* MMNoteData.m */,
+				B2F0E5B91B9595B50013DC75 /* MMPhotoData.h */,
+				B2F0E5BA1B9595B50013DC75 /* MMPhotoData.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -643,6 +648,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F0E5BB1B9595B50013DC75 /* MMPhotoData.m in Sources */,
 				B2F88D0B1B6BBEA3002567BE /* MMTouchLockSplashViewController.m in Sources */,
 				B2FB707C1B6DF27400BA05AA /* MMSettingTableViewController.m in Sources */,
 				B2FB15191B71F15700624419 /* MMNoteEditViewController.m in Sources */,
