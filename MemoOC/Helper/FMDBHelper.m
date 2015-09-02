@@ -21,6 +21,13 @@
  表三：note与notebook关系表
  结构：noteid notebookid
  */
+#define Note_Info               @"Note_Info"
+#define Note_GroupInfo          @"Note_GroupInfo"
+#define Note_Group_Relation     @"Note_Group_Relation"
+#define Photo_Info              @"Photo_Info"
+#define Photo_GroupInfo         @"Photo_GroupInfo"
+#define Photo_Group_Relation    @"Photo_Group_Relation"
+
 #define kNotebookKeyArray       @[@"noteId", @"topic", @"creatDate", @"editDate", @"article",@"tags"]
 typedef enum{
     NoteType = 0,
@@ -46,11 +53,45 @@ single_implementation(FMDBHelper);
         _dbPath = [documentDirectory stringByAppendingPathComponent:@"MyDataBase.db"];
         NSLog(@"\n%@",_dbPath);
         _db = [FMDatabase databaseWithPath:_dbPath];
+        [self initTables];
     }
     return self;
 }
 
 #pragma mark - 数据库操作
+- (BOOL)initTables {
+    BOOL flag = NO;
+    if (![self openDB]) {
+        return flag;
+    }
+    if (![self.db tableExists:Note_Info]) {
+        NSString *tempStr = [NSString stringWithFormat:@"CREATE TABLE %@ (noteId INTEGER PRIMARY KEY, topic text, creatDate text, editDate text, article text, tags text)", Note_Info];
+        if (![self.db executeUpdate:tempStr]) return flag;
+    }
+    if (![self.db tableExists:Note_GroupInfo]) {
+        NSString *tempStr = [NSString stringWithFormat:@"CREATE TABLE %@ (notebookId integer PRIMARY KEY, name text)", Note_GroupInfo];
+        if (![self.db executeUpdate:tempStr]) return flag;
+    }
+    if (![self.db tableExists:Note_Group_Relation]) {
+        NSString *tempStr = [NSString stringWithFormat:@"CREATE TABLE %@ (noteId integer PRIMARY KEY, notebookId integer)", Note_Group_Relation];
+        if (![self.db executeUpdate:tempStr]) return flag;
+    }
+    if (![self.db tableExists:Photo_Info]) {
+        NSString *tempStr = [NSString stringWithFormat:@"CREATE TABLE %@ (photoId INTEGER PRIMARY KEY, imageUrl text, thumbUrl text, topic text, creatDate text, editDate text, article text, tags text)", Photo_Info];
+        if (![self.db executeUpdate:tempStr]) return flag;
+    }
+    if (![self.db tableExists:Photo_GroupInfo]) {
+        NSString *tempStr = [NSString stringWithFormat:@"CREATE TABLE %@ (PhotoAlbumId INTEGER PRIMARY KEY, name text)", Photo_GroupInfo];
+        if (![self.db executeUpdate:tempStr]) return flag;
+    }
+    if (![self.db tableExists:Photo_Group_Relation]) {
+        NSString *tempStr = [NSString stringWithFormat:@"CREATE TABLE %@ (photoId integer PRIMARY KEY, photoAlbumId integer)", Photo_Group_Relation];
+        if (![self.db executeUpdate:tempStr]) return flag;
+    }
+    flag = YES;
+    return flag;
+}
+
 - (BOOL)openDB
 {
     if (![_db open]) {
@@ -92,6 +133,98 @@ single_implementation(FMDBHelper);
  //@property (strong, nonatomic) 地址
  @property (strong, nonatomic) NSString *toPhotoAlbum;//仅用于处理过程中，从一个photoAlbum换到另一个
  */
+#pragma mark - Common
+- (BOOL)insertGourp:(NSString *)groupName type:(DataType)type {
+    BOOL flag = NO;
+    if (![self openDB]) {
+        return flag;
+    }
+    NSString *table;
+    NSString *handler;
+    switch (type) {
+        case NoteType:
+        {
+            table = Note_GroupInfo;
+            handler = [NSString stringWithFormat:@"INSERT INTO %@ (name) VALUES (?)", table];
+        }
+            break;
+        case PhotoType:
+        {
+            table = Photo_GroupInfo;
+            handler = [NSString stringWithFormat:@"INSERT INTO %@ (name) VALUES (?)", table];
+        }
+        default:
+            break;
+    }
+    if ([self.db tableExists:table]) {
+        flag = [self.db executeUpdate:handler, groupName];
+    }
+    [self closeDB];
+    return flag;
+}
+
+- (BOOL)deleteGroup:(int)groupId type:(DataType)type {
+    BOOL flag = NO;
+    if (![self openDB]) {
+        return flag;
+    }
+    NSString *table;
+    NSString *handler;
+    switch (type) {
+        case NoteType:
+        {
+            table = Note_GroupInfo;
+            handler = [NSString stringWithFormat:@"DELETE FROM %@ WHERE noteId = %d", table, groupId];
+        }
+            break;
+        case PhotoType:
+        {
+            table = Photo_GroupInfo;
+            handler = [NSString stringWithFormat:@"DELETE FROM %@ WHERE noteId = %d", table, groupId];
+        }
+        default:
+            break;
+    }
+    if ([self.db tableExists:table]) {
+        flag = [self.db executeUpdate:handler];
+    }
+    [self closeDB];
+    return flag;
+}
+
+- (BOOL)modifyGroup:(id)group type:(DataType)type {
+    BOOL flag = NO;
+    if (![self openDB]) {
+        return flag;
+    }
+    NSString *table;
+    NSString *handler;
+    switch (type) {
+        case NoteType:
+        {
+            table = Note_GroupInfo;
+            MMNotebook *notebook = (MMNotebook *)group;
+            handler = [NSString stringWithFormat:@"UPDATE %@ SET name = ? WHERE noteId = %@", table, notebook.notebookId];
+            if ([self.db tableExists:table]) {
+                flag = [self.db executeUpdate:handler, notebook.name];
+            }
+        }
+            break;
+        case PhotoType:
+        {
+            table = Photo_GroupInfo;
+            MMPhotoAlbum *photoAlbum = (MMPhotoAlbum *)group;
+            handler = [NSString stringWithFormat:@"UPDATE %@ SET name = ? WHERE noteId = %@", table, photoAlbum.photoAlbumId];
+            if ([self.db tableExists:table]) {
+               flag = [self.db executeUpdate:handler, photoAlbum.name];
+            }
+        }
+        default:
+            break;
+    }
+    [self closeDB];
+    return flag;
+}
 #pragma mark - Common
 - (BOOL)insertTable:(NSString *)tableName type:(DataType)type{
     BOOL flag = NO;
