@@ -7,13 +7,26 @@
 //
 //在LoginResult表中存一个dataVersion，自建一个单独的dataVersion来存本地数据对应的版本号，每次登录或者取dataVersion就更新LoginResult中的dataVersion，然后根据两个dataVersion是否一致来决定是否需要更新数据
 
-
+/*
+    表结构：
+    对一个品类有两个表：
+    以Note为例：
+    表一：notebook信息表
+    结构：id, name
+    表二：note信息表
+    结构：id, name, topic...
+    表三：note与notebook关系表
+    结构：noteid notebookid
+ */
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
 @class MMNotebook;
 @class MMNote;
+@class MMPhoto;
+@class MMPhotoAlbum;
 @interface FMDBHelper : NSObject
 single_interface(FMDBHelper);
+#pragma mark - Note
 - (BOOL)insertNotebook:(NSString *)notebookName;
 - (BOOL)renameNotebook:(NSString *)oldName newName:(NSString *)newName;
 - (BOOL)deleteNotebook:(NSString *)notebookName;
@@ -23,6 +36,16 @@ single_interface(FMDBHelper);
 - (NSArray *)readAllNotebook;
 - (NSArray *)readNoteInNotebook:(NSString *)name;
 //- (NSArray *)readNoteWithNoteId:(int)noteId;
+
+#pragma mark - Photo
+- (BOOL)insertPhotoAlbum:(NSString *)photoAlbumName;
+- (BOOL)renamePhotoAlbum:(NSString *)oldName newName:(NSString *)newName;
+- (BOOL)deletePhotoAlbum:(NSString *)photoAlbumName;
+- (BOOL)insertPhoto:(MMPhoto *)note photoAlbum:(NSString *)photoAlbumName;
+- (BOOL)modifyPhoto:(MMPhoto *)note photoAlbum:(NSString *)photoAlbumName;
+- (BOOL)deletePhotoWithPhotoId:(NSNumber *)photoId photoAlbum:(NSString *)photoAlbumName;
+- (NSArray *)readAllPhotoAlbum;
+- (NSArray *)readPhotoInPhotoAlbum:(NSString *)name;
 /*
 //登录
 - (void)saveLoginResultWithDataVersion:(int)dataVersion DepartmentId:(NSString *)departmentId;
